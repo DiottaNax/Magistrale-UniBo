@@ -94,6 +94,10 @@ Supportano la **comprensione dei fenomeni di business**.
 - Storia del prodotto e monitoraggio affidabilità
 - Utilizzo per beni durevoli
 
+Questo tipo di sistemi spendono molti soldi con comprensione del clienti e cose esterne all'azienda per capire come migliorare la fatturazione. Ad esempio attraverso social e dati di traiettoria per avere info esterne utili.
+
+Esempio: Se un supermercato ha una clientela molto statica posso permettermi di aumentare i prezzi perchè so che i clienti soliti torneranno, se ho una clientela dinamica meglio evitare. Come posso capire se ho una clientela solita? Attraverso ad esempio la posizione dei clienti (non ho capito come).
+
 **Differenza con SI Direzionali:**
 
 - **SI Direzionali**: fenomeni "interni" all'azienda
@@ -101,27 +105,37 @@ Supportano la **comprensione dei fenomeni di business**.
 
 #### SI Analitici per Settori
 
+Qualsiasi azienda che sia una grande distribuzione utilizzano delle tecnologie georefenziati per capire dove aprir il prossimo negozio.
+
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/si-analitici-per-settori.png)
 
 ## La Mappa dei SI
 
+Abbiamo quindi visto delle classificazioni che aiuta a distinguere i sistemi attraverso un certo ambito, ma non è l'unico modo che possiamo usare.
+Qui ci viene in aiuto la mappa dei sistemi informativi aziendali che scompone il sistema informativo in parti e individuare delle esigenze informativi specifiche e dei moduli che implementano dei processi che si portano dietro informazioni che sono tra loro omogenee.
+
 ### Concetto di Modulo
 
 Un **modulo** rappresenta un blocco di funzionalità software che supportano una fase di un processo aziendale, omogeneo per frequenza, attore e profilo di casi d'uso.
+
+Scompongo quindi il sistema in moduli e ogni modulo rappresenta un'esigenza informativa.
 
 **Tipologie di Moduli:**
 
 - **Orizzontali**: non variano al variare della tipologia aziendale
 - **Verticali**: utilizzati in specifici settori produttivi (bancario, manifatturiero, chimico)
 
-Un modulo descrive un’esigenza informativa e quindi indica il
-potenziale impiego di tecnologia informatica.
+Un modulo descrive un’esigenza informativa e quindi indica il potenziale impiego di tecnologia informatica.
 La suddivisione in moduli è utilizzata anche dai grandi produttori di package (SAP, Micorsoft, ORACLE) per strutturare le proprie offerte.
+
+Sap = azienda tedesca molto importante a livello mondiale dei sistemi informativi, di seguito viene mostrata una mappa di sistemi informativi per una ditta di automotive-supllier.
+Possiamo vedere nelle colonne la catena dei valori di Porter.
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sap.png)
 
 ### Il Portafoglio Applicativo Aziendale
 
+Il portafoglio applicativo rappresenta un modo per costruire la mappa.
 Rappresenta una mappa dei SI aziendali ottenuta incrociando:
 
 - **Fasi del ciclo di trasformazione**
@@ -129,61 +143,98 @@ Rappresenta una mappa dei SI aziendali ottenuta incrociando:
 
 #### Livelli di Pianificazione
 
+La pianificazione ha lo scopo di determinare i piani e controllarne l’avanzamento. Le attività di pianificazione si distinguono per l’orizzonte temporale e il livello di dettaglio
+
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/profilo-livelli.png)
 
 #### Attività di Esecuzione
+
+Le attività di esecuzione attuano le operazioni pianificate producendo così l’output desiderato. I sistemi di supporto all’esecuzione elaborano informazioni in tempo reale originando benefici riconducibili ai risparmi su attività burocratiche o alle migliori prestazioni di tempi e costi dei processi
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/profilo-attivita.png)
 
 #### Portafoglio Applicativo per Settore
 
+Di seguito si vede come è fatto il portafoglio applicativo e vediamo come nelle colonne abbiamo le fasi della catena dei valori di Porter ("progettazione e industrializzazione",...) mentre nei titoli delle righe troviamo le diverse tipologie di operazioni.
+
+Per esame: _"IL PORTAFOGLIO APPLICATIVO E' UNA MAPPA DI ESIGENZE INFORMATIVE CHE DEVONO TRACCIARE INFORMAZIONI IMPORTANTI. LE ESIGENZE INFORMATIVE SINGOLE VENGONO IMPLEMENTATE DA SOFTWARE SPECIFICHE CHE COPRONO DELLE AEREE DI ESIGENZE INFORMATIVE."_
+
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo1.png)
 
-Al portafoglio applicativo corrisponde un insieme di moduli standard
+Al portafoglio applicativo corrisponde un insieme di moduli standard. Come le esigenze sono coperte ed implementate da famiglie di software commerciali.
+
+Nell'immagine sotto abbiamo:
+
+- In giallo, verde e azzurronle fasi dei processi aziendali che non variano in base al business dell'azienda.
+- I processi e i software verticali che cambiano in base al business e al mercato.
+- ERP (la maggior parte di software), CRM (rapporto con la clientela), SCADA e CAD (legato alla progettazione) sono famiglie di software. Per essere bravi CEO dobbiamo conoscere le famiglie di software e capire cosa ci serve per caprire una specifica asigenza informativa.
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo2.png)
 
+L'intelligenza artificiale è trasversale rispetto al portafoglio applicativo e potrebbe aiutare ognuna dei processi presenti.
+
+---
+
 Il portafoglio applicativo si differenzia in base alla tipologia di azienda
 
+Portafoglio applicativo per aziende chimiche e siderurgiche:
+Gli impianti sono importanti e complessi, qundi alcuni aspetti hanno una complessità molto ridotto ma altri hanno una complessità molto maggiore. Supply chain => il prodotto finito di una è la fornitura dell'altra, crando una catena.
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio.applicativo3.png)
 
+Portafoglio applicativo per aziende telefoniche:
+Le esigenze informative di aziende telefoniche è più difficile perchè abbiamo molti più processi con più importanza al rapporto con il cliente.
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo4.png)
 
 ## Smart Manufacturing (Industria 4.0)
 
 ### Architettura CIM (Computer Integrated Manufacturing)
 
+**Benefici:**
+
+- Riduzione scorte attraverso i controlli della produzione e della pianificazione
+- Riduzione tempo commercializzazione
+- Aumento qualità prodotto: analisi e controllo del processo di produzione
+- Riduzione costi per maggiore efficienza della fabbrica
+
 Architettura multilivello a **5 livelli**:
 
 1. **Sensors & Signals** - Processo produttivo
 2. **PLC, CNC, RTU** - Sensing & Manipulating
-3. **SCADA/HMI** - Monitoring
-4. **MES** - Operation Management
+3. **SCADA/HMI** - Monitoring, prendono tutte le informazioni dalle singole macchine e centralizzare il controllo di una singola macchina.
+4. **MES** - Operation Management, mettono in campo delle funzionalità per ottimizzare il processo di produzione
 5. **ERP** - Business Planning
-
-**Benefici:**
-
-- Riduzione scorte
-- Riduzione tempo commercializzazione
-- Aumento qualità prodotto
-- Riduzione costi per maggiore efficienza
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/smart-manufactoring.png)
 
 ### Sistemi SCADA
 
+Il componente di un sistema CIM preposto al controllo dei sistemi industriali,
+all’acquisizione e all’analisi dei dati da essi prodotti è denominato SCADA
+
 **SCADA** (Supervisory Control and Data Acquisition) sono sistemi per monitorare e controllare grandi impianti industriali.
 
 **Ambiti di Applicazione:**
 
-- Grandi impianti industriali
+- Grandi impianti industriali e processi industriali complessi
 - Telecomunicazioni
 - Sistemi gestione acqua/energia (HERA)
 - Sistemi produzione energia
 - Raffinerie
-- Trasporti e centri ricerca
+- Trasporti e centri ricerca (CERN)
+
+L’adozione di un sistema SCADA permette di risparmiare tempo e denaro:
+➢ Meno spostamenti per i lavoratori
+➢ Riduzione delle esigenze di personale
+➢ Aumento della produttività
+➢ Maggiore reattività rispetto a situazioni anomale
+➢ Riduzione dei costi di gestione
+➢ Maggiore affidabilità degli impianti
 
 #### Architettura SCADA
+
+![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-SCADA.png)
+
+Sistema: sistema di **collezionamento** con parte in remota, parte sensoristica, parte di calcolo, vengono mandati i calcoli in control room.
 
 **Componenti:**
 
@@ -201,13 +252,28 @@ Architettura multilivello a **5 livelli**:
 
 **Server:**
 
-- **Front-end Server**: traducono dati in formato utilizzabile
-- **SCADA Server**: funzionalità monitoraggio e gestione allarmi in tempo reale
-- **Data Server**: memorizzazione storica dati per analisi
+- **Front-end Server**: ricevono i dati dai diversi siti e li traducono in un formato
+  utilizzabile dal server Scada. Sono logicamente separati da quest’ultimo a
+  garanzia di un tempo di acquisizione in real-time
+- **SCADA Server**: funzionalità monitoraggio e gestione allarmi in tempo reale. Utilizza un database contenente una serie limitata di dati di dettaglio. Può supportare il controllo automatico tramite interfacce grafiche disposte in una control room, oppure può implementare regole di alerting automatiche.
+- **Data Server**: memorizzazione storica dati per analisi (Statistiche, Tuning dei sistemi e ottimizzazione delle performance, Data mining)
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-SCADA.png)
+### Evoluzione dei sistemi SCADA
+
+Scalabilità: l’incremento del numero degli impianti monitorati e dei segnali raccolti pone il problema dell’enorme mole di dati da gestire (in tempo reale), da memorizzare e da analizzare
+
+Capacità di analisi dei dati raccolti (più complesse): ai moduli per il controllo operativo dei sistemi si aggiungono moduli per la valorizzazione dei dati storici raccolti
+➢Data mining
+➢Analisi performance
+
+Sicurezza: i sistemi SCADA controllano infrastrutture critiche. Il livello di sicurezza dei sistemi commerciali è basato su tecnologie che sono 5-10 anni in ritardo rispetto allo stato dell’arte dell’IT
+➢Attacchi da parte di hacker esterni
+➢Attacchi da parte di insider
+Oggi la sicurezza dei sistemi SCADA è basata sul funzionamento su Virtual Private Network separate rispetto a quella aziendale.
 
 ### Evoluzione verso Industria 4.0
+
+L'industria $.0 indica la quarta rivulzione industriale che nasce nel 2014.
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/industria-4.0.png)
 
@@ -227,21 +293,80 @@ Architettura multilivello a **5 livelli**:
 
 #### Internet of Things (IoT)
 
+Che differenza c'è tra un sistema SCADA e uno IoT?
+**SCADA (Supervisory Control And Data Acquisition)** e **IoT (Internet of Things)** sono due tecnologie che, pur avendo alcune somiglianze nel monitoraggio e controllo di dispositivi, differiscono significativamente per scopo, architettura e applicazione.
+I **Sistemi SCADA** hanno lo scopo di: progettato specificamente per il controllo e la supervisione di processi industriali in tempo reale (impianti di produzione, reti elettriche, sistemi idrici, ecc.) con architettura centralizzata, con una sala di controllo che gestisce tutti i dispositivi attraverso protocolli industriali specifici
+I **Sistema IoT** nascono con lo scopo di connettere una vasta gamma di dispositivi a Internet per raccogliere dati, automatizzare processi e abilitare nuovi servizi con un'architettura distribuita e scalabile, con dispositivi che comunicano attraverso Internet e cloud.
+
 Connessioni digitali tra oggetti che diventano intelligenti comunicando dati su se stessi e accedendo a informazioni aggregate.
 
-**Applicazioni:** domotica, medicina, energy, intrattenimento
+**Applicazioni:** domotica, medicina, energy, intrattenimento, ma anche un magazzino automatizzato di amazon (esempio con video mostrato in classe) che mi fa diminuire gli ordini che riesco a fare nella minore quantità di tempo, posso ad esempio fare analisi di dati in modo tale che scaffali con oggetti che vengono comprati assieme siano vicini e così via. Quando si abilita una nuova tecnologia bisogna pensare come fare per ottimizzare quella tecnologia nel miglior modo possibile.
+
+In un mondo così connesso cambia tutto il panorama, la capacità di questa tecnologia cambia del tutto il modo in cui il sistema funziona.
 
 #### Manufacturing Execution Systems (MES)
 
-Gestiscono la fabbrica ricevendo ordini dall'ERP, raccogliendo informazioni dallo SCADA.
+Il **MES** è un sistema software che gestisce e monitora in tempo reale l'intero processo produttivo in fabbrica, fungendo da ponte tra i sistemi gestionali (ERP) e il piano di produzione (macchine e operatori).
+I MES permettono la gestione della fabbrica nel suo complesso - ricevono ordini dall'ERP, raccolgono informazioni dallo SCADA e forniscono informazioni aggiornate all'ERP.
 
 **Funzionalità:**
 
 - Assegnazione risorse e stato
 - Pianificazione operazioni
+- Spedizione della produzione
+- Gestione del lavoro
+- Ottimizzazione del processo
+- Gestione della manutenzione
 - Gestione qualità
 - Analisi prestazioni
 - Tracciamento prodotto
+
+**Benefici:**
+
+- Riduce il tempo del ciclo di produzione
+- Riduce i costi di set up
+- Elimina o riduce il tempo di inserimento dei dati
+- Migliora la qualità del prodotto
+- Migliora l'efficienza della produzione
+- Conferisce potere alle persone che operano nell'impianto
+
+Esempio pratico di cosa fa il MES (fatto da Claude):
+Immaginiamo un'azienda che produce componenti per automobili. Ecco cosa fa il MES:
+
+**1. Gestione degli ordini di produzione**
+
+- L'ERP invia al MES un ordine: "Produci 5.000 componenti del modello X entro 3 giorni"
+- Il MES pianifica le attività sulle linee disponibili, assegna le risorse e calcola i tempi
+
+**2. Tracciabilità in tempo reale**
+
+- Ogni pezzo viene etichettato con un codice univoco (barcode/RFID)
+- Il MES registra ogni fase: quale operatore ha lavorato il pezzo, su quale macchina, a che ora, con quali materiali
+- Se viene rilevato un difetto, il sistema può risalire all'intero lotto e ai parametri di produzione usati
+
+**3. Controllo qualità automatizzato**
+
+- Durante la produzione, sensori verificano tolleranze e misure
+- Il MES ferma automaticamente la linea se rileva anomalie
+- Registra tutti i controlli qualità e genera certificazioni
+
+**4. Gestione materiali e scorte**
+
+- Monitora il consumo di materie prime in tempo reale
+- Avvisa quando un componente sta per esaurirsi
+- Verifica che vengano usati i materiali corretti per ogni lotto
+
+**5. Monitoraggio performance (OEE)**
+
+- Calcola l'efficienza delle macchine: quanto tempo producono vs tempi morti
+- Identifica colli di bottiglia: "La macchina 3 è ferma da 20 minuti per manutenzione"
+- Fornisce KPI in tempo reale su dashboard
+
+**6. Documentazione automatica**
+
+- Genera automaticamente report di produzione
+- Crea la documentazione di conformità richiesta per le certificazioni (ISO, automotive standards)
+- Archivia tutti i dati per audit e analisi successive
 
 ### Industria 4.0 vs Industria 0.4
 
@@ -253,13 +378,16 @@ Nonostante le promesse dell'Industria 4.0, spesso esiste un gap tra aspirazioni 
 
 La distanza tra la **forma mentis** di un responsabile di fabbrica e di un **analista dati** rimane una sfida importante nell'implementazione di soluzioni avanzate.
 
+Noi parliamo di AI e di possibilità che un sistema possono avere ma quando si va a confrontarsi con un'azienda dobbiamo imbatterci in una reltà molto diversa in cui non sempre la tecnologia e la novità sono accettate.
+
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/industria-0.4.png)
 
 ## Sistemi ERP
 
 ### Definizione
 
-**ERP** (Enterprise Resource Planning): suite di moduli applicativi che supportano l'intera gamma dei processi aziendali.
+**ERP** (Enterprise Resource Planning): è stato coniato agli inizi degli anni ’90 da Gartner Group per indicare una suite di moduli applicativi che supportano l’intera gamma dei processi aziendali. E' un sistema gestionale integrato che coordina e automatizza i principali processi aziendali attraverso un unico database centralizzato. Elimina i silos informativi tra i vari reparti e garantisce che tutti lavorino con dati aggiornati e coerenti.
+Un'unico sistema, un'unica base di dati, un'unica realtà dell'informazione con tutte le logiche dei processi sopra.
 
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-ERP.png)
 
@@ -273,16 +401,20 @@ La distanza tra la **forma mentis** di un responsabile di fabbrica e di un **ana
 
 ### ERP Allargati
 
+Circolarità dell'informazione: quando tutti i processi si scambiano le informazioni in maniera efficiente e fluida allora tutti i processi ne traggono beneficio e l'azienda con essi.
+
 **Moduli Aggiuntivi:**
 
-- **PLM** (Product Lifecycle Management)
-- **SCM** (Supply Chain Management)
-- **CRM** (Customer Relationship Management)
-- **E-procurement**
+- **PLM** (Product Lifecycle Management): di supporto alla gestione della documentazione tecnica del prodotto e dei relativi processi produttivi
+- **SCM** (Supply Chain Management): di supporto alla pianificazione e al controllo delle attività interaziendali
+- **CRM** (Customer Relationship Management): supporto all’interazione con il cliente
+- **E-procurement**: permettono la realizzazione di mercati elettronici interaziendali in cui le condizioni quadro e i fornitori sono definite dagli uffici acquisti, mentre sono i reparti utenti a seguire gli acquisti veri e propri abbattendo così costi e tempi.
 
 ### Paradigmi ERP
 
 #### 1. Unicità dell'Informazione
+
+Esiste una e una sola copia di un'informazione.
 
 **Vantaggi:**
 
@@ -291,24 +423,38 @@ La distanza tra la **forma mentis** di un responsabile di fabbrica e di un **ana
 - **Tracciabilità aggiornamenti**
 - **Affidabilità informazione aziendale**
 
+Esempio di pericolo quando non esiste unicità dell'informazione: Il mancato pagamento di un cliente è registrato nel sistema contabile, ma fino alla sincronizzazione degli archivi il sistema commerciale continuerà ad accettare ordini dal cliente
+
 #### 2. Estensione e Modularità
+
+Tanto più il mio sistema è esteso e copre tutti i processi aziendali allora più ho unicità dell'informazione. Deve quindi coprire quanto più processi possibili.
+Tanta più estensione c'è e tanta più modularità deve evere un'azienda, ho tanti moduli che si compongono che vanno a coprire tutte le mie esigenze aziendali.
 
 **Strategie di Implementazione:**
 
-- **Incrementale**: acquisto progressivo moduli
-- **One Stop Shopping**: un solo vendor
-- **Best of Breed**: moduli di diversi vendor per diverse funzioni
+- **Incrementale**: acquisto progressivo moduli che nella precedente configurazione del SI mancavano o erano realizzati mediante sistemi legacy (vecchi e non idonei) inadeguati. Compro tutto da un venditore (es: Microsoft).
+- **One Stop Shopping**: si predilige la linearità acquistando i moduli di un solo vendor possibilmente in un’unica tranche
+- **Best of Breed**: (prendi il meglio dal mercato), vengono utilizzati i moduli di diversi vendor che meglio si prestano alle esigenze dell’azienda o che vengono considerati i migliori. Non voglio prendere le cose da un solo fornitore ma devo assicurarmi che i software siano integrati ad esempio anche attraverso accordi tra fornitori.
+
+Tipicamente…
+➢ Azienda con funzioni core di nicchia: si adotta un approccio best of breed per le funzioni core (fondamentali) dell’azienda (privilegiando la specializzazione) e mentre si adotta un unico fornitore per le rimanenti (privilegiando il fattore costo e il livello di integrazione)
+➢ Azienda con funzioni core generiche: si adotta un unico fornitore che copra tutte le funzionalità possibili (privilegiando il costo e il livello di integrazione), mentre si adotta un approccio best of breed per le funzioni non coperte
 
 #### 3. Prescrittività
 
-I sistemi ERP incorporano la logica del processo gestionale. È necessario adattare i processi aziendali a quelli definiti nell'ERP.
+I sistemi ERP incorporano la logica del processo gestionale quindi nascono già pronti. È necessario adattare i processi aziendali a quelli definiti nell'ERP.
+L’approccio a un progetto ERP è invertito rispetto a quanto avviene nella
+progettazione di un SI “su misura”.
 
 **Vantaggi:**
 
-- Processi basati su best practices
-- Standardizzazione operazioni
-- Razionalizzazione processi (BPR)
+- I processi ERP sono basati sulle best practices del settore
+- Garantiscono la correttezza e standardizzazione delle operazioni
+- Favorisce la razionalizzazione dei processi, facendo coincidere il progetto informatico ERP con un progetto di BPR (Business Process Reengineering)
 
+I sistemi ERP non devono tuttavia considerarsi oggetti immutabili, esistono ampi margini di personalizzazione, necessari a gestire il gap tra il modulo standard e le specificità delle aziende. La figura del programmatore è sostituita da quella del **parametrizzatore**, che non scrive il software, ma agisce, con strumentazioni spesso sofisticate per parametrarlo secondo le esigenze dell’impresa.
+
+Esempio preso da SAP:
 ![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/paradigma-ERP.png)
 
 ### Architettura ERP
@@ -432,6 +578,7 @@ I servizi di classificano in:
 - **B2C (Business-to-Consumer)**: modello di commercio elettronico in cui le aziende vendono prodotti o servizi direttamente ai consumatori finali. Esempi tipici includono negozi online come Amazon, Zalando o boutique digitali che si rivolgono all'utente privato. Le transazioni sono generalmente di valore più basso, con un volume elevato di ordini e processi di acquisto semplificati. L'esperienza utente, il marketing emozionale e la facilità di navigazione sono elementi cruciali in questo modello.
 
 - **B2B (Business-to-Business)**: modello di commercio elettronico in cui le transazioni avvengono tra aziende, rappresentando l'80% dei siti di e-commerce in Italia. In questo contesto, un'impresa vende prodotti, servizi o forniture ad altre imprese che li utilizzano per la propria attività produttiva o commerciale. Le caratteristiche distintive includono: ordini di volumi maggiori, relazioni commerciali durature, processi di acquisto più complessi (spesso con approvazioni multiple), listini prezzi personalizzati, contratti quadro e condizioni di pagamento dilazionate. Esempi comuni sono fornitori di materie prime, grossisti, produttori di componenti industriali o piattaforme SaaS per aziende.
+  Es: Supply chain dove il prodotto di un'azienda è la materia prima dell'altra.
 
 I servizi possono riguardare:
 
