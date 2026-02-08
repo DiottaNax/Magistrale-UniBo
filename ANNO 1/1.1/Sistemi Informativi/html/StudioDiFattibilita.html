@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Matilde D'Antino" />
+  <title>Studio di Fattibilità</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css" />
+  
+  <style>
+    body { 
+      max-width: 980px; 
+      margin: 0 auto; 
+      padding: 45px; 
+      background: #f6f8fa; 
+    }
+    .markdown-body { 
+      background: white; 
+      padding: 45px; 
+      border-radius: 6px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    
+    /* FIX IMMAGINI - NON SBORDANO MAI */
+    img { 
+      max-width: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      display: block;
+      margin: 20px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Immagini più piccole per la stampa */
+    @media print {
+      body { 
+        background: white; 
+        max-width: 100%;
+        padding: 2cm;
+      }
+      .markdown-body { 
+        box-shadow: none; 
+        padding: 0;
+      }
+      img { 
+        max-width: 90% !important;
+        max-height: 500px !important;
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+    }
+    
+    h1 { 
+      border-bottom: 2px solid #0969da; 
+      padding-bottom: 0.3em;
+      color: #0969da;
+      page-break-after: avoid;
+    }
+    h2 {
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 0.3em;
+      margin-top: 24px;
+      page-break-after: avoid;
+    }
+    
+    #TOC {
+      background-color: #f6f8fa;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    #TOC ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a {
+      text-decoration: none;
+      color: #0969da;
+    }
+    
+    code {
+      background-color: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    
+    pre {
+      background-color: #f6f8fa;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Studio di Fattibilità</h1>
+<p class="author">Matilde D'Antino</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#lo-studio-di-fattibilità"
+id="toc-lo-studio-di-fattibilità">Lo studio di fattibilità</a>
+<ul>
+<li><a href="#introduzione" id="toc-introduzione">Introduzione</a>
+<ul>
+<li><a href="#obiettivi-dello-studio-di-fattibilità"
+id="toc-obiettivi-dello-studio-di-fattibilità">Obiettivi dello studio di
+fattibilità</a></li>
+<li><a href="#quando-si-effettua" id="toc-quando-si-effettua">Quando si
+effettua</a></li>
+<li><a href="#alternativa-proof-of-concept-poc"
+id="toc-alternativa-proof-of-concept-poc">Alternativa: Proof of Concept
+(PoC)</a></li>
+<li><a href="#vantaggi-del-poc-rispetto-allo-studio-di-fattibilità"
+id="toc-vantaggi-del-poc-rispetto-allo-studio-di-fattibilità">Vantaggi
+del PoC rispetto allo studio di fattibilità:</a></li>
+</ul></li>
+<li><a href="#motivazioni-obiettivi-e-fasi"
+id="toc-motivazioni-obiettivi-e-fasi">Motivazioni, obiettivi e fasi</a>
+<ul>
+<li><a href="#motivazioni-e-obiettivi"
+id="toc-motivazioni-e-obiettivi">Motivazioni e obiettivi</a></li>
+<li><a href="#fasi" id="toc-fasi">Fasi</a></li>
+<li><a href="#valutazione-delle-alternative"
+id="toc-valutazione-delle-alternative">Valutazione delle
+alternative</a></li>
+</ul></li>
+<li><a href="#analisi-della-situazione-attuale"
+id="toc-analisi-della-situazione-attuale">Analisi della situazione
+attuale</a></li>
+<li><a href="#progetti-di-massima" id="toc-progetti-di-massima">Progetti
+di massima</a></li>
+<li><a href="#analisi-del-rischio" id="toc-analisi-del-rischio">Analisi
+del rischio</a>
+<ul>
+<li><a href="#obiettivo-e-fasi" id="toc-obiettivo-e-fasi">Obiettivo e
+fasi</a></li>
+<li><a href="#definizione-del-rischio-di-progetto"
+id="toc-definizione-del-rischio-di-progetto">Definizione del rischio di
+progetto</a></li>
+<li><a href="#modalità-di-gestione-del-rischio"
+id="toc-modalità-di-gestione-del-rischio">Modalità di gestione del
+rischio</a></li>
+</ul></li>
+<li><a href="#il-progetto-proposto" id="toc-il-progetto-proposto">Il
+progetto proposto</a>
+<ul>
+<li><a href="#la-segmentazione-del-progetto"
+id="toc-la-segmentazione-del-progetto">La segmentazione del
+progetto</a></li>
+<li><a href="#il-modello-organizzativo"
+id="toc-il-modello-organizzativo">Il modello organizzativo</a></li>
+<li><a href="#il-piano-di-progetto" id="toc-il-piano-di-progetto">Il
+piano di progetto</a></li>
+</ul></li>
+<li><a href="#rappresentazioni-grafiche-possibili"
+id="toc-rappresentazioni-grafiche-possibili">Rappresentazioni grafiche
+possibili</a>
+<ul>
+<li><a href="#la-wbs" id="toc-la-wbs">La WBS</a></li>
+<li><a href="#il-diagramma-di-gantt" id="toc-il-diagramma-di-gantt">Il
+diagramma di Gantt</a></li>
+<li><a href="#il-diagramma-di-pert" id="toc-il-diagramma-di-pert">Il
+diagramma di PERT</a></li>
+<li><a href="#analisi-costi-benefici"
+id="toc-analisi-costi-benefici">Analisi Costi-Benefici</a></li>
+</ul></li>
+<li><a href="#outsorcing-e-cloud" id="toc-outsorcing-e-cloud">Outsorcing
+e Cloud</a>
+<ul>
+<li><a href="#outsourcing" id="toc-outsourcing">Outsourcing</a></li>
+<li><a href="#cloud-computing-nei-sistemi-informativi"
+id="toc-cloud-computing-nei-sistemi-informativi">Cloud computing nei
+Sistemi Informativi</a></li>
+<li><a href="#cloud-pubbliche-vs-private"
+id="toc-cloud-pubbliche-vs-private">Cloud Pubbliche vs Private</a></li>
+<li><a href="#multi-cloud" id="toc-multi-cloud">Multi Cloud</a></li>
+<li><a href="#vantaggi-delle-soluzioni-in-cloud"
+id="toc-vantaggi-delle-soluzioni-in-cloud">Vantaggi delle soluzioni in
+cloud</a></li>
+<li><a href="#svantaggi-delle-soluzioni-in-cloud"
+id="toc-svantaggi-delle-soluzioni-in-cloud">Svantaggi delle soluzioni in
+cloud</a></li>
+<li><a href="#cloud-vs-appliance" id="toc-cloud-vs-appliance">Cloud vs
+Appliance</a></li>
+<li><a href="#total-cost-ownership" id="toc-total-cost-ownership">Total
+Cost Ownership</a></li>
+<li><a href="#individuazione-dei-benefici"
+id="toc-individuazione-dei-benefici">Individuazione dei
+benefici</a></li>
+<li><a href="#benefici-misurabili-nelle-p.a.-pubblica-amministrazione"
+id="toc-benefici-misurabili-nelle-p.a.-pubblica-amministrazione">Benefici
+misurabili nelle P.A. (Pubblica amministrazione)</a></li>
+<li><a href="#raccomandazione-per-le-fasi-realizzative"
+id="toc-raccomandazione-per-le-fasi-realizzative">Raccomandazione per le
+fasi realizzative</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="lo-studio-di-fattibilità">Lo studio di fattibilità</h1>
+<h2 id="introduzione">Introduzione</h2>
+<p>Lo studio di fattibilità serve per valutare se ha senso avviare un
+processo di innovazione, con quali tecnologie implementarlo e se i
+benefici attesi giustificano gli investimenti necessari in termini di
+tempo e risorse.</p>
+<h3 id="obiettivi-dello-studio-di-fattibilità">Obiettivi dello studio di
+fattibilità</h3>
+<p>Determinare la convenienza di:</p>
+<ul>
+<li>Un’innovazione guidata da una nuova tecnologia</li>
+<li>Il cambiamento di un processo aziendale esistente</li>
+<li>L’adozione di nuovi sistemi o modelli di business</li>
+</ul>
+<h3 id="quando-si-effettua">Quando si effettua</h3>
+<p>Lo studio di fattibilità ha <strong>costi elevati</strong> (in
+termini di tempo, risorse e competenze richieste), quindi viene condotto
+principalmente per:</p>
+<ul>
+<li>Progetti complessi e di grandi dimensioni</li>
+<li>Investimenti significativi con alto rischio</li>
+<li>Innovazioni strategiche per l’organizzazione</li>
+</ul>
+<p><strong>Esempio:</strong> Il ponte sullo Stretto di Messina ha
+richiesto numerosi studi di fattibilità negli anni per valutare vantaggi
+economici, impatti ambientali, fattibilità tecnica e sostenibilità
+finanziaria.</p>
+<h3 id="alternativa-proof-of-concept-poc">Alternativa: Proof of Concept
+(PoC)</h3>
+<p>Quando ci sono:</p>
+<ul>
+<li>Clienti indecisi</li>
+<li>Idee contrastanti all’interno dell’organizzazione</li>
+<li>Necessità di validare rapidamente un’ipotesi</li>
+</ul>
+<p>Invece di uno studio di fattibilità completo (lungo, costoso e
+complesso), si può realizzare un <strong>Proof of Concept
+(PoC)</strong>: un prototipo funzionante che implementa solo il nucleo
+essenziale del progetto.</p>
+<h3 id="vantaggi-del-poc-rispetto-allo-studio-di-fattibilità">Vantaggi
+del PoC rispetto allo studio di fattibilità:</h3>
+<ul>
+<li><strong>Più rapido:</strong> Tempi di realizzazione ridotti</li>
+<li><strong>Meno costoso:</strong> Richiede meno risorse</li>
+<li><strong>Concreto:</strong> Si testa direttamente sul campo anziché
+solo su carta</li>
+<li><strong>Validazione pratica:</strong> Permette di verificare
+l’utilità reale della soluzione con utenti veri</li>
+</ul>
+<p>Il PoC è quindi un approccio “learning by doing” che riduce
+l’incertezza attraverso sperimentazione pratica piuttosto che solo
+analisi teorica.</p>
+<h2 id="motivazioni-obiettivi-e-fasi">Motivazioni, obiettivi e fasi</h2>
+<h3 id="motivazioni-e-obiettivi">Motivazioni e obiettivi</h3>
+<ol type="1">
+<li><p>La necessità di effettuare uno studio di fattibilità nasce dal
+fatto che si è individuato un possibile progetto, che per dimensione
+economica, complessità dell’intervento, incertezza sui requisiti,
+presenza di possibili alternative, richiede un approfondimento prima che
+possa esserne avviata la realizzazione, pena un elevato rischio di
+insuccesso. –&gt; Quindi valutazione del rischio, stimare i costi e
+predire i benefici attesi. Se io non so spiegare nel dettaglio i
+benefici e i costi il progetto non si può fare.</p></li>
+<li><p><strong>L’obiettivo di uno studio di fattibilità non è quindi
+quello di individuare potenziali progetti, bensì quello di dare
+concretezza a un progetto pre-identificato, fornendo tutti gli elementi
+per l’avvio della fase realizzativa.</strong> –&gt; Esplicitare le
+condizioni che rendono conveniente l’effettuazione di progetti per la
+realizzazione di sistemi informativi automatizzati e l’erogazione di
+servizi informatici. In particolare è importante definire esattamente i
+benefici attesi del progetto, stimare i costi di impianto e di esercizi
+individuando e valutando i rischi del progetto. –&gt; Dare concretezza
+all’ipotesi progettuale delineando il processo di passaggio dallo stato
+attuale a quello finale corrispondente alle attese (come e con cosa
+faccio il progetto). In particolare è necessario verificare l’esistenza
+di un’adeguata soluzione tecnico-organizzativa situata all’interno di
+vincoli economici e temporali dati anche attraverso il confronto tra
+soluzioni diverse e la scelta tra essi sulla base di criteri esplicitati
+e predefiniti.</p></li>
+<li><p>Sebbene il contenuto di uno studio di fattibilità vari fortemente
+in base alla natura del progetto, è possibile delineare la seguente
+struttura di riferimento:</p></li>
+</ol>
+<h3 id="fasi">Fasi</h3>
+<ol type="a">
+<li><strong>Analisi della situazione attuale</strong> (comprendo)</li>
+<li><strong>Progetti di massima</strong> (più proposte)</li>
+<li><strong>Analisi dei rischi</strong> (di ogni progetto proposto)</li>
+<li><strong>Il progetto proposto</strong></li>
+<li><strong>Analisi costi benefici</strong></li>
+<li><strong>Raccomandazioni per le fasi realizzative</strong></li>
+</ol>
+<p>Le fasi <strong>d</strong> ed <strong>e</strong> possono essere
+invertite: se prima decido il progetto da selezionare tra quelli
+proposti devo fare l’analisi dei costi benefici solo di quello scelto.
+Se invece decido di fare prima analisi dei costi/benefici allora lo farò
+do ogni progetto proposto e poi scelgo sulla base delle analisi quale
+tra i progetti è il migliore.</p>
+<h3 id="valutazione-delle-alternative">Valutazione delle
+alternative</h3>
+<p>Lo studio di fattibilità presuppone la valutazione di diverse
+alternative progettuali (ho più progetti che vengono proposti da dove
+analizzare). È però indispensabile delineare con esattezza i margini
+decisionali di competenza dello studio di fattibilità al fine di non
+stravolgerne gli obiettivi.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/Valutazione_alternative.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Prima di tutto: Dove mi trovo quando arrivo a questa questa parte del
+processo?</p>
+<p>Veniamo da una parte di pianificazione in cui qualcuno ha già un
+piano (pluriennale o annuale) su quale deve essere la strategia
+complessiva di rinnovamento.</p>
+<p>Cosa vogliamo? Gli obiettivi della digitalizzazione</p>
+<p>Ma noi dobbiamo capire a livello macroscopico come sarò fatto il
+sistema quindi le specifiche generali e quali sono le modalità e
+strategie generali. I dettagli sono da decidere nalla fare realizzativa
+non nella pianificazione.</p>
+<p>Devo approfondire la modalità realizzativa fino a che posso capire se
+il progetto è conveniente o meno.</p>
+<p>Esempio: azienda di barca con livello di digitalizzazione davvero
+basso e devo capire se costruire e automatizzare l’esperienza del
+cliente per la personalizzazione della barca (cambiare colore e decidere
+optional) atraverso un configuratore che la simula. Al configuratore
+posso anche dare il compito di modificare la barca in base agli optional
+richiesti (incastrare tante cose). Ma mi vengono mille domande:
+covienienza? che software posso utilizzare? i clienti che spendono 2
+milioni hanno voglia di lavorare lui con un configuratore e non con una
+persone che lavora con loro?</p>
+<p>In questo esempio abbiamo a che fare con un progetto davvero grade
+che andrebbe a rivoluzionare il processo spendendo anche molti soldi per
+fare il configuratore. Quindi è logico fare uno studio di fattibilità in
+modo tale che io capisca prima la convenienza. Anche perchè magari
+attraverso i KPI vedo che il processo di personalizzazione che vado a
+modificare non mi porta via tutto questo tempo e quindi non ne vale la
+pena.</p>
+<h2 id="analisi-della-situazione-attuale">Analisi della situazione
+attuale</h2>
+<p>L’analisi della situazione attuale evidenzia le caratteristiche del
+sistema informativo su cui deve essere realizzato il progetto relativo
+allo studio di fattibilità e si articola sui seguenti punti:</p>
+<ol type="1">
+<li><strong>Il contesto dello studio</strong> (azienda che fa una certa
+cosa che vuole digitalizzare attraverso un certo progetto)</li>
+<li><strong>Descrizione della problematica</strong> (dobbiamo
+raccontarle e andarle e cercare anche parlando con le persone )</li>
+<li><strong>Descrizione della situazione attuale del SI</strong>
+(descrivere il processo attuale)</li>
+<li><strong>Analisi e diagnosi della situazione attuale</strong></li>
+<li><strong>Identificazione dei vincoli</strong> (vincoli temporali che
+sono quanto ci posso mettere, vincoli economici che possono essere
+quanto al massimo posso spendere o altre tipologie come non posso far
+decidere il tessuto dei sedili della barca per vincoli commerciali fuori
+dal mio potere)</li>
+<li><strong>Definizione degli obiettivi di progetto</strong></li>
+</ol>
+<p>Parte delle informazioni richieste in queste fasi dovrebbero già
+essere presenti in azienda poiché elaborate durante la fase di
+pianificazione, è quindi necessario riutilizzarle approfondendole dove
+necessario.</p>
+<p>(Cit del prof: All’esame non è tanto importante dover sapere a
+memoria le fasi sapere quali sono gli scopi e perchè si fa)</p>
+<p><strong>1) Il contesto dello studio:</strong> serve a inquadrare il
+progetto analizzato nel quadro della strategia di sviluppo del SI.</p>
+<ol type="a">
+<li><p>Ripresa della visione strategica in termini di servizi,
+organizzazione, tecnologia.</p></li>
+<li><p>Ripresa dei principali passaggi che hanno portato
+all’individuazione del progetto per essere allineati allo
+scopo.</p></li>
+<li><p>Collocazione del progetto all’interno del piano di
+informatizzazione.</p></li>
+</ol>
+<p><strong>2) Descrizione della problematica:</strong> illustra i
+problemi o le opportunità da cui scaturisce il progetto, indicandone la
+rilevanza e stabilendone esattamente i confini.</p>
+<ol type="a">
+<li><p>Descrizione e rilevanza della problematica</p></li>
+<li><p>Esigenze da soddisfare (rispetto a utenti interni e
+esterni)</p></li>
+</ol>
+<p><strong>3) Descrizione della situazione attuale del SI:</strong>
+consiste nella individuazione e rappresentazione dei processi e dei
+sistemi informatici coinvolti nell’area di intervento.</p>
+<ol type="a">
+<li><p>Individuazione e rappresentazione dei processi coinvolti</p></li>
+<li><p>Individuazione e rappresentazione dei flussi informativi</p></li>
+<li><p>Individuazione e rappresentazione della struttura organizzativa e
+dell’utenza coinvolta</p></li>
+<li><p>Attuale livello di automazione</p></li>
+</ol>
+<p><strong>4) Analisi e diagnosi della situazione attuale:</strong>
+illustra i risultati dell’attività di esame e valutazione critica dei
+processi impattati dal progetto, risultati finalizzati alla
+individuazione e quantificazione degli obiettivi di progetto</p>
+<ol type="a">
+<li>Individuazione dei fenomeni che costituiscono le cause del
+problema</li>
+</ol>
+<p>b.Collocazione di tali fenomeni sulle diverse componenti del processo
+di servizio</p>
+<ol start="3" type="a">
+<li><p>Individuazione di metriche atte a rappresentare fenomeni critici
+e la loro evoluzione</p></li>
+<li><p>Misurazione della situazione attuale</p></li>
+</ol>
+<p><strong>5) Identificazione dei vincoli:</strong> identifica e
+descrive le condizioni di ambiente non modificabili della situazione
+attuale</p>
+<ol type="a">
+<li><p>Quadro normativo di riferimento</p></li>
+<li><p>Vincoli temporali e altri vincoli (economici, organizzativi,
+…)</p></li>
+</ol>
+<p><strong>6) Definizione degli obiettivi di progetto:</strong> gli
+obiettivi devono essere espressi in forma quantitativa, ossia debbono
+fare riferimento a costi, tempi e a individuate caratteristiche del
+prodotto/servizio erogato oltre a essere messe in relazione con i
+fenomeni individuati come cause dei problemi da cui il progetto ha avuto
+origine.</p>
+<h2 id="progetti-di-massima">Progetti di massima</h2>
+<p><strong>I progetti di massima</strong> consistono in una descrizione
+generale del sistema informativo previsto e comprendono:</p>
+<ol type="1">
+<li><p><strong>La definizione dei requisiti</strong>, ossia delle
+condizioni che il sistema deve soddisfare,</p></li>
+<li><p><strong>Le specificazioni del sistema</strong>, ossia una
+descrizione del sistema proposto in termini di proprietà,</p></li>
+<li><p>L’indicazione delle principali modalità di realizzazione:
+<strong>“A che livello di dettaglio deve essere realizzato lo studio di
+fattibilità?”</strong></p>
+<p><em>Lo studio di fattibilità deve essere realizzato a un livello di
+dettaglio tale da rispondere ai quesiti per cui è stato richiesto,
+quindi…</em></p>
+<p>-&gt; Lo studio dovrà essere svolto a un elevato livello di
+aggregazione intendendo che non tutte le componenti del SI dovranno
+essere completamente scomposte e descritte.</p>
+<p>-&gt; Dovranno essere studiate solo le funzionalità principali e i
+casi di utilizzo standard.</p>
+<p>-&gt; Lo studio potrà riguardare solo la porzione più importante del
+SI che presenta le principali criticità e su cui incombono i principali
+dubbi.</p></li>
+<li><p>Possono essere proposti diversi progetti di massima le cui
+caratteristiche verranno valutate durante lo studio di fattibilità.
+Perchè io possa valutare le differente tra i diversi progetti.</p></li>
+</ol>
+<p>Esempio: Ho l’azienda di barche che magari oltre al configuratore
+devo rifare anche una parte del CRM, quale delle due implemento prima?
+Per motivi economici e non tecnologici si partirà da quello che può
+portare soldi nel minor tempo possibile, ma mi serve uno studio di
+fattibilità per capire i vantaggi di entrambi.</p>
+<p><strong>1) Requisiti della soluzione:</strong> devono essere
+evidenziate le condizioni essenziali che il sistema proposto deve
+rispettare</p>
+<p>1.1 Dettaglio del processo previsto (dopo la reingegnerizzazione)</p>
+<p>1.2 Interventi previsti sulle componenti non informatizzate del
+processo</p>
+<p>1.3 Necessità di modifica della normativa</p>
+<p>1.4 Requisiti del sistema informativo da realizzare</p>
+<ul>
+<li>Informazioni trattate</li>
+<li>Funzioni informatizzate</li>
+<li>Modalità di lavoro</li>
+<li>Requisiti architetturali</li>
+<li>Requisiti di qualità</li>
+</ul>
+<p><strong>2) Specifiche generali del sistema:</strong> evidenzia le
+specifiche di massima del sistema informativo da realizzare, ossia
+quelle caratteristiche o proprietà che sono essenziali per rispondere ai
+requisiti individuati.</p>
+<p>2.1 <strong>Specifiche applicative</strong></p>
+<ul>
+<li><p>Architettura dei dati (con esame e valutazione delle eventuali
+alternative)</p></li>
+<li><p>Architettura applicativa (con esame e valutazione delle eventuali
+alternative)</p></li>
+<li><p>Interfaccia utente</p>
+<p>2.2 <strong>Specifiche tecnologiche</strong></p></li>
+<li><p>Architettura tecnologica (con esame e valutazione delle eventuali
+alternative)</p></li>
+<li><p>Ambiente e strumenti di sviluppo (con esame e valutazione delle
+eventuali alternative)</p></li>
+</ul>
+<p><strong>3) Modalità di realizzazione</strong></p>
+<p>3.1 Realizzazione o acquisizione (con esame e valutazione delle
+eventuali alternative)</p>
+<p>3.2 Riuso dei componenti esistenti (con esame e valutazione delle
+eventuali alternative)</p>
+<p>3.3 Avvio del sistema</p>
+<p>3.4 Esercizio e manutenzione del sistema</p>
+<p>3.5 Formazione e assistenza utenti</p>
+<h2 id="analisi-del-rischio">Analisi del rischio</h2>
+<h3 id="obiettivo-e-fasi">Obiettivo e fasi</h3>
+<p>Una delle fasi più cruciali dello studio di fattibilità è sicuramente
+l’analisi del rischio.</p>
+<p>l’obiettivo è quello di mettere sul tavolo tutti gli ambiti e ognungo
+di questi esplicita quali sono i rischi.</p>
+<p>Il rischio connesso a un progetto è dato dall’esistenza di eventi
+capaci di pregiudicare il buon esisto del progetto:</p>
+<ul>
+<li>Mancata conclusione</li>
+<li>Ottenimento di prodotti difettosi o non utilizzati</li>
+<li>Lievitazione dei costi</li>
+<li>Allungamento dei tempi</li>
+<li>Difficile integrazione con il restante sistema informativo</li>
+</ul>
+<p>Questa sezione dello studio di fattibilità si articola su tre
+punti</p>
+<p><strong>1) Individuazione dei fattori di rischio del
+progetto:</strong> evidenzia i principali fattori di rischio</p>
+<ul>
+<li><strong>Complessità</strong>
+<ul>
+<li>Complessità gestionale</li>
+<li>Dimensione del progetto</li>
+<li>Altri fattori specifici (impatto nell’azienda)</li>
+</ul></li>
+<li><strong>Incertezza</strong>
+<ul>
+<li>Incertezza sui requisiti (magari nemmeno l’azienda sa davvero bene
+cosa vuole)</li>
+<li>Innovazione tecnologica</li>
+</ul></li>
+</ul>
+<p><strong>2) Definizione del rischio di progetto:</strong> valuta
+sistematicamente tutti i fattori di rischio individuati e determina la
+classe di rischio dell’intero progetto</p>
+<p><strong>3) Modalità di gestione del rischio:</strong> definisce una
+strategia e un insieme di azioni tese alla riduzione dei rischi e quindi
+al buon andamento del progetto.</p>
+<h3 id="definizione-del-rischio-di-progetto">Definizione del rischio di
+progetto</h3>
+<p>Ha l’obiettivo di individuare in maniera precisa i rischi connessi a
+un progetto. L’esito di tale quantificazione consiste nell’attribuzione
+alle varie fasi del progetto di un’appropriata <strong>classe di
+rischio</strong>.</p>
+<p>L’esecuzione dell’analisi prevede le seguenti fasi:</p>
+<ol type="1">
+<li>Individuazione di un insieme di fattori di rischio</li>
+<li>Per ogni fattore di rischio si definisce un insieme di parametri
+quantificabili</li>
+<li>Per ogni parametro si quantifica il livello di rischio
+(alto/medio/basso)</li>
+</ol>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/rischio_progetto.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="modalità-di-gestione-del-rischio">Modalità di gestione del
+rischio</h3>
+<p>L’individuazione dei fattori di rischio deve portare alla definizione
+delle modalità di <strong>gestione del rischio</strong> ossia degli
+accorgimenti adottabili per ridurre i rischi del progetto:</p>
+<ol type="1">
+<li><strong>Individuazione degli elementi critici:</strong> ossia delle
+fasi che mettono maggiormente a rischio la riuscita dell’intero
+progetto. Tali fasi saranno soggette a un maggior controllo e su di esse
+andranno concentrate un maggior numero di risorse. Si fanno dei
+diagrammi per poterli individuare meglio.</li>
+<li><strong>Segmentazione:</strong> la segmentazione riduce i rischi del
+processo poiché permette di circoscrivere e meglio controllare i rischi
+inerenti alla complessità, alla dimensione e all’incertezza.</li>
+<li><strong>Definizione dei punti di controllo:</strong> indicano i
+momenti in cui valutare lo stato del progetto per verificarne
+l’andamento in base ai fattori critici ed eventualmente valutare
+modifiche in corso d’opera. Vado a lavorare su un piano temporale
+vedendo quali sono i momenti in cui mi fermo per valutare lo stato del
+processo.</li>
+<li><strong>Definizione dei punti di arresto:</strong> nel caso si
+verifichino i problemi legati ai fattori di rischio può essere opportuno
+interrompere il progetto prima che questo porti a ulteriori danni per
+l’azienda. Capire quando fermarsi, ad esempio se io mi dico che sotto il
+23 non accetto il voto dell’esame è un punto di arresto in modo tale che
+so quando andare avanti e quando fermarmi (nel dare l’esame per
+continuare con l’esempio).</li>
+</ol>
+<h2 id="il-progetto-proposto">Il progetto proposto</h2>
+<p>Sulla base di quanto indicato nel progetto di massima e tenendo in
+considerazione i risultati dell’analisi del rischio specifica la
+soluzione scelta indicando più in dettaglio tempi e modi di
+realizzazione.</p>
+<p>Questa fase si articola su quattro punti:</p>
+<p><strong>1. Segmentazione del progetto:</strong> con questo termine si
+intende la suddivisione di un progetto in moduli ognuno finalizzato al
+completamento di un sottosistema specifico. La modalità di segmentazione
+dipende dalle scelte realizzative fatte. […]</p>
+<p><strong>2. Riepilogo delle acquisizioni e realizzazioni
+previste:</strong> focalizza definitivamente il progetto realizzativo
+proposto alla luce dei criteri di segmentazione scelti e sintetizza le
+acquisizioni previste (sistemi di elaborazione, servizi e
+apparecchiature di rete, software di base e applicativo, ecc.)</p>
+<p><strong>3. Modello organizzativo:</strong> definisce la struttura
+organizzativa finalizzata alla gestione del progetto e le modalità di
+interazione fornitore-cliente. Devo conoscere nome e cognome delle
+persone coinvolte […]</p>
+<p><strong>4. Piano del progetto:</strong> esplicita la sequenza e le
+dipendenze tra le principali attività del progetto […]</p>
+<h3 id="la-segmentazione-del-progetto">La segmentazione del
+progetto</h3>
+<p>Abbiamo diverse possibili modalità per effettuare la
+segmentazione:</p>
+<ul>
+<li><p><strong>Realizzazione in soluzione unica:</strong> il SI viene
+realizzato, e collaudato in un’unica versione, generalmente con una
+attività continuativa.</p></li>
+<li><p><strong>Realizzazione incrementale:</strong> la realizzazione e
+il collaudo avvengono per parti successive, ciascuna delle quali
+contiene un sottoinsieme delle funzionalità e dei servizi previsti. I
+requisiti previsti sono completamente definiti prima della realizzazione
+iniziale e non variano nel corso delle successive installazioni.
+Diminuisco il rischio di fare qualcosa di sbagliato.</p></li>
+<li><p><strong>Realizzazione evolutiva:</strong> la realizzazione e il
+collaudo avviene per versioni successive in cui ogni versione può
+contenere tutte o parte delle funzionalità richieste. I requisiti
+previsti possono essere variati tra due versioni successive in seguito
+al feedback ottenuto durante le fasi di realizzazione e collaudo.
+All’inizio consegno un progettino con solo le funzionalità di base e poi
+vado complicandolo.</p></li>
+<li><p><strong>Approccio Agile:</strong> fortemente incrementale ed
+evolutivo. L’interazione con l’utente è finalizzata ad acquisire
+feedback utili al miglioramento in corso d’opera. Rispetto alle
+soluzioni precedenti si prevede esplicitamente nel progetto
+l’inserimento/rimozione di funzionalità nonché la ri-prioritizzazione
+delle consegne in base ai desiderata del cliente. Il livello di
+interazione con il cliente è alto quindi lo posso fare solo se ho la
+possibilità di vedere il cliente spesso.</p></li>
+</ul>
+<h3 id="il-modello-organizzativo">Il modello organizzativo</h3>
+<ul>
+<li><strong>Struttura organizzativa preposta al progetto per il
+committente</strong>
+<ul>
+<li>Articolazione, figure “chiave”, compiti e responsabilità e
+competenze</li>
+<li>Valutazione <em>(di massima)</em> degli impegni richiesti a utenti
+di business, personale dei SI, ecc. (quanto? quando?)</li>
+</ul></li>
+<li><strong>Struttura organizzativa richiesta al fornitore</strong>
+<ul>
+<li>Articolazione, con chiara individuazione del Responsabile di
+Progetto e, se applicabile, dei diversi Responsabili di servizio</li>
+<li>Definizione dei compiti e delle responsabilità</li>
+<li>Modalità operative di interazione tra Amministrazione committente e
+fornitore:</li>
+<li>Classificazione delle forme di interazione previste (riunioni,
+prodotti e <em>documenti, relative modalità di controllo e
+accettazione</em>);</li>
+</ul></li>
+<li><strong>Eventuali strumenti e/o sistemi informatici a supporto di
+dette interazioni</strong>
+<ul>
+<li>Share Point</li>
+<li>Microsoft Project</li>
+<li>ErWin</li>
+</ul></li>
+</ul>
+<h3 id="il-piano-di-progetto">Il piano di progetto</h3>
+<p>Esplicita <strong>la sequenza e le dipendenze tra le principali
+attività del progetto</strong>; esso deve evidenziare le necessità e gli
+obiettivi di fondo cui la programmazione puntuale delle attività dovrà
+adeguarsi per rispettare sia le scadenze temporali fissate sia la
+coerente disponibilità dei prodotti intermedi necessari al progressivo
+superamento dell’incertezza e alla definizione di dettaglio dei prodotti
+finali attesi.</p>
+<ul>
+<li><p><strong>Piano dei rilasci</strong> (viene allegato al
+contratto)</p>
+<ul>
+<li>Requisiti globali</li>
+<li>Specifiche realizzative di fondo</li>
+<li>Specifiche di dettaglio</li>
+<li>Produzione prototipi</li>
+<li>Installazione sistema finale</li>
+</ul></li>
+<li><p><strong>Punti di controllo</strong></p></li>
+<li><p><strong>Il piano delle attività</strong></p>
+<ul>
+<li>Work Breakdown Structure-WBS</li>
+<li>Diagramma di Gantt di massima</li>
+<li>Diagramma di Pert di massima</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="rappresentazioni-grafiche-possibili">Rappresentazioni grafiche
+possibili</h2>
+<h3 id="la-wbs">La WBS</h3>
+<p>Prof: “E’ la lista della spesa”</p>
+<p>La WBS costituisce una rappresentazione del progetto, in forma
+grafica e/o descrittiva che, suddividendo le attività in livelli,
+consente un’analisi di dettaglio indispensabile per una corretta
+identificazione delle attività elementari la cui esecuzione integrata
+conduce alla realizzazione dell’intero progetto.</p>
+<ul>
+<li>Evidenzia il collegamento tra i <em>deliverables</em> e le
+attività</li>
+<li>Non ha alcuna relazione con lo sviluppo temporale delle
+attività</li>
+</ul>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/wbs.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>La WBS serve a:</p>
+<ul>
+<li>Non dimenticare parti di lavoro ed evitare duplicazioni</li>
+<li>Fare chiarezza e trasparenza da subito</li>
+<li>Facilitare la comunicazione tra gli stakeholders</li>
+<li>Permettere a tutti di riferirsi in maniera omogenea ed
+inequivocabile al lavoro da eseguirsi</li>
+<li>Operare aggregazioni di dati elementari (tempi, costi, ricavi,..)
+sulle parti di lavoro</li>
+</ul>
+<p>Mi dice tutte le attività da fare come una lista della spesa.</p>
+<h4 id="la-wbs-un-esempio">La WBS: un esempio</h4>
+<p><strong>1. Pianificazione del progetto</strong></p>
+<ul>
+<li>1.1 Analisi esigenze</li>
+<li>1.2 Stima dei tempi e dei costi di realizzazione</li>
+<li>1.3 Definizione della proposta di progetto
+<ul>
+<li>1.3.1 Stesura requisiti di sistema</li>
+<li>1.3.2 Approvazione requisiti</li>
+<li>1.3.3 Congelamento requisiti</li>
+</ul></li>
+</ul>
+<p><strong>2. Progetto e realizzazione del sistema</strong></p>
+<ul>
+<li>2.1 Costituzione del team di progetto</li>
+<li>2.2 Pianificazione sistema informativo
+<ul>
+<li>2.2.1 Individuazione sottosistemi</li>
+<li>2.2.2 Selezione materiale da acquisire</li>
+<li>2.2.2.3 Selezione fornitori</li>
+<li>2.2.3 Approvazione budget spesa materiali</li>
+</ul></li>
+<li>2.3 Realizzazione del sistema
+<ul>
+<li>2.3.1 Acquisizione hardware e software</li>
+</ul></li>
+<li>2.4 Realizzazione sottosistemi
+<ul>
+<li>2.4.1 Test sottosistemi</li>
+<li>2.4.2 Soluzione criticità e revisioni</li>
+</ul></li>
+<li>2.5 Realizzazione documentazione di sistema
+<ul>
+<li>2.5.1 Manuale gestione di rete e sistema</li>
+<li>2.5.2 Manuale utente</li>
+</ul></li>
+<li>2.6 Integrazione sottosistemi</li>
+<li>2.7 Test di sistema</li>
+</ul>
+<p><strong>3. Installazione, configurazione e
+personalizzazione</strong></p>
+<ul>
+<li>3.1 Installazione rete e hardware di sistema</li>
+<li>3.2 Installazione e configurazione software</li>
+<li>3.3 Definizione e configurazione profili utente</li>
+</ul>
+<p><strong>4. Avvio dell’esercizio</strong></p>
+<hr />
+<h3 id="il-diagramma-di-gantt">Il diagramma di Gantt</h3>
+<p>Il diagramma di Gantt consiste in una tabella nella quale le righe
+servono per indicare le attività previste dalla WBS, mentre le colonne
+si utilizzano per indicare i tempi necessari per realizzarle.</p>
+<p>Il progect manager ha il compito di controllare settimanalmente il
+diagramma per capire se sono nei tempi che erano stati previsti. E’ uno
+strumento di progettazione ma anche uno strumento che il PM deve gestire
+in itinere del progetto.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/grantt.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Man mano che il progetto progredisce, delle barre secondarie, delle
+frecce o delle barre colorate possono essere aggiunte al diagramma, per
+indicare le attività sottostanti completate o una porzione completata di
+queste.</p>
+<p>Il diagramma di Gantt è lo strumento ufficiale per gestire la
+pianificazione temporale del progetto. Più in particolare il diagramma
+di Gantt serve a:</p>
+<ul>
+<li>Pianificare la tempistica delle attività di progetto</li>
+<li>Verificare la fattibilità temporale del progetto</li>
+<li>Permettere a tutti gli interpreti del progetto di avere un quadro
+generale ed integrato delle date di inizio e fine delle attività di
+progetto</li>
+<li>Ufficializzare a livello strategico le date desiderate/imposte di
+inizio, fine ed eventuali milestone intermedie (Master Schedule)</li>
+<li>Ufficializzare a livello operativo le date di inizio e fine attese
+di ciascuna attività elementare (Gantt di dettaglio)</li>
+<li>Controllare durante l’avanzamento del progetto gli scostamenti
+temporali (ritardi/anticipi) rispetto alle date pianificate</li>
+<li>Verificare continuamente le nuove stime a finire del progetto o di
+sue parti a fronte dei consuntivi e per facilitare le relative
+correzioni</li>
+</ul>
+<hr />
+<h3 id="il-diagramma-di-pert">Il diagramma di PERT</h3>
+<p>Un diagramma di Gantt non modella l’interdipendenza delle attività,
+caratteristica invece della programmazione reticolare, cioè del
+diagramma PERT (<em>Project Evaluation and Review Technique</em>). Ad
+ogni attività possono essere in generale associati una serie di
+attributi: durata (o data di inizio e fine), predecessori, risorsa,
+costo.</p>
+<p>Esplicito le relazioni.</p>
+<p>Il diagramma di PERT è la rappresentazione grafica del progetto sulla
+quale sono indicate:</p>
+<ul>
+<li>tutte le attività previste dalla WBS;</li>
+<li>le milestones;</li>
+<li>condizionamenti reciproci temporali tra le attività (legami di
+precedenza).</li>
+</ul>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/pert.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<ul>
+<li>Il primo nodo è sempre quello di inizio progetto; l’ultimo è sempre
+quello di fine progetto.</li>
+<li>I legami di precedenza che solitamente sono utilizzati sono:
+<ul>
+<li><strong>Finish to Start:</strong> l’attività B non può iniziare se
+non è terminata l’attività A.</li>
+<li><strong>Start to Start:</strong> l’attività B non può iniziare se
+non è iniziata l’attività A.</li>
+<li><strong>Start to Finish:</strong> l’attività B non può finire se non
+è iniziata l’attività A.</li>
+<li><strong>Finish to Finish:</strong> l’attività B non può finire se
+non è finita l’attività A.</li>
+</ul></li>
+<li>Ad ogni legame di precedenza può essere associato un ritardo (lag)
+oppure un anticipo. Ovvero ‘L’attività A può iniziare solo dopo 5 giorni
+che l’attività B è finita’.</li>
+</ul>
+<p><img src="./asset/Studio%20di%20fattibilità/pert1.png" alt="." />
+<img src="./asset/Studio%20di%20fattibilità/pert2.png" alt="." /> <img
+src="./asset/Studio%20di%20fattibilità/pert3.png" alt="." /> <img
+src="./asset/Studio%20di%20fattibilità/pert4.png" alt="." /> <img
+src="./asset/Studio%20di%20fattibilità/pert5.png" alt="." /></p>
+<h4 id="percorso-critico">Percorso critico</h4>
+<p>Conoscendo la durata prevista per ciascuna attività e le relative
+relazioni di precedenza è possibile definire la tempificazione del
+progetto e il relativo <strong>percorso critico</strong> ossia la catena
+di attività che condiziona la durata del progetto.</p>
+<p>L’identificazione del percorso critico si effettua in due fasi:</p>
+<ul>
+<li><strong>Forward pass (cammino in avanti):</strong> si parte
+dall’inizio del progetto e si sommano le durate di ciascuna attività
+fino a determinare la data di fine progetto alla fine di questa fase per
+ogni attività sono determinate le date:
+<ul>
+<li><strong>Early start:</strong> data di inizio al più presto</li>
+<li><strong>Early finish:</strong> data di fine al più presto</li>
+</ul></li>
+</ul>
+<p>Quindi mi esplicita il primo momento in cui io posso
+partire/finire.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/forward_pass.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<ul>
+<li><strong>Backward pass (cammino all’indietro):</strong> si parte
+dalla fine del progetto e si sottrae la durata di ciascuna attività.
+Alla fine di questa fase per ogni attività sono determinate le date:
+<ul>
+<li><strong>Late start:</strong> data di inizio al più tardi</li>
+<li><strong>Late finish:</strong> data di fine al più tardi</li>
+</ul></li>
+</ul>
+<p>Quindi mi esplicita l’ultimo momento in cui io posso
+partire/finire.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/backward_pass.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<ul>
+<li>Determinate le quattro date per ogni attività si calcola lo
+scorrimento (Total Float) che indica il ritardo massimo che può avere la
+singola attività senza ritardare la data di completamento del progetto.
+<ul>
+<li>Le attività con Total Float uguale a zero sono critiche perchè
+vorrebbe dire che avere un ritardo di un giorno comporta il ritardo
+totale del progetto</li>
+<li>La catena formata dalle attività critiche è il <strong>percorso
+critico</strong></li>
+</ul></li>
+</ul>
+<p><strong>Total Float = Late Start - Early Start</strong></p>
+<p>Le fasi tipiche di gestione di un PERT includono:</p>
+<ul>
+<li><strong>Pianificazione e costruzione del modello</strong> (reticolo)
+di dettaglio sulla base della WBS e considerando la relativa sequenza
+logica</li>
+<li><strong>Stime dei tempi e analisi dei percorsi.</strong> Ad ogni
+attività viene attribuita una stima della durata prevista.</li>
+<li><strong>Programmazione operativa.</strong> Sulla base dei risultati
+ottenuti dall’analisi dei percorsi inizia il lavoro di definizione di
+risorse da impiegare. Vengono analizzati impegni di manodopera, carico
+degli impianti, ecc.</li>
+</ul>
+<p>La realizzazione di un PERT richiede in generale molte revisioni e
+riedizioni del modello al fine rientrare nei vincoli di costo e tempo
+previsti.</p>
+<hr />
+<h3 id="analisi-costi-benefici">Analisi Costi-Benefici</h3>
+<p>E’ davvero molto difficile fare la stima dei costi perchè i prezzi
+sono davvero molto ampi e cambiano, inoltre il costo non è solo il
+prezzo ma tutti i costi annessi ad un acquisto. Il calcolo di tutti i
+costi è quindi molto complesso e per questo ci sono persone in azienda
+che fanno solo e unicamente della stima dei costi.</p>
+<p>La sezione di analisi costi-benefici si articola su tre punti:</p>
+<p><strong>1. Valutazione dei benefici attesi:</strong> fornisce una
+valutazione dettagliata dei benefici attesi, limitatamente a quelli
+monetizzabili o comunque misurabili secondo criteri oggettivi.</p>
+<ul>
+<li>Individuazione e descrizione dei benefici attesi</li>
+<li>Individuazione ed esplicitazione delle metriche dei valori
+attesi</li>
+<li>Correlazione obiettivi-benefici</li>
+</ul>
+<p><strong>2. Stima dei costi</strong></p>
+<ul>
+<li>Individuazione delle principali voci di costo</li>
+<li>Esplicitazione delle metriche utilizzate</li>
+<li>Stima dei costi di impianto e di esercizio</li>
+</ul>
+<p><strong>3. Analisi dell’investimento:</strong> fornisce una
+valutazione comparata dei benefici e dei costi che si presentano nelle
+diverse alternative tenendo conto che questi si concretizzeranno in
+istanti diversi. Essa deve indicare:</p>
+<ul>
+<li>Le giustificazioni economiche all’investimento</li>
+<li>Gli elementi per la scelta nel caso in cui si comparino più
+alternative</li>
+</ul>
+<h4 id="classificazione-dei-costi">Classificazione dei costi</h4>
+<p>Ci sono diverse classificazioni alternative che posso utilizzare.
+Sono alternative quindi non le faccio tutte ma solo quella più indicata
+a me.</p>
+<p><strong>In tutti questi casi abbiamo bisogno di calcolare il TCO
+(Total Cost Onership) ovvero il totale di tutti i costi accessori che mi
+servono per mantenere in vita un certo esercizio con una certa
+tecnologia e non solo quello di acquisto.</strong></p>
+<p>I costi legati a un Sistema Informativo possono essere classificati
+utilizzando diversi criteri:</p>
+<ul>
+<li><strong>Classificazione per tipologia di risorsa</strong>
+<ul>
+<li><strong>Costi delle tecnologie</strong> (hardware e software)</li>
+<li><strong>Costi del personale:</strong> costi del personale
+informatico dedicato allo sviluppo, gestione e manutenzione delle
+applicazioni, assistenza agli utenti, pianificazione e
+amministrazione.</li>
+<li><strong>Costi dei servizi esterni:</strong> sono i costi legati a
+tutte le attività di manutenzione e assistenza agli utenti.</li>
+<li><strong>Altri costi:</strong> non legati direttamente alle
+tecnologie informatiche (es. immobili, materiali di consumo, ecc.).</li>
+</ul></li>
+<li><strong>Classificazione per missione</strong>
+<ul>
+<li><strong>Costi di sviluppo</strong>
+<ul>
+<li>Costi di costruzione (progettazione e realizzazione): oneri
+necessari per ottenere il sistema da utilizzare.</li>
+<li>Costi di avviamento: oneri legati alle attività per mettere in
+esercizio il sistema acquisito.</li>
+</ul></li>
+<li><strong>Costi di esercizio:</strong> costi necessari per il corretto
+funzionamento dei sistemi e l’utilizzo delle applicazioni da parte degli
+utenti. <em>Tipicamente i costi di esercizio rappresentano il 70%-80% di
+tutti i costi informatici di un’azienda (fonte Gartner Group)</em></li>
+</ul></li>
+<li><strong>Classificazione in interni ed esterni</strong>
+<ul>
+<li><strong>Costi interni</strong>
+<ul>
+<li>Costi diretti: costi del personale tecnico informatico impegnato
+nelle attività di sviluppo e di esercizio del sistema.</li>
+<li>Costi indotti: costi legati alle attività svolte dagli utenti finali
+per attività connesse al progetto (es. tempo impiegato dagli utenti a
+caricare i dati negli archivi, oppure a imparare l’utilizzo di un
+applicativo).</li>
+</ul></li>
+<li><strong>Costi esterni:</strong> sono relativi all’acquisizione di
+prodotti hardware e software e dei servizi affidati a società esterne
+anziché svolti internamente. Di solito nelle piccole.medie imprese la
+parte informatica è gestita in modo esterno perchè vorrebbe dire
+assumere del personale tecnico specifico per magari pochissime
+tecnologie, mantenendo all’esterno il servizio invece è molto più
+comodo.</li>
+</ul></li>
+</ul>
+<p>I procedimenti di stima e di valorizzazione dei costi varia a seconda
+del tipo di costo. Ci aiutiamo con delle tabelle di riferimento che ci
+aiutano a capire meglio.</p>
+<p>Il costo per identificare il tempo in cui una persona lavora è in
+‘giorno-uomo’ o ‘mese-uomo’.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/stima_costi.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<hr />
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/stima_costi2.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Da queste tabelle possiamo vedere quanto possa essere difficile
+calcolare il costo quando ho una tecnologia un pò complessa.</p>
+<hr />
+<h2 id="outsorcing-e-cloud">Outsorcing e Cloud</h2>
+<h3 id="outsourcing">Outsourcing</h3>
+<p><strong>L’outsourcing</strong> ha luogo quando un’organizzazione
+affida tramite un accordo contrattuale a un fornitore esterno la
+responsabilità di una o più funzioni o servizi specializzati
+precedentemente svolti internamente.</p>
+<p>Io non me ne preoccupo più e tu ti prendi tutta la responsabilità di
+quell’attività. Un esempio è l’outsourcing delle paghe, quindi io
+demando e affido ad un’azienda esterna attraverso un accordo
+contrattuale la responsabilità del servizio paghe. Io azienda che affido
+il compito non me ne preoccupo.</p>
+<p>L’accordo per questo tipo di contratto è il service level agreement
+ma ne parleremo meglio nel momento in cui parleremo di contratti.
+Comunque di base io pago per un servizio e tu mi dai un servizio che
+abbia delle caratteristiche specifiche (ad esempio mi dai un range di
+velocità si rete se il tuo servizio è dare all’azienda la rete). Decido
+quindi i livelli minimi del servizio.</p>
+<ul>
+<li><p>Riduzione dei costi di gestione: l’outsourcer riesce a conseguire
+profitti per effetto delle sue competenze specialistiche e delle
+economie di scala.</p></li>
+<li><p>Benefici finanziari: l’outsourcing evita la necessità di
+investimenti in beni immobili.</p></li>
+<li><p>Aumento del livello qualitativo del servizio.</p></li>
+<li><p>Accesso a tecnologie avanzate.</p></li>
+<li><p>Possibilità di incrementi di capacità a richiesta.</p></li>
+</ul>
+<p>Il rapporto di outsourcing può essere utilizzato per tutte le
+componenti di un sistema informativo.</p>
+<ul>
+<li>CED</li>
+<li>Server</li>
+<li>Stazioni di lavoro (personal computer)</li>
+<li>Help desk</li>
+<li>Siti web</li>
+</ul>
+<p><em>Quando si opta per l’outsourcing è necessario considerare il
+rischio di perdere il controllo del know how sul proprio sistema
+informativo: la progettazione del SI deve sempre essere fatta
+all’interno dell’azienda appaltando all’esterno solo la gestione delle
+problematiche tecnologiche.</em></p>
+<p>L’adozione dell’outsourcing esploso negli anni ’80 ha avuto agli
+inizi degli anni 2000 un nuovo forte impulso con la nascita delle
+soluzioni <strong>ASP (Application Service Provider)</strong> questo
+tipo di servizio è oggi confluito nei sistemi di <strong>Cloud
+Computing</strong>.</p>
+<h3 id="cloud-computing-nei-sistemi-informativi">Cloud computing nei
+Sistemi Informativi</h3>
+<p>Indica un insieme di tecnologie che permettono, tipicamente sotto
+forma di un servizio offerto da un provider al cliente, di
+memorizzare/archiviare e/o elaborare dati (tramite CPU o software)
+grazie all’utilizzo di risorse hardware/software distribuite e
+virtualizzate in rete.</p>
+<ul>
+<li><p><strong>SaaS (Software as a Service)</strong> - Consiste
+nell’utilizzo di programmi installati su un server remoto. Questo
+acronimo condivide in parte la filosofia di un termine oggi in disuso,
+ASP (Application service provider). Il Provider mi fornisce già
+l’applicazione finita.</p></li>
+<li><p><strong>DaaS (Data as a Service)</strong> - Con questo servizio
+vengono messi a disposizione via web solamente i dati ai quali gli
+utenti possono accedere tramite qualsiasi applicazione come se fossero
+residenti su un disco locale.</p></li>
+<li><p><strong>PaaS (Platform as a Service)</strong> - Con questo
+servizio viene messa a disposizione una piattaforma di sviluppo in cloud
+comprensiva di componenti di base specifici per il cloud in modo che il
+programmatore possa concentrarsi sulla logica applicativa. Il Provider
+non mi dà una macchina vuota ma anche tutti i servizi di sviluppo
+(linguaggio di programmazione ad esempio). E’ più complesso capire il
+costo di questo rispetto al costo del SaaS.</p></li>
+<li><p><strong>IaaS (Hardware/Infrastructore as a Service)</strong> -
+Con questo servizio l’utente acquista come servizio un’intera
+piattaforma hardware comprensiva di sistema operativo e suite di
+programmi on-the-shelf. Ad esempio compro solo la potenza di calcolo,
+quindi pago solo il software di base. E’ come si io stessi comprando la
+macchina vuota senza riempirla.</p></li>
+</ul>
+<p>Tra i principali fornitori di servizi in cloud si ricordano:</p>
+<ul>
+<li>Microsoft Azure</li>
+<li>Amazon Elastic Computing Cloud (EC2)</li>
+<li>Google App Engine</li>
+<li>IBM</li>
+</ul>
+<h3 id="cloud-pubbliche-vs-private">Cloud Pubbliche vs Private</h3>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/cloud1.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>In un <strong>cloud pubblico</strong> le infrastrutture e i servizi
+sono offerti attraverso internet tipicamente da un fornitore terzo.
+Quindi i dati di più clienti sono nello stesso Cloud. Il cloud offre il
+massimo livello di efficienza nella condivisione delle risorse sebbene
+sia maggiormente vulnerabile agli attacchi. Una cloud pubblica è la
+soluzione migliore quando:</p>
+<ul>
+<li>L’obiettivo è testare l’applicazione che si sta sviluppando</li>
+<li>Si vuole utilizzare un’applicazione SaaS che si ritenga abbia un
+buon livello di protezione contro gli attacchi.</li>
+<li>E’ forte l’esigenza di scalabilità</li>
+<li>L’utilizzo del cloud è legato a un progetto a cui collaborano più
+aziende</li>
+</ul>
+<p>Il prezzo di un cloud pubblico è molto variabile ed dipende anche dal
+tempo che il cloud deve lavorare per te, ad esempio sotto natale o sotto
+il black friday gli un e-commerce tendono a comprare del tempo-macchina
+del cloud in più in modo tale che questo spenda più tempo per loro e
+possa rispondere alle domande in tempi decenti.</p>
+<p>Ovviamente ha dei vantaggi in termini di costo rispetto ad un Cloud
+Privato, dove il proprietario del cloud mi lascia delle macchine
+fisicamente separate dalle altre e le lascia a mia completa
+disposizione. Sicurmente si spende di più ma tende ad essere molto meno
+vulnerabile. Anche se anche nei cloud pubblici si sta lavorando molto
+sulla vulnerabilità avendo anche interi team e più persone che se ne
+occupano, per le private invece magari hanno anche un solo
+dipendente.</p>
+<h3 id="multi-cloud">Multi Cloud</h3>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/cloud2.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Distribuzione su più <strong>cloud provider</strong> della propria
+cloud platform con l’obiettivo di:</p>
+<ul>
+<li>Evitare il vendor lock-in e sfruttare le soluzioni migliori
+(Gartner), quindi non sono solo su un sistema</li>
+<li>Ridurre i rischi: la distribuzione di sistemi critici su più servizi
+cloud offre un’ulteriore tolleranza ai guasti.</li>
+</ul>
+<p>In un multi cloud risulta più complesso definire appropriate policy
+per:</p>
+<ul>
+<li>Security e Trust perchè i sistemi si devono parlare passando dei
+dati tra loro</li>
+<li>Deploying, Balancing e Provisioning (quanta velocità do per fare in
+modo che il flusso delle informazioni sia bilanciato?). Quindi è molto
+più complesso il sistema di organizzazione quando si decide di
+ultilizzare più cloud.</li>
+</ul>
+<h3 id="vantaggi-delle-soluzioni-in-cloud">Vantaggi delle soluzioni in
+cloud</h3>
+<p><strong>Vantaggi economici</strong></p>
+<ul>
+<li>Capacità di diminuire i costi di start-up di un sistema. Se
+decidessi di non utilizzare un cloud ho una serie di costi indiretti
+come la manutenzione e il personale specializzato. Se invece mi affido
+ad un cloud devo solo pagare lo spazio senza dovermi occupare di molte
+cose.</li>
+<li>Possibilità di dimensionare sistemi e applicazioni sulla base del
+normale carico di lavoro gestendo i picchi di carico tramite la capacità
+di scalare tipica delle infrastrutture cloud. Ad esempio posso avere dei
+periodo dell’anno molto scarsi e invece dei periodi molto pieni ma se
+non mi affido in un cloud devo predire questi periodi per accuparmi di
+tutta l’organizzazione per la gestione del carico di lavoro.</li>
+<li>Capacità di ottimizzare i costi sia in termini di risorse
+computazionali, sia in termini di risorse umane di gestione.</li>
+<li>Possibilità di ridurre gli investimenti a fronte di maggiori spese
+correnti</li>
+</ul>
+<p><strong>Vantaggi operativi</strong></p>
+<ul>
+<li>Drastica riduzione dei tempi di realizzazione e di messa in
+esercizio di nuovi servizi. Ho dei servizi già pronti ed “inscatolati”
+per noi, quindi non mi devo occupare in nessun modo della gestione.
+Quindi mi trovo una serie di progetti, servizi e sistemi messi a
+disposizione che posso prendere ed adattarli alla mia azienda. Ad
+esempio Technogym ha un servizio che in base all’account ti suggerisce
+alcuni allenamenti, per fare questo ha preso l’algoritmo di AWS (Amazon)
+che mette a disposizione ed è stato velocissimo farlo (circa 10 giorni)
+risparmiando tempo e soldi di persone che ci hanno lavorato.</li>
+<li>Rapida capacità di scalare le risorse rapidamente per venire
+incontro a nuove esigenze o a requisiti modificati;</li>
+<li>Rapido ed efficiente provisoning e deprovisioning delle
+risorse;</li>
+<li>Decisa ottimizzazione dei consumi energetici sia per le esigenze
+computazionali, sia per le esigenze di refrigerazione dei centri di
+elaborazione</li>
+</ul>
+<h3 id="svantaggi-delle-soluzioni-in-cloud">Svantaggi delle soluzioni in
+cloud</h3>
+<p><strong>Mancato rispetto normativa sulla privacy</strong></p>
+<ul>
+<li>La normativa in materia di protezione dei dati personali non è nata
+pensando ad uno scenario di tipo “cloud”</li>
+<li>Le classiche figure previste dalla normativa (titolare, responsabile
+e incaricato) mal si adattano alle cloud</li>
+<li>I dati sono distribuiti geograficamente</li>
+</ul>
+<p><strong>Compromissione delle caratteristiche di sicurezza dei
+dati</strong></p>
+<ul>
+<li>Reale isolamento tra le risorse virtualizzate</li>
+<li>Compromissione delle interfacce di management</li>
+<li>Reale cancellazione dei dati</li>
+<li>Gestione delle identità</li>
+<li>Ricordare che, nel mondo cloud, anche gli aspetti di sicurezza sono
+regolati da clausole, SLA e penali che quindi devono essere attentamente
+valutati da chi si occupa di sicurezza</li>
+</ul>
+<p><strong>Compromissione della sicurezza di rete</strong></p>
+<h3 id="cloud-vs-appliance">Cloud vs Appliance</h3>
+<p>Ci sono anche altre tecnologie che possono essere utilizzati. In
+ambito informatico con il termine <strong>appliance</strong> si
+identifica un hardware integrato con il software necessario a fornire
+una specifica funzionalità e hanno necessità minime di gestione (es:
+appliance di gestione della rete). Vuol dire che mi arrivano a casa
+delle macchine che ad esempio gestiscono dati che non hanno bisogno di
+particolare gestione e manutenzione. Prima di avere la macchina posso
+fare una simulazione in cloud.</p>
+<p>Non permettono/richiedono configurazioni, parametrizzazioni o tuning.
+Di conseguenza la loro messa in opera e la loro gestione non richiede
+personale IT specializzato. L’ottimizzazione delle performance può
+sfruttare l’integrazione tra software e hardware</p>
+<p>Nell’ambito dei sistemi informativi si stanno oggi diffondendo
+diversi DBMS con questo modello di business:</p>
+<ul>
+<li><strong>SAP HANA Appliance:</strong> per applicazioni OLAP e
+OLTP</li>
+<li><strong>Oracle Exadata/Exalogic:</strong> per applicazioni OLAP e
+OLTP</li>
+<li><strong>IBM Netezza:</strong> solo per applicazioni OLAP</li>
+</ul>
+<p>Questo paradigma è applicabile solo a grandi realtà visto il suo
+costo elevato. Per esempio il costo di Exalogic varia da 475.000$ (1/4
+della configurazione massima) a più di 1 milione di dollari per un rack
+completo</p>
+<p>I vantaggi di questo tipo di soluzione sono:</p>
+<ul>
+<li>Riduzione dei costi e tempi di set up</li>
+<li>Riduzione dei costi del personale IT dovuto a manutenzione e
+tuning</li>
+<li>Performance elevate</li>
+<li>Buona scalabilità</li>
+<li>Possono essere usate come mattone di base per la costruzione di
+private cloud</li>
+</ul>
+<hr />
+<h3 id="total-cost-ownership">Total Cost Ownership</h3>
+<p>Il <strong>TCO</strong> rappresenta il costo totale legato
+all’acquisto, all’implementazione, all’uso e alla manutenzione di un
+asset per tutto il suo ciclo di vita</p>
+<p><strong>1. Costi di Acquisto / Capitale (CAPEX)</strong> pagati in
+UpFront ➢ Hardware: server, storage, networking ➢ Software: licenze,
+sistemi operativi, applicazioni ➢ Installazione: cablaggio, setup,
+configurazioni iniziali</p>
+<p><strong>2. Costi Operativi (OPEX)</strong>, costi ricorrenti ➢
+Energia elettrica: alimentazione dei server, condizionamento dei data
+center ➢ Personale: amministratori di sistema, tecnici, manutenzione IT
+➢ Manutenzione e supporto: upgrade hardware/software, contratti di
+assistenza ➢ Rete e connettività: banda internet, VPN ➢ Costi di licenze
+ricorrenti: abbonamenti software, cloud service fees</p>
+<p><strong>3. Costi indiretti/nascosti</strong> ➢ Downtime o perdita di
+produttività: interruzioni dei servizi IT ➢ Formazione del personale:
+addestramento su nuovi strumenti o sistemi ➢ Aggiornamenti e migrazioni:
+migrazione dati, upgrade tecnologici ➢ Costi di sicurezza e compliance:
+audit, backup, disaster recovery</p>
+<hr />
+<h3 id="individuazione-dei-benefici">Individuazione dei benefici</h3>
+<ol type="1">
+<li><strong>Benefici monetizzabili:</strong> sono quelli a cui è
+possibile associare direttamente un valore di tipo monetario: maggiori
+guadagni, minori costi. Guardiamo tutti i valori che possono essere
+tradotti in termini economici. Di seguito alcuni esempi per le Pubbliche
+Amministrazioni:</li>
+</ol>
+<ul>
+<li>riduzione di personale (ev. assegnato ad altre funzioni)</li>
+<li>riduzioni di preesistenti spese informatiche (interne ed
+esterne),</li>
+<li>riduzioni di canoni affitto locali, spese di archiviazione;</li>
+<li>incrementi (o anticipazione) nella riscossione</li>
+<li>aumento dei servizi a pagamento (parziale/totale)</li>
+</ul>
+<p>Ma non tutti i valori possono essere valutati in termini economici.
+Ad esempio se ogni cittadino ci mette 20 minuti in più per lavori
+stradali, io posso musirare in minuti ma non a livello economico.</p>
+<ol start="2" type="1">
+<li><strong>Benefici misurabili:</strong> pur non essendo possibile
+associargli direttamente un valore economico è necessario individuare
+dei misuratori (KPI) tramite i quali si possa quantificarne il loro
+valore.</li>
+</ol>
+<p>Ci sono poi valori che non posso misurare in termini numerici o che
+non sono quantificabili a priori.</p>
+<ol start="3" type="1">
+<li><strong>Benefici intangibili:</strong> possono essere valutati solo
+in base a considerazioni qualitative, aziendali, sociali o politiche. Di
+seguito alcuni esempi per le Pubbliche Amministrazioni:</li>
+</ol>
+<ul>
+<li>Miglioramento del servizio all’utenza esterna</li>
+<li>Miglioramento della immagine della organizzazione</li>
+<li>Maggiore motivazione e autonomia del personale</li>
+<li>Migliore disponibilità della informazione</li>
+<li>Affidabilità della informazione</li>
+<li>Riduzione dei supporti cartacei</li>
+<li>Miglioramento della metodologia di lavoro</li>
+<li>Efficacia e rapidità del processo decisionale</li>
+</ul>
+<p>Dato che costi e benefici non si realizzeranno nello stesso momento è
+necessario definire l’istante temporale a cui fare riferimento
+attualizzando costi e benefici rispetto a tale data.</p>
+<p>Avendo a disposizione dati comparabili sarà possibile effettuare
+un’analisi comparativa che indichi quale sarà la redditività del
+progetto.</p>
+<h3
+id="benefici-misurabili-nelle-p.a.-pubblica-amministrazione">Benefici
+misurabili nelle P.A. (Pubblica amministrazione)</h3>
+<p>Gli indicatori chiave delle prestazioni (KPI), esprimono (o sono
+connessi) al raggiungimento degli obiettivi e, anche nelle
+Amministrazioni pubbliche, sono il riferimento per la gestione nel suo
+complesso, secondo criteri di responsabilità ed autonomia
+decisionale.</p>
+<p>Tra questi indicatori assume particolare rilevanza a livello esogeno
+il livello di servizio reso agli utenti interni o esterni (altre
+Amministrazioni, Imprese, categorie sociali, singoli cittadini, ecc.),
+che fornisce una misura della qualità (percepita) del prodotto/servizio
+erogato mentre, a livello endogeno resta alta l’attenzione per le
+iniziative in grado di migliorare la qualità di vita e del lavoro degli
+operatori.</p>
+<p>La variazione indotta dal progetto su queste variabili (o su di un
+loro sottoinsieme) rappresenta una differente chiave di valutazione
+della validità del risultato atteso. Si tratta di una valutazione
+ovviamente più ampia rispetto a quella condotta tenendo conto delle sole
+variabili monetizzabili e che pertanto richiede l’adozione di un
+differente approccio metodologico.</p>
+<figure>
+<img src="./asset/Studio%20di%20fattibilità/cloud4.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="raccomandazione-per-le-fasi-realizzative">Raccomandazione per le
+fasi realizzative</h3>
+<p>Dopo le valutazioni abbiamo da una parte un insieme di costi e
+dall’altra parte una serie di benefici. Quindi ritorno all’inizio e mi
+dico <strong>“I benefici coprono i costi?”</strong>.</p>
+<p>Se si, si passa alla realizzazione:</p>
+<p>Sulla base degli approfondimenti effettuati durante tutto lo
+svolgimento dello studio di fattibilità presenta un <strong>insieme di
+indicazioni</strong> da tener presenti per risolvere o minimizzare le
+problematiche emerse. Questa sezione si articola su due punti:</p>
+<p><strong>1. Indicazioni per l’approvvigionamento</strong></p>
+<ul>
+<li>criteri per la determinazione della tipologia di fornitore</li>
+<li>criteri di selezione delle offerte</li>
+<li>indicazioni sulle modalità di approvvigionamento</li>
+</ul>
+<p><strong>2. Indicazioni per la gestione del progetto</strong></p>
+<ul>
+<li>indicazioni il piano di qualità e la gestione del rischio</li>
+<li>indicazioni sul project management</li>
+<li>esigenze di negoziazione delle varianti</li>
+</ul>
+<p><strong>3. Riepilogo degli elementi utili alla stesura del
+capitolato</strong></p>
+<hr />
+<h4
+id="caso-di-studio---studio-di-fattibilità-di-un-ente-previdenziale">Caso
+di studio - studio di fattibilità di un Ente previdenziale</h4>
+<p>(Si consgilia la lettura con le slide dell’esercizio lasciando tanti
+dettagli alla lettura e accennando solo alle cose che vengono dette dal
+prof).</p>
+<p>Per alcuni studi una parte più importante potrebbe essere decidere se
+utilizzare o meno un cloud mentre per altri dobbiamo concentrarci su
+altri aspetti dello studio in base a quale problema ho bisogno di andare
+a sistemare.</p>
+<p>Il caso di studio in questo caso analizza un ente pubblico
+previdenziale che ora non esiste più.</p>
+<p>Il soggetto: ente previdneizale pubblico che pensa di iniziare a
+gestire internamente la parte dei sistemi informativi e della parte
+digitalizzata dell’azienda che attualemente è gestita esternamente per
+necessità.</p>
+<p>Contesto di studio: progetto di ammodernamento, ci sono obiettivi
+strategici da rispettare (integrazione delle procedure, capacità di
+accogliere i cambiamenti, autonomia decisionale e gestionale). Vogliamo
+delle proposte che possono anche essere accolte dallo staff.</p>
+<p>Ci sono una serie di processi che vogliamo andare a digitalizzare.
+Prima di tutto capiamo quali sono e cosa fanno. Ovviamente saranno cose
+che non conosciamo perchè non è il settore che conosciamo. Insieme ai
+processi dobbiamo anche capire la struttura organizzativa dell’ente.</p>
+<p>1 - DIAGNOSI DELLA SITUAZIONE ATTUALE</p>
+<p>L’obiettivo iniziale è capire ‘che cosa fa l’ente’ e dare una
+valutazione della situazione attuale e di come è gestita.</p>
+<p>Ci vengono dati tutti i dati di cui abbiamo bisogno, ad esempio dei
+dipendenti sappiamo le fascie d’età, la competenza,…</p>
+<p>Attività principale dell’ente = servizio prestazione, poi le altre
+cose sono tutte processi di supporto (es: gestione dipendenti). Ci sono
+degli appartamenti che sono gli investimenti dell’azienda.</p>
+<p>Un dato che salta all’occhio guardando i dati forniti è che l’età
+media dei dipendenti è davvero molto alta quindi ci sarà una difficoltà
+nell’accetazione del cambiamento che dovremo prendere in considerazione
+(assenza di competenze informatiche). Inoltre abbiamo una mancanza di
+personale che può influenzare l’introduzione di una nuova
+applicazione.</p>
+<p>Tutte le informazioni che abbiamo ci portano a fare delle valutazione
+su quali pocessi sono digitalizzati, quali no, quali sono digitalizzati
+solo in parte e da chi sono gestiti.</p>
+<p>Facciamo quindi delle conclusioni andando a evidenziare le criticità
+nell’introduzione di un nuovo sistema.</p>
+<p>2 - IDENTIFICAZIONE DEI VINCOLI</p>
+<p>(Vedi slide)</p>
+<p>Abbiamo dei vincoli di orari, di contratti,… dividiamo questi vincoli
+tra quelli di servizio e quelli temporai e organizzativi.</p>
+<p>Identifichiamo quello che salta più all’occhio: devo far convivere
+due sistemi che vanno avanti contemporaneamente perchè non posso pensare
+da un giorno all’altro di fare un cambiamento netto, questo definisce
+una difficoltà di soldi e tempo. Viene inoltre richiesto che venga
+sistemato tutto in un anno ma è quasi impossibile fare un cambiamento
+del genere solo in un anno ma si parla sicuramente di un processo
+pluriennale per un cambiamento così grande.</p>
+<p>Considerare comunque che essendo un’ente previdenziale probabilmente
+ci sono software che vengono già utilizzati da altri enti essendo
+abbastanza diffusi.</p>
+<p>Per la pubblica amministrazione ci sono diversi vincoli anche di
+legge che devono rispettare ad esempio per gli investimenti e i software
+che possono essere utilizzati per una questione di concorrenza e altre
+dinamiche mafioncelle (termine mio per identificarli). Inoltre ci sono
+leggi e regolamenti per fare certe cose, ad esempio un bilancio deve
+essere fatto rispettando specifiche procedure e processi.</p>
+<p>3 - DEFINIZIONE DEGLI OBIETTIVI</p>
+<p>Garanzia della continuità del servizio e continuità operatova in modo
+tale che il servizio non si blocchi mai.</p>
+<p>… diversi altri obiettivi che ci interessano fino ad un certo
+punto.</p>
+<p>4 - PROGETTI DI MASSIMA</p>
+<p>Viene proposta un’organizzazione del sistema in diversi moduli in
+base a cosa il sistema deve fare e queli dati deve usare, ad esempio il
+sottosistema della gestione dei documenti deve essere indipendente dagli
+alti. Vogliamo quindi quella che viene chiamata architettura a
+microservizi.</p>
+<p>Dividiamo il progetto in 4 fasi principali definendone le attività e
+il risultato. L’ultima fase prevede la diminuzione dell’uso del vecchio
+sistema per definirlo progressivamente con il nuovo.</p>
+<p>5 - ANALISI DEL RISCHIO</p>
+<p>E’ una lunga tabella con tutti i rischi e il livello di questo.</p>
+<p>6 - PROGETTO DI MASSIMA E PROGETTO PROPOSTO</p>
+<p>I progetti di massima sono possibili progetti, magari solo di quello
+proposto poi andiamo a fare delle analisi (anche economiche) più
+dettagliate.</p>
+<p>7 - ANALISI DEI COSTI BENEFICI</p>
+<p>Di solito è molto più facile fare un’analisi dei costi ma è davvero
+difficile capire i benefici in anticipo. Molti benefici sono
+quantificabili ma a posteriori.</p>
+</body>
+</html>
