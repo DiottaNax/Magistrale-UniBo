@@ -12,7 +12,7 @@ Ovviamente l'azienda si deve occupare del guadagno ma anche le risorse umane and
 
 #### Catena del Valore di Porter
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/catena-valore-porter.png)
+![.](./asset/ClassificazioneSI/catena-valore-porter.png)
 
 La catena del valore identifica le attività primarie e di supporto:
 
@@ -53,7 +53,7 @@ L'importanza dei SI operativi dipende dall'**intensità informativa** del settor
 
 **Investimenti in tecnologia**: variano dall'1% del fatturato nelle manifatture semplici al 7% nelle aziende di telecomunicazioni.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/intesita-informatica-si-operativi.png)
+![.](./asset/ClassificazioneSI/intesita-informatica-si-operativi.png)
 
 La tabella mostra quanto i processi sono complessi e quanto il prodotto è complesso. Se ho un prodotto e un processo semplice non devo investire molto nei sistemi informativi perchè non mi serve.
 
@@ -63,7 +63,7 @@ Supportano il **processo decisionale** (controllo dell'azienda da parte dei mana
 
 **Modello del Ciclo di Controllo:**
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/si-direzionali.png)
+![.](./asset/ClassificazioneSI/si-direzionali.png)
 
 Il loop decisionale:
 
@@ -107,7 +107,7 @@ Esempio: Se un supermercato ha una clientela molto statica posso permettermi di 
 
 Qualsiasi azienda che sia una grande distribuzione utilizzano delle tecnologie georefenziati per capire dove aprir il prossimo negozio.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/si-analitici-per-settori.png)
+![.](./asset/ClassificazioneSI/si-analitici-per-settori.png)
 
 ## La Mappa dei SI
 
@@ -131,7 +131,7 @@ La suddivisione in moduli è utilizzata anche dai grandi produttori di package (
 Sap = azienda tedesca molto importante a livello mondiale dei sistemi informativi, di seguito viene mostrata una mappa di sistemi informativi per una ditta di automotive-supllier.
 Possiamo vedere nelle colonne la catena dei valori di Porter.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sap.png)
+![.](./asset/ClassificazioneSI/sap.png)
 
 ### Il Portafoglio Applicativo Aziendale
 
@@ -145,13 +145,13 @@ Rappresenta una mappa dei SI aziendali ottenuta incrociando:
 
 La pianificazione ha lo scopo di determinare i piani e controllarne l’avanzamento. Le attività di pianificazione si distinguono per l’orizzonte temporale e il livello di dettaglio
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/profilo-livelli.png)
+![.](./asset/ClassificazioneSI/profilo-livelli.png)
 
 #### Attività di Esecuzione
 
 Le attività di esecuzione attuano le operazioni pianificate producendo così l’output desiderato. I sistemi di supporto all’esecuzione elaborano informazioni in tempo reale originando benefici riconducibili ai risparmi su attività burocratiche o alle migliori prestazioni di tempi e costi dei processi
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/profilo-attivita.png)
+![.](./asset/ClassificazioneSI/profilo-attivita.png)
 
 #### Portafoglio Applicativo per Settore
 
@@ -159,7 +159,7 @@ Di seguito si vede come è fatto il portafoglio applicativo e vediamo come nelle
 
 Per esame: _"IL PORTAFOGLIO APPLICATIVO E' UNA MAPPA DI ESIGENZE INFORMATIVE CHE DEVONO TRACCIARE INFORMAZIONI IMPORTANTI. LE ESIGENZE INFORMATIVE SINGOLE VENGONO IMPLEMENTATE DA SOFTWARE SPECIFICHE CHE COPRONO DELLE AEREE DI ESIGENZE INFORMATIVE."_
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo1.png)
+![.](./asset/ClassificazioneSI/portafoglio-applicativo1.png)
 
 Al portafoglio applicativo corrisponde un insieme di moduli standard. Come le esigenze sono coperte ed implementate da famiglie di software commerciali.
 
@@ -169,7 +169,7 @@ Nell'immagine sotto abbiamo:
 - I processi e i software verticali che cambiano in base al business e al mercato.
 - ERP (la maggior parte di software), CRM (rapporto con la clientela), SCADA e CAD (legato alla progettazione) sono famiglie di software. Per essere bravi CEO dobbiamo conoscere le famiglie di software e capire cosa ci serve per caprire una specifica asigenza informativa.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo2.png)
+![.](./asset/ClassificazioneSI/portafoglio-applicativo2.png)
 
 L'intelligenza artificiale è trasversale rispetto al portafoglio applicativo e potrebbe aiutare ognuna dei processi presenti.
 
@@ -179,11 +179,11 @@ Il portafoglio applicativo si differenzia in base alla tipologia di azienda
 
 Portafoglio applicativo per aziende chimiche e siderurgiche:
 Gli impianti sono importanti e complessi, qundi alcuni aspetti hanno una complessità molto ridotto ma altri hanno una complessità molto maggiore. Supply chain => il prodotto finito di una è la fornitura dell'altra, crando una catena.
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio.applicativo3.png)
+![.](./asset/ClassificazioneSI/portafoglio.applicativo3.png)
 
 Portafoglio applicativo per aziende telefoniche:
 Le esigenze informative di aziende telefoniche è più difficile perchè abbiamo molti più processi con più importanza al rapporto con il cliente.
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/portafoglio-applicativo4.png)
+![.](./asset/ClassificazioneSI/portafoglio-applicativo4.png)
 
 ## Smart Manufacturing (Industria 4.0)
 
@@ -204,7 +204,7 @@ Architettura multilivello a **5 livelli**:
 4. **MES** - Operation Management, mettono in campo delle funzionalità per ottimizzare il processo di produzione
 5. **ERP** - Business Planning
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/smart-manufactoring.png)
+![.](./asset/ClassificazioneSI/smart-manufactoring.png)
 
 ### Sistemi SCADA
 
@@ -232,7 +232,7 @@ L’adozione di un sistema SCADA permette di risparmiare tempo e denaro:
 
 #### Architettura SCADA
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-SCADA.png)
+![.](./asset/ClassificazioneSI/sistemi-SCADA.png)
 
 Sistema: sistema di **collezionamento** con parte in remota, parte sensoristica, parte di calcolo, vengono mandati i calcoli in control room.
 
@@ -275,7 +275,7 @@ Oggi la sicurezza dei sistemi SCADA è basata sul funzionamento su Virtual Priva
 
 L'industria $.0 indica la quarta rivulzione industriale che nasce nel 2014.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/industria-4.0.png)
+![.](./asset/ClassificazioneSI/industria-4.0.png)
 
 **Tecnologie Chiave:**
 
@@ -289,7 +289,7 @@ L'industria $.0 indica la quarta rivulzione industriale che nasce nel 2014.
 - **Additive Manufacturing**
 - **Augmented Reality**
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/tecnologie-industria.png)
+![.](./asset/ClassificazioneSI/tecnologie-industria.png)
 
 #### Internet of Things (IoT)
 
@@ -380,7 +380,7 @@ La distanza tra la **forma mentis** di un responsabile di fabbrica e di un **ana
 
 Noi parliamo di AI e di possibilità che un sistema possono avere ma quando si va a confrontarsi con un'azienda dobbiamo imbatterci in una reltà molto diversa in cui non sempre la tecnologia e la novità sono accettate.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/industria-0.4.png)
+![.](./asset/ClassificazioneSI/industria-0.4.png)
 
 ## Sistemi ERP
 
@@ -389,7 +389,7 @@ Noi parliamo di AI e di possibilità che un sistema possono avere ma quando si v
 **ERP** (Enterprise Resource Planning): è stato coniato agli inizi degli anni ’90 da Gartner Group per indicare una suite di moduli applicativi che supportano l’intera gamma dei processi aziendali. E' un sistema gestionale integrato che coordina e automatizza i principali processi aziendali attraverso un unico database centralizzato. Elimina i silos informativi tra i vari reparti e garantisce che tutti lavorino con dati aggiornati e coerenti.
 Un'unico sistema, un'unica base di dati, un'unica realtà dell'informazione con tutte le logiche dei processi sopra.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-ERP.png)
+![.](./asset/ClassificazioneSI/sistemi-ERP.png)
 
 **Moduli Core:**
 
@@ -397,7 +397,7 @@ Un'unico sistema, un'unica base di dati, un'unica realtà dell'informazione con 
 - **Gestione Finanze**: gestione capitali, investimenti, controllo flussi economici
 - **Gestione Risorse Umane**: personale, organigramma, tempo, paghe
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/schema-sistemi-ERP.png)
+![.](./asset/ClassificazioneSI/schema-sistemi-ERP.png)
 
 ### ERP Allargati
 
@@ -455,7 +455,7 @@ progettazione di un SI “su misura”.
 I sistemi ERP non devono tuttavia considerarsi oggetti immutabili, esistono ampi margini di personalizzazione, necessari a gestire il gap tra il modulo standard e le specificità delle aziende. La figura del programmatore è sostituita da quella del **parametrizzatore**, che non scrive il software, ma agisce, con strumentazioni spesso sofisticate per parametrarlo secondo le esigenze dell’impresa.
 
 Esempio preso da SAP:
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/paradigma-ERP.png)
+![.](./asset/ClassificazioneSI/paradigma-ERP.png)
 
 ### Architettura ERP
 
@@ -465,7 +465,7 @@ Evoluzione da architetture client-server verso thin-client web enabled:
 - **Application Server**: elaborazione applicazioni
 - **Database Server**: gestione dati integrata
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/architettura-ERP.png)
+![.](./asset/ClassificazioneSI/architettura-ERP.png)
 
 ## Sistemi CRM
 
@@ -489,7 +489,7 @@ che hanno una clientela molto bassa).
 I sistemi CRM sono i moduli del SI che supportano le relazioni con il cliente e informatizzano i flussi di attività attraverso cui le richieste del cliente vengono servite.
 Il ruolo dei sistemi CRM varia a secondo dei settori di attività ed è massimo nelle aziende con relazioni frequenti e continuate nel tempo con una clientela numerosa, geograficamente distribuita, che interagisce attraverso diversi canali.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/sistemi-CRM.png)
+![.](./asset/ClassificazioneSI/sistemi-CRM.png)
 
 ### Tipologie CRM
 
@@ -510,7 +510,7 @@ Informatizza l'analisi della clientela per definire politiche di promozione e co
 
 Permette al management di valutare la performance dell'azienda verso il cliente. Mi permette di capire quali sono i tempi (di attesa, di risoluzione di un problema), oppure di vedere le recensioni per vedere che stia funziando bene.
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/architettura-CRM.png)
+![.](./asset/ClassificazioneSI/architettura-CRM.png)
 
 ### Paradigma CRM
 
@@ -586,6 +586,6 @@ I servizi possono riguardare:
 - Personalizzazione utente
 - Click stream analysis
 
-![Testo alternativo](/ANNO%201/1.1/Sistemi%20Informativi/asset/ClassificazioneSI/CRM-mercato.png)
+![.](./asset/ClassificazioneSI/CRM-mercato.png)
 
 ---

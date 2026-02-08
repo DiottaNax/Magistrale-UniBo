@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Matilde D'Antino" />
+  <title>Classificazione dei Sistemi Informativi</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css" />
+  <style>
+    body { 
+      max-width: 980px; 
+      margin: 0 auto; 
+      padding: 45px; 
+      background: #f6f8fa; 
+    }
+    .markdown-body { 
+      background: white; 
+      padding: 45px; 
+      border-radius: 6px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    
+    /* FIX IMMAGINI - NON SBORDANO MAI */
+    img { 
+      max-width: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      display: block;
+      margin: 20px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Immagini più piccole per la stampa */
+    @media print {
+      body { 
+        background: white; 
+        max-width: 100%;
+        padding: 2cm;
+      }
+      .markdown-body { 
+        box-shadow: none; 
+        padding: 0;
+      }
+      img { 
+        max-width: 90% !important;
+        max-height: 500px !important;
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+    }
+    
+    h1 { 
+      border-bottom: 2px solid #0969da; 
+      padding-bottom: 0.3em;
+      color: #0969da;
+      page-break-after: avoid;
+    }
+    h2 {
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 0.3em;
+      margin-top: 24px;
+      page-break-after: avoid;
+    }
+    
+    #TOC {
+      background-color: #f6f8fa;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    #TOC ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a {
+      text-decoration: none;
+      color: #0969da;
+    }
+    
+    code {
+      background-color: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    
+    pre {
+      background-color: #f6f8fa;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Classificazione dei Sistemi Informativi</h1>
+<p class="author">Matilde D'Antino</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#sistemi-informativi" id="toc-sistemi-informativi">Sistemi
+Informativi</a>
+<ul>
+<li><a href="#classificazione-dei-sistemi-informativi"
+id="toc-classificazione-dei-sistemi-informativi">Classificazione dei
+Sistemi Informativi</a>
+<ul>
+<li><a href="#si-e-aziende" id="toc-si-e-aziende">SI e Aziende</a></li>
+</ul></li>
+<li><a href="#tipologie-di-sistemi-informativi"
+id="toc-tipologie-di-sistemi-informativi">Tipologie di Sistemi
+Informativi</a>
+<ul>
+<li><a href="#si-operativi" id="toc-si-operativi">SI Operativi</a></li>
+<li><a href="#si-direzionali" id="toc-si-direzionali">SI
+Direzionali</a></li>
+<li><a href="#si-analitici" id="toc-si-analitici">SI Analitici</a></li>
+</ul></li>
+<li><a href="#la-mappa-dei-si" id="toc-la-mappa-dei-si">La Mappa dei
+SI</a>
+<ul>
+<li><a href="#concetto-di-modulo" id="toc-concetto-di-modulo">Concetto
+di Modulo</a></li>
+<li><a href="#il-portafoglio-applicativo-aziendale"
+id="toc-il-portafoglio-applicativo-aziendale">Il Portafoglio Applicativo
+Aziendale</a></li>
+</ul></li>
+<li><a href="#smart-manufacturing-industria-4.0"
+id="toc-smart-manufacturing-industria-4.0">Smart Manufacturing
+(Industria 4.0)</a>
+<ul>
+<li><a href="#architettura-cim-computer-integrated-manufacturing"
+id="toc-architettura-cim-computer-integrated-manufacturing">Architettura
+CIM (Computer Integrated Manufacturing)</a></li>
+<li><a href="#sistemi-scada" id="toc-sistemi-scada">Sistemi
+SCADA</a></li>
+<li><a href="#evoluzione-dei-sistemi-scada"
+id="toc-evoluzione-dei-sistemi-scada">Evoluzione dei sistemi
+SCADA</a></li>
+<li><a href="#evoluzione-verso-industria-4.0"
+id="toc-evoluzione-verso-industria-4.0">Evoluzione verso Industria
+4.0</a></li>
+<li><a href="#industria-4.0-vs-industria-0.4"
+id="toc-industria-4.0-vs-industria-0.4">Industria 4.0 vs Industria
+0.4</a></li>
+</ul></li>
+<li><a href="#sistemi-erp" id="toc-sistemi-erp">Sistemi ERP</a>
+<ul>
+<li><a href="#definizione" id="toc-definizione">Definizione</a></li>
+<li><a href="#erp-allargati" id="toc-erp-allargati">ERP
+Allargati</a></li>
+<li><a href="#paradigmi-erp" id="toc-paradigmi-erp">Paradigmi
+ERP</a></li>
+<li><a href="#architettura-erp" id="toc-architettura-erp">Architettura
+ERP</a></li>
+</ul></li>
+<li><a href="#sistemi-crm" id="toc-sistemi-crm">Sistemi CRM</a>
+<ul>
+<li><a href="#definizione-crm" id="toc-definizione-crm">Definizione
+CRM</a></li>
+<li><a href="#tipologie-crm" id="toc-tipologie-crm">Tipologie
+CRM</a></li>
+<li><a href="#paradigma-crm" id="toc-paradigma-crm">Paradigma
+CRM</a></li>
+<li><a href="#canali-crm" id="toc-canali-crm">Canali CRM</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="sistemi-informativi">Sistemi Informativi</h1>
+<h2 id="classificazione-dei-sistemi-informativi">Classificazione dei
+Sistemi Informativi</h2>
+<h3 id="si-e-aziende">SI e Aziende</h3>
+<p>Un’azienda è una <strong>struttura di comando</strong> che governa
+processi operativi finalizzati al raggiungimento di uno o più obiettivi
+predefiniti.</p>
+<p>I SI supportano sia i <strong>processi di governo</strong> (SI
+direzionali e analitici), sia i <strong>processi operativi</strong> (SI
+operativi).</p>
+<p>Ovviamente l’azienda si deve occupare del guadagno ma anche le
+risorse umane and co.</p>
+<h4 id="catena-del-valore-di-porter">Catena del Valore di Porter</h4>
+<figure>
+<img src="./asset/ClassificazioneSI/catena-valore-porter.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>La catena del valore identifica le attività primarie e di
+supporto:</p>
+<p><strong>Attività Primarie:</strong></p>
+<ul>
+<li>Gestione materie prime</li>
+<li>Trasformazione</li>
+<li>Marketing e vendita</li>
+<li>Distribuzione</li>
+<li>Postvendita</li>
+</ul>
+<p><strong>Attività di Supporto:</strong></p>
+<ul>
+<li>Approvvigionamenti</li>
+<li>Sviluppo delle tecnologie</li>
+<li>Gestione delle risorse</li>
+<li>Infrastruttura</li>
+</ul>
+<h2 id="tipologie-di-sistemi-informativi">Tipologie di Sistemi
+Informativi</h2>
+<h3 id="si-operativi">SI Operativi</h3>
+<p>Informatizzano processi volti all’<strong>esecuzione</strong> di
+attività o alla loro <strong>programmazione</strong> (ovvero
+pianificazione di basso livello):</p>
+<ul>
+<li>Programmazione della fabbricazione e Fabbricazione</li>
+<li>Programmazione della distribuzione e Distribuzione</li>
+<li>Amministrazione</li>
+<li>Gestione del personale</li>
+</ul>
+<p>Operazioni pratiche che digitalizzano delle operazioni pratica del
+day by day della vita.</p>
+<h4 id="intensità-informativa">Intensità Informativa</h4>
+<p>L’importanza dei SI operativi dipende dall’<strong>intensità
+informativa</strong> del settore? Dipende, ci saranno aziende che
+investono di più e altri che investono di meno. Più informazioni mi
+servono e più ho necessità di investire nei sistemi informativi.</p>
+<ul>
+<li><strong>Tecnologia di produzione</strong>: settori che “vendono”
+informazioni (banche, assicurazioni, telecomunicazioni)</li>
+<li><strong>Tecnologia di processo</strong>: quando il prodotto è
+materiale (aziende manifatturiere)</li>
+</ul>
+<p><strong>Investimenti in tecnologia</strong>: variano dall’1% del
+fatturato nelle manifatture semplici al 7% nelle aziende di
+telecomunicazioni.</p>
+<figure>
+<img
+src="./asset/ClassificazioneSI/intesita-informatica-si-operativi.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>La tabella mostra quanto i processi sono complessi e quanto il
+prodotto è complesso. Se ho un prodotto e un processo semplice non devo
+investire molto nei sistemi informativi perchè non mi serve.</p>
+<h3 id="si-direzionali">SI Direzionali</h3>
+<p>Supportano il <strong>processo decisionale</strong> (controllo
+dell’azienda da parte dei manager) fornendo informazioni ai manager per
+aiutarli a decidere.</p>
+<p><strong>Modello del Ciclo di Controllo:</strong></p>
+<figure>
+<img src="./asset/ClassificazioneSI/si-direzionali.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Il loop decisionale:</p>
+<ol type="1">
+<li>Definizione degli obiettivi</li>
+<li>Attività operative</li>
+<li>Controllo dei risultati</li>
+<li>Definizione azioni correttive: cambio qualcosa per capire come
+migliorare la situazione (sconti ad esempio)</li>
+</ol>
+<p><strong>Caratteristiche distintive:</strong></p>
+<ul>
+<li>Si basano su <strong>indici</strong> (informazioni aggregate e
+riassuntive)</li>
+<li>Elaborazione <strong>periodica</strong> (non continua a differenza
+degli operativi)</li>
+<li>Costruiti sopra i SI operativi da cui estraggono le informazioni di
+base</li>
+</ul>
+<h3 id="si-analitici">SI Analitici</h3>
+<p>Supportano la <strong>comprensione dei fenomeni di
+business</strong>.</p>
+<p><strong>Focus:</strong></p>
+<ul>
+<li>Prodotti</li>
+<li>Clienti</li>
+<li>Processi</li>
+</ul>
+<p><strong>Funzionalità:</strong></p>
+<ul>
+<li>Profilazione clienti (abitudini e comportamenti)</li>
+<li>Storia del prodotto e monitoraggio affidabilità</li>
+<li>Utilizzo per beni durevoli</li>
+</ul>
+<p>Questo tipo di sistemi spendono molti soldi con comprensione del
+clienti e cose esterne all’azienda per capire come migliorare la
+fatturazione. Ad esempio attraverso social e dati di traiettoria per
+avere info esterne utili.</p>
+<p>Esempio: Se un supermercato ha una clientela molto statica posso
+permettermi di aumentare i prezzi perchè so che i clienti soliti
+torneranno, se ho una clientela dinamica meglio evitare. Come posso
+capire se ho una clientela solita? Attraverso ad esempio la posizione
+dei clienti (non ho capito come).</p>
+<p><strong>Differenza con SI Direzionali:</strong></p>
+<ul>
+<li><strong>SI Direzionali</strong>: fenomeni “interni” all’azienda</li>
+<li><strong>SI Analitici</strong>: fenomeni “esterni” all’azienda</li>
+</ul>
+<h4 id="si-analitici-per-settori">SI Analitici per Settori</h4>
+<p>Qualsiasi azienda che sia una grande distribuzione utilizzano delle
+tecnologie georefenziati per capire dove aprir il prossimo negozio.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/si-analitici-per-settori.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="la-mappa-dei-si">La Mappa dei SI</h2>
+<p>Abbiamo quindi visto delle classificazioni che aiuta a distinguere i
+sistemi attraverso un certo ambito, ma non è l’unico modo che possiamo
+usare. Qui ci viene in aiuto la mappa dei sistemi informativi aziendali
+che scompone il sistema informativo in parti e individuare delle
+esigenze informativi specifiche e dei moduli che implementano dei
+processi che si portano dietro informazioni che sono tra loro
+omogenee.</p>
+<h3 id="concetto-di-modulo">Concetto di Modulo</h3>
+<p>Un <strong>modulo</strong> rappresenta un blocco di funzionalità
+software che supportano una fase di un processo aziendale, omogeneo per
+frequenza, attore e profilo di casi d’uso.</p>
+<p>Scompongo quindi il sistema in moduli e ogni modulo rappresenta
+un’esigenza informativa.</p>
+<p><strong>Tipologie di Moduli:</strong></p>
+<ul>
+<li><strong>Orizzontali</strong>: non variano al variare della tipologia
+aziendale</li>
+<li><strong>Verticali</strong>: utilizzati in specifici settori
+produttivi (bancario, manifatturiero, chimico)</li>
+</ul>
+<p>Un modulo descrive un’esigenza informativa e quindi indica il
+potenziale impiego di tecnologia informatica. La suddivisione in moduli
+è utilizzata anche dai grandi produttori di package (SAP, Micorsoft,
+ORACLE) per strutturare le proprie offerte.</p>
+<p>Sap = azienda tedesca molto importante a livello mondiale dei sistemi
+informativi, di seguito viene mostrata una mappa di sistemi informativi
+per una ditta di automotive-supllier. Possiamo vedere nelle colonne la
+catena dei valori di Porter.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/sap.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="il-portafoglio-applicativo-aziendale">Il Portafoglio Applicativo
+Aziendale</h3>
+<p>Il portafoglio applicativo rappresenta un modo per costruire la
+mappa. Rappresenta una mappa dei SI aziendali ottenuta incrociando:</p>
+<ul>
+<li><strong>Fasi del ciclo di trasformazione</strong></li>
+<li><strong>Tipologia delle attività</strong> (pianificazione ed
+esecuzione)</li>
+</ul>
+<h4 id="livelli-di-pianificazione">Livelli di Pianificazione</h4>
+<p>La pianificazione ha lo scopo di determinare i piani e controllarne
+l’avanzamento. Le attività di pianificazione si distinguono per
+l’orizzonte temporale e il livello di dettaglio</p>
+<figure>
+<img src="./asset/ClassificazioneSI/profilo-livelli.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h4 id="attività-di-esecuzione">Attività di Esecuzione</h4>
+<p>Le attività di esecuzione attuano le operazioni pianificate
+producendo così l’output desiderato. I sistemi di supporto
+all’esecuzione elaborano informazioni in tempo reale originando benefici
+riconducibili ai risparmi su attività burocratiche o alle migliori
+prestazioni di tempi e costi dei processi</p>
+<figure>
+<img src="./asset/ClassificazioneSI/profilo-attivita.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h4 id="portafoglio-applicativo-per-settore">Portafoglio Applicativo per
+Settore</h4>
+<p>Di seguito si vede come è fatto il portafoglio applicativo e vediamo
+come nelle colonne abbiamo le fasi della catena dei valori di Porter
+(“progettazione e industrializzazione”,…) mentre nei titoli delle righe
+troviamo le diverse tipologie di operazioni.</p>
+<p>Per esame: <em>“IL PORTAFOGLIO APPLICATIVO E’ UNA MAPPA DI ESIGENZE
+INFORMATIVE CHE DEVONO TRACCIARE INFORMAZIONI IMPORTANTI. LE ESIGENZE
+INFORMATIVE SINGOLE VENGONO IMPLEMENTATE DA SOFTWARE SPECIFICHE CHE
+COPRONO DELLE AEREE DI ESIGENZE INFORMATIVE.”</em></p>
+<figure>
+<img src="./asset/ClassificazioneSI/portafoglio-applicativo1.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Al portafoglio applicativo corrisponde un insieme di moduli standard.
+Come le esigenze sono coperte ed implementate da famiglie di software
+commerciali.</p>
+<p>Nell’immagine sotto abbiamo:</p>
+<ul>
+<li>In giallo, verde e azzurronle fasi dei processi aziendali che non
+variano in base al business dell’azienda.</li>
+<li>I processi e i software verticali che cambiano in base al business e
+al mercato.</li>
+<li>ERP (la maggior parte di software), CRM (rapporto con la clientela),
+SCADA e CAD (legato alla progettazione) sono famiglie di software. Per
+essere bravi CEO dobbiamo conoscere le famiglie di software e capire
+cosa ci serve per caprire una specifica asigenza informativa.</li>
+</ul>
+<figure>
+<img src="./asset/ClassificazioneSI/portafoglio-applicativo2.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>L’intelligenza artificiale è trasversale rispetto al portafoglio
+applicativo e potrebbe aiutare ognuna dei processi presenti.</p>
+<hr />
+<p>Il portafoglio applicativo si differenzia in base alla tipologia di
+azienda</p>
+<p>Portafoglio applicativo per aziende chimiche e siderurgiche: Gli
+impianti sono importanti e complessi, qundi alcuni aspetti hanno una
+complessità molto ridotto ma altri hanno una complessità molto maggiore.
+Supply chain =&gt; il prodotto finito di una è la fornitura dell’altra,
+crando una catena. <img
+src="./asset/ClassificazioneSI/portafoglio.applicativo3.png"
+alt="." /></p>
+<p>Portafoglio applicativo per aziende telefoniche: Le esigenze
+informative di aziende telefoniche è più difficile perchè abbiamo molti
+più processi con più importanza al rapporto con il cliente. <img
+src="./asset/ClassificazioneSI/portafoglio-applicativo4.png"
+alt="." /></p>
+<h2 id="smart-manufacturing-industria-4.0">Smart Manufacturing
+(Industria 4.0)</h2>
+<h3 id="architettura-cim-computer-integrated-manufacturing">Architettura
+CIM (Computer Integrated Manufacturing)</h3>
+<p><strong>Benefici:</strong></p>
+<ul>
+<li>Riduzione scorte attraverso i controlli della produzione e della
+pianificazione</li>
+<li>Riduzione tempo commercializzazione</li>
+<li>Aumento qualità prodotto: analisi e controllo del processo di
+produzione</li>
+<li>Riduzione costi per maggiore efficienza della fabbrica</li>
+</ul>
+<p>Architettura multilivello a <strong>5 livelli</strong>:</p>
+<ol type="1">
+<li><strong>Sensors &amp; Signals</strong> - Processo produttivo</li>
+<li><strong>PLC, CNC, RTU</strong> - Sensing &amp; Manipulating</li>
+<li><strong>SCADA/HMI</strong> - Monitoring, prendono tutte le
+informazioni dalle singole macchine e centralizzare il controllo di una
+singola macchina.</li>
+<li><strong>MES</strong> - Operation Management, mettono in campo delle
+funzionalità per ottimizzare il processo di produzione</li>
+<li><strong>ERP</strong> - Business Planning</li>
+</ol>
+<figure>
+<img src="./asset/ClassificazioneSI/smart-manufactoring.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="sistemi-scada">Sistemi SCADA</h3>
+<p>Il componente di un sistema CIM preposto al controllo dei sistemi
+industriali, all’acquisizione e all’analisi dei dati da essi prodotti è
+denominato SCADA</p>
+<p><strong>SCADA</strong> (Supervisory Control and Data Acquisition)
+sono sistemi per monitorare e controllare grandi impianti
+industriali.</p>
+<p><strong>Ambiti di Applicazione:</strong></p>
+<ul>
+<li>Grandi impianti industriali e processi industriali complessi</li>
+<li>Telecomunicazioni</li>
+<li>Sistemi gestione acqua/energia (HERA)</li>
+<li>Sistemi produzione energia</li>
+<li>Raffinerie</li>
+<li>Trasporti e centri ricerca (CERN)</li>
+</ul>
+<p>L’adozione di un sistema SCADA permette di risparmiare tempo e
+denaro: ➢ Meno spostamenti per i lavoratori ➢ Riduzione delle esigenze
+di personale ➢ Aumento della produttività ➢ Maggiore reattività rispetto
+a situazioni anomale ➢ Riduzione dei costi di gestione ➢ Maggiore
+affidabilità degli impianti</p>
+<h4 id="architettura-scada">Architettura SCADA</h4>
+<figure>
+<img src="./asset/ClassificazioneSI/sistemi-SCADA.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Sistema: sistema di <strong>collezionamento</strong> con parte in
+remota, parte sensoristica, parte di calcolo, vengono mandati i calcoli
+in control room.</p>
+<p><strong>Componenti:</strong></p>
+<p><strong>Sensori e Attuatori:</strong></p>
+<ul>
+<li>Pressione, velocità, luminosità, umidità, temperatura, livello,
+distanza</li>
+<li>Valvole, pompe, motori</li>
+</ul>
+<p><strong>Controllori:</strong></p>
+<ul>
+<li><strong>PLC</strong> (Programmable Logic Controller): dispositivo
+programmabile che risolve logiche algoritmiche</li>
+<li><strong>RTU</strong> (Remote Terminal Unit): unità terminale che
+esegue ordini, ripetitore intelligente</li>
+</ul>
+<p><strong>Gateway:</strong> raccolgono informazioni da PLC/RTU e le
+trasferiscono al sistema centralizzato</p>
+<p><strong>Server:</strong></p>
+<ul>
+<li><strong>Front-end Server</strong>: ricevono i dati dai diversi siti
+e li traducono in un formato utilizzabile dal server Scada. Sono
+logicamente separati da quest’ultimo a garanzia di un tempo di
+acquisizione in real-time</li>
+<li><strong>SCADA Server</strong>: funzionalità monitoraggio e gestione
+allarmi in tempo reale. Utilizza un database contenente una serie
+limitata di dati di dettaglio. Può supportare il controllo automatico
+tramite interfacce grafiche disposte in una control room, oppure può
+implementare regole di alerting automatiche.</li>
+<li><strong>Data Server</strong>: memorizzazione storica dati per
+analisi (Statistiche, Tuning dei sistemi e ottimizzazione delle
+performance, Data mining)</li>
+</ul>
+<h3 id="evoluzione-dei-sistemi-scada">Evoluzione dei sistemi SCADA</h3>
+<p>Scalabilità: l’incremento del numero degli impianti monitorati e dei
+segnali raccolti pone il problema dell’enorme mole di dati da gestire
+(in tempo reale), da memorizzare e da analizzare</p>
+<p>Capacità di analisi dei dati raccolti (più complesse): ai moduli per
+il controllo operativo dei sistemi si aggiungono moduli per la
+valorizzazione dei dati storici raccolti ➢Data mining ➢Analisi
+performance</p>
+<p>Sicurezza: i sistemi SCADA controllano infrastrutture critiche. Il
+livello di sicurezza dei sistemi commerciali è basato su tecnologie che
+sono 5-10 anni in ritardo rispetto allo stato dell’arte dell’IT
+➢Attacchi da parte di hacker esterni ➢Attacchi da parte di insider Oggi
+la sicurezza dei sistemi SCADA è basata sul funzionamento su Virtual
+Private Network separate rispetto a quella aziendale.</p>
+<h3 id="evoluzione-verso-industria-4.0">Evoluzione verso Industria
+4.0</h3>
+<p>L’industria $.0 indica la quarta rivulzione industriale che nasce nel
+2014.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/industria-4.0.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>Tecnologie Chiave:</strong></p>
+<ul>
+<li><strong>Big Data e Analytics</strong></li>
+<li><strong>Autonomous Robots</strong></li>
+<li><strong>Simulation</strong></li>
+<li><strong>Horizontal and Vertical System Integration</strong></li>
+<li><strong>Industrial Internet of Things</strong></li>
+<li><strong>Cybersecurity</strong></li>
+<li><strong>Cloud Computing</strong></li>
+<li><strong>Additive Manufacturing</strong></li>
+<li><strong>Augmented Reality</strong></li>
+</ul>
+<figure>
+<img src="./asset/ClassificazioneSI/tecnologie-industria.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h4 id="internet-of-things-iot">Internet of Things (IoT)</h4>
+<p>Che differenza c’è tra un sistema SCADA e uno IoT? <strong>SCADA
+(Supervisory Control And Data Acquisition)</strong> e <strong>IoT
+(Internet of Things)</strong> sono due tecnologie che, pur avendo alcune
+somiglianze nel monitoraggio e controllo di dispositivi, differiscono
+significativamente per scopo, architettura e applicazione. I
+<strong>Sistemi SCADA</strong> hanno lo scopo di: progettato
+specificamente per il controllo e la supervisione di processi
+industriali in tempo reale (impianti di produzione, reti elettriche,
+sistemi idrici, ecc.) con architettura centralizzata, con una sala di
+controllo che gestisce tutti i dispositivi attraverso protocolli
+industriali specifici I <strong>Sistema IoT</strong> nascono con lo
+scopo di connettere una vasta gamma di dispositivi a Internet per
+raccogliere dati, automatizzare processi e abilitare nuovi servizi con
+un’architettura distribuita e scalabile, con dispositivi che comunicano
+attraverso Internet e cloud.</p>
+<p>Connessioni digitali tra oggetti che diventano intelligenti
+comunicando dati su se stessi e accedendo a informazioni aggregate.</p>
+<p><strong>Applicazioni:</strong> domotica, medicina, energy,
+intrattenimento, ma anche un magazzino automatizzato di amazon (esempio
+con video mostrato in classe) che mi fa diminuire gli ordini che riesco
+a fare nella minore quantità di tempo, posso ad esempio fare analisi di
+dati in modo tale che scaffali con oggetti che vengono comprati assieme
+siano vicini e così via. Quando si abilita una nuova tecnologia bisogna
+pensare come fare per ottimizzare quella tecnologia nel miglior modo
+possibile.</p>
+<p>In un mondo così connesso cambia tutto il panorama, la capacità di
+questa tecnologia cambia del tutto il modo in cui il sistema
+funziona.</p>
+<h4 id="manufacturing-execution-systems-mes">Manufacturing Execution
+Systems (MES)</h4>
+<p>Il <strong>MES</strong> è un sistema software che gestisce e monitora
+in tempo reale l’intero processo produttivo in fabbrica, fungendo da
+ponte tra i sistemi gestionali (ERP) e il piano di produzione (macchine
+e operatori). I MES permettono la gestione della fabbrica nel suo
+complesso - ricevono ordini dall’ERP, raccolgono informazioni dallo
+SCADA e forniscono informazioni aggiornate all’ERP.</p>
+<p><strong>Funzionalità:</strong></p>
+<ul>
+<li>Assegnazione risorse e stato</li>
+<li>Pianificazione operazioni</li>
+<li>Spedizione della produzione</li>
+<li>Gestione del lavoro</li>
+<li>Ottimizzazione del processo</li>
+<li>Gestione della manutenzione</li>
+<li>Gestione qualità</li>
+<li>Analisi prestazioni</li>
+<li>Tracciamento prodotto</li>
+</ul>
+<p><strong>Benefici:</strong></p>
+<ul>
+<li>Riduce il tempo del ciclo di produzione</li>
+<li>Riduce i costi di set up</li>
+<li>Elimina o riduce il tempo di inserimento dei dati</li>
+<li>Migliora la qualità del prodotto</li>
+<li>Migliora l’efficienza della produzione</li>
+<li>Conferisce potere alle persone che operano nell’impianto</li>
+</ul>
+<p>Esempio pratico di cosa fa il MES (fatto da Claude): Immaginiamo
+un’azienda che produce componenti per automobili. Ecco cosa fa il
+MES:</p>
+<p><strong>1. Gestione degli ordini di produzione</strong></p>
+<ul>
+<li>L’ERP invia al MES un ordine: “Produci 5.000 componenti del modello
+X entro 3 giorni”</li>
+<li>Il MES pianifica le attività sulle linee disponibili, assegna le
+risorse e calcola i tempi</li>
+</ul>
+<p><strong>2. Tracciabilità in tempo reale</strong></p>
+<ul>
+<li>Ogni pezzo viene etichettato con un codice univoco
+(barcode/RFID)</li>
+<li>Il MES registra ogni fase: quale operatore ha lavorato il pezzo, su
+quale macchina, a che ora, con quali materiali</li>
+<li>Se viene rilevato un difetto, il sistema può risalire all’intero
+lotto e ai parametri di produzione usati</li>
+</ul>
+<p><strong>3. Controllo qualità automatizzato</strong></p>
+<ul>
+<li>Durante la produzione, sensori verificano tolleranze e misure</li>
+<li>Il MES ferma automaticamente la linea se rileva anomalie</li>
+<li>Registra tutti i controlli qualità e genera certificazioni</li>
+</ul>
+<p><strong>4. Gestione materiali e scorte</strong></p>
+<ul>
+<li>Monitora il consumo di materie prime in tempo reale</li>
+<li>Avvisa quando un componente sta per esaurirsi</li>
+<li>Verifica che vengano usati i materiali corretti per ogni lotto</li>
+</ul>
+<p><strong>5. Monitoraggio performance (OEE)</strong></p>
+<ul>
+<li>Calcola l’efficienza delle macchine: quanto tempo producono vs tempi
+morti</li>
+<li>Identifica colli di bottiglia: “La macchina 3 è ferma da 20 minuti
+per manutenzione”</li>
+<li>Fornisce KPI in tempo reale su dashboard</li>
+</ul>
+<p><strong>6. Documentazione automatica</strong></p>
+<ul>
+<li>Genera automaticamente report di produzione</li>
+<li>Crea la documentazione di conformità richiesta per le certificazioni
+(ISO, automotive standards)</li>
+<li>Archivia tutti i dati per audit e analisi successive</li>
+</ul>
+<h3 id="industria-4.0-vs-industria-0.4">Industria 4.0 vs Industria
+0.4</h3>
+<p>Nonostante le promesse dell’Industria 4.0, spesso esiste un gap tra
+aspirazioni tecnologiche e realtà implementativa. Molte aziende possono
+ottenere valore significativo anche con sistemi di Business Intelligence
+descrittiva:</p>
+<ul>
+<li>Calcolo OEE (Overall Equipment Effectiveness)</li>
+<li>Analisi funzionamento macchinari</li>
+<li>Analisi consumo tool</li>
+</ul>
+<p>La distanza tra la <strong>forma mentis</strong> di un responsabile
+di fabbrica e di un <strong>analista dati</strong> rimane una sfida
+importante nell’implementazione di soluzioni avanzate.</p>
+<p>Noi parliamo di AI e di possibilità che un sistema possono avere ma
+quando si va a confrontarsi con un’azienda dobbiamo imbatterci in una
+reltà molto diversa in cui non sempre la tecnologia e la novità sono
+accettate.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/industria-0.4.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="sistemi-erp">Sistemi ERP</h2>
+<h3 id="definizione">Definizione</h3>
+<p><strong>ERP</strong> (Enterprise Resource Planning): è stato coniato
+agli inizi degli anni ’90 da Gartner Group per indicare una suite di
+moduli applicativi che supportano l’intera gamma dei processi aziendali.
+E’ un sistema gestionale integrato che coordina e automatizza i
+principali processi aziendali attraverso un unico database
+centralizzato. Elimina i silos informativi tra i vari reparti e
+garantisce che tutti lavorino con dati aggiornati e coerenti. Un’unico
+sistema, un’unica base di dati, un’unica realtà dell’informazione con
+tutte le logiche dei processi sopra.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/sistemi-ERP.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>Moduli Core:</strong></p>
+<ul>
+<li><strong>Logistica</strong>: gestione dati prodotti, pianificazione
+produzione, gestione materiali</li>
+<li><strong>Gestione Finanze</strong>: gestione capitali, investimenti,
+controllo flussi economici</li>
+<li><strong>Gestione Risorse Umane</strong>: personale, organigramma,
+tempo, paghe</li>
+</ul>
+<figure>
+<img src="./asset/ClassificazioneSI/schema-sistemi-ERP.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="erp-allargati">ERP Allargati</h3>
+<p>Circolarità dell’informazione: quando tutti i processi si scambiano
+le informazioni in maniera efficiente e fluida allora tutti i processi
+ne traggono beneficio e l’azienda con essi.</p>
+<p><strong>Moduli Aggiuntivi:</strong></p>
+<ul>
+<li><strong>PLM</strong> (Product Lifecycle Management): di supporto
+alla gestione della documentazione tecnica del prodotto e dei relativi
+processi produttivi</li>
+<li><strong>SCM</strong> (Supply Chain Management): di supporto alla
+pianificazione e al controllo delle attività interaziendali</li>
+<li><strong>CRM</strong> (Customer Relationship Management): supporto
+all’interazione con il cliente</li>
+<li><strong>E-procurement</strong>: permettono la realizzazione di
+mercati elettronici interaziendali in cui le condizioni quadro e i
+fornitori sono definite dagli uffici acquisti, mentre sono i reparti
+utenti a seguire gli acquisti veri e propri abbattendo così costi e
+tempi.</li>
+</ul>
+<h3 id="paradigmi-erp">Paradigmi ERP</h3>
+<h4 id="unicità-dellinformazione">1. Unicità dell’Informazione</h4>
+<p>Esiste una e una sola copia di un’informazione.</p>
+<p><strong>Vantaggi:</strong></p>
+<ul>
+<li><strong>Sincronizzazione dei dati</strong> e dei processi</li>
+<li><strong>Assenza di ridondanza</strong></li>
+<li><strong>Tracciabilità aggiornamenti</strong></li>
+<li><strong>Affidabilità informazione aziendale</strong></li>
+</ul>
+<p>Esempio di pericolo quando non esiste unicità dell’informazione: Il
+mancato pagamento di un cliente è registrato nel sistema contabile, ma
+fino alla sincronizzazione degli archivi il sistema commerciale
+continuerà ad accettare ordini dal cliente</p>
+<h4 id="estensione-e-modularità">2. Estensione e Modularità</h4>
+<p>Tanto più il mio sistema è esteso e copre tutti i processi aziendali
+allora più ho unicità dell’informazione. Deve quindi coprire quanto più
+processi possibili. Tanta più estensione c’è e tanta più modularità deve
+evere un’azienda, ho tanti moduli che si compongono che vanno a coprire
+tutte le mie esigenze aziendali.</p>
+<p><strong>Strategie di Implementazione:</strong></p>
+<ul>
+<li><strong>Incrementale</strong>: acquisto progressivo moduli che nella
+precedente configurazione del SI mancavano o erano realizzati mediante
+sistemi legacy (vecchi e non idonei) inadeguati. Compro tutto da un
+venditore (es: Microsoft).</li>
+<li><strong>One Stop Shopping</strong>: si predilige la linearità
+acquistando i moduli di un solo vendor possibilmente in un’unica
+tranche</li>
+<li><strong>Best of Breed</strong>: (prendi il meglio dal mercato),
+vengono utilizzati i moduli di diversi vendor che meglio si prestano
+alle esigenze dell’azienda o che vengono considerati i migliori. Non
+voglio prendere le cose da un solo fornitore ma devo assicurarmi che i
+software siano integrati ad esempio anche attraverso accordi tra
+fornitori.</li>
+</ul>
+<p>Tipicamente… ➢ Azienda con funzioni core di nicchia: si adotta un
+approccio best of breed per le funzioni core (fondamentali) dell’azienda
+(privilegiando la specializzazione) e mentre si adotta un unico
+fornitore per le rimanenti (privilegiando il fattore costo e il livello
+di integrazione) ➢ Azienda con funzioni core generiche: si adotta un
+unico fornitore che copra tutte le funzionalità possibili (privilegiando
+il costo e il livello di integrazione), mentre si adotta un approccio
+best of breed per le funzioni non coperte</p>
+<h4 id="prescrittività">3. Prescrittività</h4>
+<p>I sistemi ERP incorporano la logica del processo gestionale quindi
+nascono già pronti. È necessario adattare i processi aziendali a quelli
+definiti nell’ERP. L’approccio a un progetto ERP è invertito rispetto a
+quanto avviene nella progettazione di un SI “su misura”.</p>
+<p><strong>Vantaggi:</strong></p>
+<ul>
+<li>I processi ERP sono basati sulle best practices del settore</li>
+<li>Garantiscono la correttezza e standardizzazione delle
+operazioni</li>
+<li>Favorisce la razionalizzazione dei processi, facendo coincidere il
+progetto informatico ERP con un progetto di BPR (Business Process
+Reengineering)</li>
+</ul>
+<p>I sistemi ERP non devono tuttavia considerarsi oggetti immutabili,
+esistono ampi margini di personalizzazione, necessari a gestire il gap
+tra il modulo standard e le specificità delle aziende. La figura del
+programmatore è sostituita da quella del
+<strong>parametrizzatore</strong>, che non scrive il software, ma
+agisce, con strumentazioni spesso sofisticate per parametrarlo secondo
+le esigenze dell’impresa.</p>
+<p>Esempio preso da SAP: <img
+src="./asset/ClassificazioneSI/paradigma-ERP.png" alt="." /></p>
+<h3 id="architettura-erp">Architettura ERP</h3>
+<p>Evoluzione da architetture client-server verso thin-client web
+enabled:</p>
+<ul>
+<li><strong>Presentation Server</strong>: interfaccia utente</li>
+<li><strong>Application Server</strong>: elaborazione applicazioni</li>
+<li><strong>Database Server</strong>: gestione dati integrata</li>
+</ul>
+<figure>
+<img src="./asset/ClassificazioneSI/architettura-ERP.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="sistemi-crm">Sistemi CRM</h2>
+<h3 id="definizione-crm">Definizione CRM</h3>
+<p><strong>CRM</strong> (Customer Relationship Management): processo
+integrato per la gestione della relazione con la clientela, finalizzato
+a costruire relazioni personalizzate di lungo periodo. Sono capaci di
+aumentare la soddisfazione del cliente e di aumentare il valore
+dell’impresa per il cliente e del cliente per l’impresa.</p>
+<p>B to C =&gt; business to customer</p>
+<p><strong>Il cliente diventa il focus centrale</strong> della strategia
+commerciale.</p>
+<p>L’approccio CRM non è possibile senza il supporto informatico.</p>
+<p>Esempio: le aziende telefoniche che hanno la possibilità di acquisto
+online, tariffe personalizzate ai clienti, call center h24.</p>
+<p>Le aziende che investiranno di più in questi tipi di software hanno
+relazioni frequenti con il cliente e una clientela numerosa (non vendo
+un prodotto come le petroliere che hanno una clientela molto bassa).</p>
+<p>I sistemi CRM sono i moduli del SI che supportano le relazioni con il
+cliente e informatizzano i flussi di attività attraverso cui le
+richieste del cliente vengono servite. Il ruolo dei sistemi CRM varia a
+secondo dei settori di attività ed è massimo nelle aziende con relazioni
+frequenti e continuate nel tempo con una clientela numerosa,
+geograficamente distribuita, che interagisce attraverso diversi
+canali.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/sistemi-CRM.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="tipologie-crm">Tipologie CRM</h3>
+<h4 id="crm-operativo">CRM Operativo</h4>
+<p>Informatizza i canali di contatto con il cliente:</p>
+<ul>
+<li><strong>Presenza</strong> (Sales Force Automation)</li>
+<li><strong>Voce</strong> (Call Center)</li>
+<li><strong>Web</strong> (Commercio Elettronico)</li>
+<li><strong>Corrispondenza</strong> (E-mail)</li>
+</ul>
+<h4 id="crm-analitico">CRM Analitico</h4>
+<p>Informatizza l’analisi della clientela per definire politiche di
+promozione e contatto.</p>
+<h4 id="crm-direzionale">CRM Direzionale</h4>
+<p>Permette al management di valutare la performance dell’azienda verso
+il cliente. Mi permette di capire quali sono i tempi (di attesa, di
+risoluzione di un problema), oppure di vedere le recensioni per vedere
+che stia funziando bene.</p>
+<figure>
+<img src="./asset/ClassificazioneSI/architettura-CRM.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="paradigma-crm">Paradigma CRM</h3>
+<p><strong>Caratteristiche Distintive:</strong></p>
+<ul>
+<li><strong>Multicanalità</strong>: cliente sceglie canale più
+conveniente. I servizi sono su canali differenti. Il servizio deve
+essere erogabile 24h.</li>
+<li><strong>Completezza e unicità dati</strong>: base dati comune. per
+rendere possibile la multicanalità le informazioni sul cliente devono
+essere condivise dai diversi sistemi di contatto che utilizzeranno una
+base di dati comune.</li>
+<li><strong>Catene di servizio</strong>: integrazione front-end e
+back-end. le richieste sottoposte ai front-end generano una serie di
+attività complesse sui sistemi di back-end. L’efficienza del sistema CRM
+dipende quindi dalla capacità di integrare i servizi del SI.</li>
+</ul>
+<h3 id="canali-crm">Canali CRM</h3>
+<h4 id="presenza-sfa">Presenza (SFA)</h4>
+<p>❑ Il cliente interagisce direttamente con l’azienda. ❑ Il CRM dà
+supporto al venditore nel ciclo di individuazione del cliente, di
+contatto, di trattativa e di ordinazione vera e propria. ❑ Dato che
+l’automazione è indirizzata soprattutto al venditore si parla di
+applicazioni Sales Force Automation (SFA). ❑ Questi sistemi nati negli
+anni ’80 sono stati ampiamente utilizzati dai venditori di prodotti
+complessi (es. informatori medici, promotori finanziari). I venditori
+vengono dotati di un computer portatile che: ➢ Permette di mettere a
+punto le offerte ai clienti ➢ Contiene schede informative e
+dimostrazioni dei prodotti ➢ Raccoglie gli ordini ➢ Raccoglie
+informazioni sull’andamento delle visite ai clienti ➢ I dati e le
+informazioni così raccolte vengono poi trasmesse al sistema centrale
+dell’azienda che provvede alla loro gestione.</p>
+<ul>
+<li>Computer portatili per venditori</li>
+<li>Supporto ciclo vendita completo</li>
+<li>Raccolta ordini e informazioni visite</li>
+</ul>
+<h4 id="voce-e-corrispondenza">Voce e Corrispondenza</h4>
+<p>❑ Il cliente interagisce via telefono con una rete di operatori
+assistiti dal sistema CRM, e di sistemi automatici integrati con gli
+apparati telefonici (call-center) ❑ La componente informatica ➢ Permette
+di smistare le chiamate in base al servizio richiesto ➢ Fornisce
+risposte e servizi in maniera automatica e con modalità self-service ➢
+Rende trasparente la multilocalizzazione dei call-center ➢ Supporta gli
+operatori</p>
+<p>Nel canale corrispondenza il cliente interagisce via e-mail con
+l’azienda in cui gli operatori smistano le lettere in entrata. L’azienda
+può inoltre utilizzare sistemi automatici di invio rendendo possibili
+campagne di marketing o servizi informazioni altrimenti
+irrealizzabili</p>
+<p><strong>Call Center:</strong></p>
+<ul>
+<li>Smistamento chiamate</li>
+<li>Servizi automatici self-service</li>
+<li>Multilocalizzazione trasparente</li>
+<li>Supporto operatori</li>
+</ul>
+<p>Quando chiamiamo un call center l’operatrice deve sapere tutto su di
+noi che quindi abbiamo molte informazioni da registrare Il call center
+di primo livello non abbiamo specialisti che devono sapere quali domande
+fare</p>
+<h4 id="web">Web</h4>
+<p>I servizi di classificano in:</p>
+<ul>
+<li><p><strong>B2C (Business-to-Consumer)</strong>: modello di commercio
+elettronico in cui le aziende vendono prodotti o servizi direttamente ai
+consumatori finali. Esempi tipici includono negozi online come Amazon,
+Zalando o boutique digitali che si rivolgono all’utente privato. Le
+transazioni sono generalmente di valore più basso, con un volume elevato
+di ordini e processi di acquisto semplificati. L’esperienza utente, il
+marketing emozionale e la facilità di navigazione sono elementi cruciali
+in questo modello.</p></li>
+<li><p><strong>B2B (Business-to-Business)</strong>: modello di commercio
+elettronico in cui le transazioni avvengono tra aziende, rappresentando
+l’80% dei siti di e-commerce in Italia. In questo contesto, un’impresa
+vende prodotti, servizi o forniture ad altre imprese che li utilizzano
+per la propria attività produttiva o commerciale. Le caratteristiche
+distintive includono: ordini di volumi maggiori, relazioni commerciali
+durature, processi di acquisto più complessi (spesso con approvazioni
+multiple), listini prezzi personalizzati, contratti quadro e condizioni
+di pagamento dilazionate. Esempi comuni sono fornitori di materie prime,
+grossisti, produttori di componenti industriali o piattaforme SaaS per
+aziende. Es: Supply chain dove il prodotto di un’azienda è la materia
+prima dell’altra.</p></li>
+</ul>
+<p>I servizi possono riguardare:</p>
+<ul>
+<li>Vendita self-service 24/7</li>
+<li>Personalizzazione utente</li>
+<li>Click stream analysis</li>
+</ul>
+<figure>
+<img src="./asset/ClassificazioneSI/CRM-mercato.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<hr />
+</body>
+</html>
