@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Matilde D'Antino" />
+  <title>Ingegneria dei processi</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css" />
+  
+  <style>
+    body { 
+      max-width: 980px; 
+      margin: 0 auto; 
+      padding: 45px; 
+      background: #f6f8fa; 
+    }
+    .markdown-body { 
+      background: white; 
+      padding: 45px; 
+      border-radius: 6px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    
+    /* FIX IMMAGINI - NON SBORDANO MAI */
+    img { 
+      max-width: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      display: block;
+      margin: 20px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Immagini più piccole per la stampa */
+    @media print {
+      body { 
+        background: white; 
+        max-width: 100%;
+        padding: 2cm;
+      }
+      .markdown-body { 
+        box-shadow: none; 
+        padding: 0;
+      }
+      img { 
+        max-width: 90% !important;
+        max-height: 500px !important;
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+    }
+    
+    h1 { 
+      border-bottom: 2px solid #0969da; 
+      padding-bottom: 0.3em;
+      color: #0969da;
+      page-break-after: avoid;
+    }
+    h2 {
+      border-bottom: 1px solid #d8dee4;
+      padding-bottom: 0.3em;
+      margin-top: 24px;
+      page-break-after: avoid;
+    }
+    
+    #TOC {
+      background-color: #f6f8fa;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    #TOC ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a {
+      text-decoration: none;
+      color: #0969da;
+    }
+    
+    code {
+      background-color: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    
+    pre {
+      background-color: #f6f8fa;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Ingegneria dei processi</h1>
+<p class="author">Matilde D'Antino</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#linnovazione-nei-sistemi-informativi"
+id="toc-linnovazione-nei-sistemi-informativi">L’innovazione nei Sistemi
+Informativi</a>
+<ul>
+<li><a href="#rincorrere-linnovazione-tecnologica"
+id="toc-rincorrere-linnovazione-tecnologica">Rincorrere l’innovazione
+tecnologica</a>
+<ul>
+<li><a href="#da-dove-arriva-la-legge-di-martec"
+id="toc-da-dove-arriva-la-legge-di-martec">Da dove arriva la legge di
+Martec?</a></li>
+</ul></li>
+<li><a href="#il-ciclo-dellinnovazione"
+id="toc-il-ciclo-dellinnovazione">Il ciclo dell’innovazione</a>
+<ul>
+<li><a href="#fase-di-pianificazione" id="toc-fase-di-pianificazione">1.
+Fase di pianificazione</a></li>
+<li><a href="#fase-di-realizzazioneattuazione"
+id="toc-fase-di-realizzazioneattuazione">2. Fase di
+realizzazione/attuazione</a></li>
+<li><a href="#fase-di-verifica" id="toc-fase-di-verifica">3. Fase di
+verifica</a></li>
+<li><a href="#fase-di-intervento" id="toc-fase-di-intervento">4. Fase di
+intervento</a></li>
+</ul></li>
+<li><a href="#definizione-degli-obiettivi"
+id="toc-definizione-degli-obiettivi">Definizione degli obiettivi</a>
+<ul>
+<li><a href="#piano-strategico" id="toc-piano-strategico">Piano
+strategico</a></li>
+<li><a href="#piano-operativo" id="toc-piano-operativo">Piano
+operativo</a></li>
+<li><a href="#definizione-degli-obiettivi-top-down-vs-bottom-up"
+id="toc-definizione-degli-obiettivi-top-down-vs-bottom-up">Definizione
+degli obiettivi: top down VS bottom up</a></li>
+</ul></li>
+<li><a href="#il-percorso-di-adozione-nei-sistemi-informativi"
+id="toc-il-percorso-di-adozione-nei-sistemi-informativi">Il percorso di
+adozione nei Sistemi Informativi</a></li>
+<li><a href="#creare-aziende-data-driven"
+id="toc-creare-aziende-data-driven">Creare aziende data-driven</a>
+<ul>
+<li><a href="#le-tre-dimensioni-della-digitalizzazione"
+id="toc-le-tre-dimensioni-della-digitalizzazione">Le tre dimensioni
+della digitalizzazione</a></li>
+</ul></li>
+<li><a href="#il-miglioramento-incrementale"
+id="toc-il-miglioramento-incrementale">Il miglioramento incrementale</a>
+<ul>
+<li><a href="#approccio-occidentale-vs.-approccio-giapponese"
+id="toc-approccio-occidentale-vs.-approccio-giapponese">Approccio
+occidentale vs. approccio giapponese</a></li>
+<li><a href="#perché-il-miglioramento-incrementale-non-basta"
+id="toc-perché-il-miglioramento-incrementale-non-basta">Perché il
+miglioramento incrementale non basta</a></li>
+</ul></li>
+<li><a href="#il-business-process-reengineering"
+id="toc-il-business-process-reengineering">Il Business Process
+Reengineering</a></li>
+<li><a href="#i-processi-aziendali" id="toc-i-processi-aziendali">I
+processi aziendali</a>
+<ul>
+<li><a href="#cosè-il-business-process-re-engineering"
+id="toc-cosè-il-business-process-re-engineering">Cos’è il Business
+Process Re-engineering</a></li>
+<li><a href="#gli-approcci-di-miglioramento"
+id="toc-gli-approcci-di-miglioramento">Gli approcci di
+miglioramento</a></li>
+</ul></li>
+<li><a href="#le-varie-modalità-di-reingegnerizzazione"
+id="toc-le-varie-modalità-di-reingegnerizzazione">Le varie modalità di
+reingegnerizzazione</a>
+<ul>
+<li><a href="#streamlining" id="toc-streamlining">Streamlining</a></li>
+<li><a href="#re-engineering"
+id="toc-re-engineering">Re-engineering</a></li>
+<li><a href="#enterprise-transformation"
+id="toc-enterprise-transformation">Enterprise Transformation</a></li>
+</ul></li>
+<li><a href="#fasi-del-bpr" id="toc-fasi-del-bpr">Fasi del BPR</a>
+<ul>
+<li><a href="#descrivere-i-processi" id="toc-descrivere-i-processi">1.1
+Descrivere i Processi</a></li>
+</ul></li>
+<li><a href="#linear-responsability-charting-lrc"
+id="toc-linear-responsability-charting-lrc">Linear Responsability
+Charting (LRC)</a></li>
+<li><a href="#le-risorse-umane" id="toc-le-risorse-umane">Le risorse
+umane</a></li>
+<li><a href="#key-performance-indicator-kpi"
+id="toc-key-performance-indicator-kpi">Key Performance Indicator
+(KPI)</a>
+<ul>
+<li><a href="#proprietà-dei-kpi" id="toc-proprietà-dei-kpi">Proprietà
+dei KPI</a></li>
+<li><a href="#la-mappa-degli-indicatori"
+id="toc-la-mappa-degli-indicatori">La mappa degli indicatori</a></li>
+<li><a href="#visualizzazione-di-kpi"
+id="toc-visualizzazione-di-kpi">Visualizzazione di KPI</a></li>
+</ul></li>
+<li><a href="#overall-equipment-effectiveness-oee"
+id="toc-overall-equipment-effectiveness-oee">Overall Equipment
+Effectiveness (OEE)</a>
+<ul>
+<li><a href="#formula" id="toc-formula">Formula</a></li>
+<li><a href="#oee-example" id="toc-oee-example">OEE Example</a></li>
+</ul></li>
+<li><a href="#costruiamo-una-mappa-di-kpi---training"
+id="toc-costruiamo-una-mappa-di-kpi---training">Costruiamo una mappa di
+KPI - Training</a>
+<ul>
+<li><a href="#esempio-1" id="toc-esempio-1">Esempio 1</a></li>
+<li><a href="#esempio-2" id="toc-esempio-2">Esempio 2</a></li>
+</ul></li>
+<li><a href="#fasi-del-bpr-business-process-reengineering"
+id="toc-fasi-del-bpr-business-process-reengineering">Fasi del BPR
+(Business Process Reengineering)</a></li>
+<li><a href="#lidentificazione-dei-breakthrough"
+id="toc-lidentificazione-dei-breakthrough">L’identificazione dei
+Breakthrough</a>
+<ul>
+<li><a
+href="#due-modalità-fondamentali-per-lidentificazione-dei-breakthrough"
+id="toc-due-modalità-fondamentali-per-lidentificazione-dei-breakthrough">Due
+modalità fondamentali per l’identificazione dei Breakthrough</a></li>
+</ul></li>
+<li><a href="#tecniche-bpr-lanalisi-dei-tempi-ciclo"
+id="toc-tecniche-bpr-lanalisi-dei-tempi-ciclo">Tecniche BPR: l’analisi
+dei tempi ciclo</a>
+<ul>
+<li><a href="#componenti-del-tempo-di-ciclo"
+id="toc-componenti-del-tempo-di-ciclo">Componenti del tempo di
+ciclo:</a></li>
+<li><a href="#obiettivi-dellanalisi"
+id="toc-obiettivi-dellanalisi">Obiettivi dell’analisi:</a></li>
+<li><a href="#esempio-analisi-dei-tempi-ciclo---caso-utilities"
+id="toc-esempio-analisi-dei-tempi-ciclo---caso-utilities">Esempio:
+Analisi dei tempi ciclo - Caso Utilities</a></li>
+<li><a href="#soluzione-identificata"
+id="toc-soluzione-identificata">Soluzione identificata</a></li>
+</ul></li>
+<li><a href="#tecniche-bpr-lanalisi-della-creazione-del-valore"
+id="toc-tecniche-bpr-lanalisi-della-creazione-del-valore">Tecniche BPR:
+l’analisi della creazione del valore</a>
+<ul>
+<li><a href="#domande-per-lanalisi-a-valore-aggiunto"
+id="toc-domande-per-lanalisi-a-valore-aggiunto">Domande per l’Analisi a
+valore aggiunto</a></li>
+<li><a href="#focalizzazione-sui-processi-ad-alto-valore-aggiunto"
+id="toc-focalizzazione-sui-processi-ad-alto-valore-aggiunto">Focalizzazione
+sui processi ad alto valore aggiunto</a></li>
+<li><a href="#portafoglio-dei-processi---esempio-azienda-x"
+id="toc-portafoglio-dei-processi---esempio-azienda-x">Portafoglio dei
+processi - Esempio Azienda X</a></li>
+</ul></li>
+<li><a href="#tecniche-bpr-lanalisi-di-pareto"
+id="toc-tecniche-bpr-lanalisi-di-pareto">Tecniche BPR: l’analisi di
+Pareto</a>
+<ul>
+<li><a href="#principio-di-pareto-legge-8020"
+id="toc-principio-di-pareto-legge-8020">Principio di Pareto (Legge
+80/20)</a></li>
+<li><a href="#fasi-dellanalisi" id="toc-fasi-dellanalisi">Fasi
+dell’analisi:</a></li>
+<li><a href="#obiettivi-dellanalisi-1"
+id="toc-obiettivi-dellanalisi-1">Obiettivi dell’analisi:</a></li>
+<li><a href="#esempio-pratico" id="toc-esempio-pratico">Esempio
+pratico:</a></li>
+</ul></li>
+<li><a href="#la-scelta-dei-processi-sui-quali-intervenire"
+id="toc-la-scelta-dei-processi-sui-quali-intervenire">La scelta dei
+processi sui quali intervenire</a>
+<ul>
+<li><a href="#matrice-di-prioritizzazione"
+id="toc-matrice-di-prioritizzazione">Matrice di
+prioritizzazione:</a></li>
+</ul></li>
+<li><a href="#complessità-del-ridisegno-per-tipologia-di-business"
+id="toc-complessità-del-ridisegno-per-tipologia-di-business">Complessità
+del ridisegno per tipologia di business</a>
+<ul>
+<li><a href="#matrice-complessità" id="toc-matrice-complessità">Matrice
+Complessità:</a></li>
+</ul></li>
+<li><a href="#strumenti-analitici"
+id="toc-strumenti-analitici">Strumenti analitici</a>
+<ul>
+<li><a href="#azienda-estesa" id="toc-azienda-estesa">1. <strong>Azienda
+estesa</strong></a></li>
+<li><a href="#parallelizzazione" id="toc-parallelizzazione">2.
+<strong>Parallelizzazione</strong></a></li>
+<li><a href="#riallocazione" id="toc-riallocazione">3.
+<strong>Riallocazione</strong></a></li>
+<li><a href="#eliminazione" id="toc-eliminazione">4.
+<strong>Eliminazione</strong></a></li>
+<li><a href="#cicli-di-miglioramento-continuo"
+id="toc-cicli-di-miglioramento-continuo">5. <strong>Cicli di
+miglioramento continuo</strong></a></li>
+</ul></li>
+<li><a href="#linformation-technology-come-fattore-di-successo"
+id="toc-linformation-technology-come-fattore-di-successo">L’Information
+Technology come fattore di successo</a>
+<ul>
+<li><a href="#impatti-tipici-sulla-catena-del-valore"
+id="toc-impatti-tipici-sulla-catena-del-valore">Impatti tipici sulla
+Catena del Valore:</a></li>
+</ul></li>
+<li><a href="#tecnologie-informatiche-abilitanti-per-il-reengineering"
+id="toc-tecnologie-informatiche-abilitanti-per-il-reengineering">Tecnologie
+informatiche “abilitanti” per il reengineering</a></li>
+<li><a
+href="#lit-deve-essere-sviluppata-contestualmente-con-il-modello-dimpresa"
+id="toc-lit-deve-essere-sviluppata-contestualmente-con-il-modello-dimpresa">L’IT
+deve essere sviluppata contestualmente con il “modello
+d’impresa”</a></li>
+<li><a href="#i-ruoli-della-tecnologia-nellinnovazione"
+id="toc-i-ruoli-della-tecnologia-nellinnovazione">I ruoli della
+tecnologia nell’innovazione</a>
+<ul>
+<li><a href="#la-tecnologia-è-un-fattore-abilitante-dellinnovazione"
+id="toc-la-tecnologia-è-un-fattore-abilitante-dellinnovazione">La
+tecnologia è un fattore abilitante dell’innovazione:</a></li>
+<li><a href="#due-tipologie-di-innovazione"
+id="toc-due-tipologie-di-innovazione">Due tipologie di
+innovazione:</a></li>
+</ul></li>
+<li><a href="#il-ridisegno-dei-processi-un-modello-in-6-fasi"
+id="toc-il-ridisegno-dei-processi-un-modello-in-6-fasi">Il ridisegno dei
+processi: un modello in 6 fasi</a>
+<ul>
+<li><a href="#fase-1-condivisione-obiettivi-aziendali"
+id="toc-fase-1-condivisione-obiettivi-aziendali">Fase 1:
+<strong>Condivisione obiettivi aziendali</strong></a></li>
+<li><a href="#fase-2-definizione-linee-guida"
+id="toc-fase-2-definizione-linee-guida">Fase 2: <strong>Definizione
+linee guida</strong></a></li>
+<li><a href="#fase-3-analisi-di-base-e-benchmark"
+id="toc-fase-3-analisi-di-base-e-benchmark">Fase 3: <strong>Analisi di
+base e Benchmark</strong></a></li>
+<li><a href="#early-wins-risultati-immediati"
+id="toc-early-wins-risultati-immediati">Early Wins (Risultati
+immediati)</a></li>
+<li><a href="#fase-4-sviluppo-dei-concetti-innovativi"
+id="toc-fase-4-sviluppo-dei-concetti-innovativi">Fase 4:
+<strong>Sviluppo dei concetti innovativi</strong></a></li>
+<li><a href="#fase-5-progettazione-del-cambiamento"
+id="toc-fase-5-progettazione-del-cambiamento">Fase 5:
+<strong>Progettazione del cambiamento</strong></a></li>
+<li><a href="#fase-6-pianificare-limplementazione"
+id="toc-fase-6-pianificare-limplementazione">Fase 6: <strong>Pianificare
+l’implementazione</strong></a></li>
+</ul></li>
+<li><a href="#la-realizzazione-del-cambiamento-è-un-processo-continuo"
+id="toc-la-realizzazione-del-cambiamento-è-un-processo-continuo">La
+realizzazione del cambiamento è un processo continuo</a>
+<ul>
+<li><a href="#attività-chiave" id="toc-attività-chiave">Attività
+chiave:</a></li>
+<li><a href="#risultato" id="toc-risultato">Risultato:</a></li>
+</ul></li>
+<li><a href="#integrazione-delle-attività"
+id="toc-integrazione-delle-attività">Integrazione delle
+attività</a></li>
+<li><a
+href="#modellazione-fuzionale-con-data-flow-diagram-flusso-di-attività"
+id="toc-modellazione-fuzionale-con-data-flow-diagram-flusso-di-attività">Modellazione
+fuzionale con Data Flow Diagram (Flusso di attività)</a>
+<ul>
+<li><a href="#definizione-formale"
+id="toc-definizione-formale">Definizione formale</a></li>
+<li><a href="#consigli" id="toc-consigli">Consigli</a></li>
+<li><a href="#regole" id="toc-regole">Regole</a></li>
+<li><a href="#vincoli" id="toc-vincoli">Vincoli</a></li>
+<li><a href="#strategie" id="toc-strategie">Strategie</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="linnovazione-nei-sistemi-informativi">L’innovazione nei Sistemi
+Informativi</h1>
+<h2 id="rincorrere-linnovazione-tecnologica">Rincorrere l’innovazione
+tecnologica</h2>
+<p>Nella maggior parte dei processi innovativi sono le persone e i
+processi a frenare l’innovazione a causa dell’avversione all’innovazione
+e alla <strong>legge di Martec (2013)</strong>.</p>
+<p>Questo fenomeno può determinare un senso di inadeguatezza con
+conseguente avversione all’innovazione tecnologica.</p>
+<p>Questo richiede alle aziende di:</p>
+<ul>
+<li>Prioritizzare le innovazioni da adottare</li>
+<li>Diventare più agili e abituarsi al cambiamento continuo (innovazione
+continua)</li>
+<li>Adottare cambiamenti rivoluzionari, come la revisione di sistemi,
+processi o strutture per allinearsi alla curva esponenziale dei
+progressi tecnologici</li>
+</ul>
+<p><strong>Legge di Martec</strong>: L’innovazione digitale non è avere
+un atecnologia innovativa, perchè l’innovazione tecnologica cresce in
+modo molto più veloce che l’adattamento delle nuove persone alla nuova
+tecnologia. Quindi dobbiamo diventare bravi a seguire le innovazioni
+effettivamente utili al mio lavoro sapendo i limiti delle persone con
+cui lavoro a cui un cambiamento frequente di tecnologie può portare ad
+un senso di inadeguatezza.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Martec%20Law%201.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Le tecnologie cloude cambiano molto velocemtne anche perchè spesso
+sono cambiamenti imposti dalla tecnologia stessa. Dall’altro lato devo
+abituare alle persone che sono in azienda all’innovazione creando dei
+gruppi di lavoro che fanno solo quello per cercare l’innovazione.</p>
+<h3 id="da-dove-arriva-la-legge-di-martec">Da dove arriva la legge di
+Martec?</h3>
+<p><strong>Legge di Moore</strong>: La Legge di Moore è un’osservazione
+fatta nel 1965 da Gordon Moore, co-fondatore di Intel, secondo cui il
+numero di transistor che possono essere collocati su un chip di silicio
+raddoppia circa ogni due anni. Questo fenomeno implica che la potenza di
+calcolo dei computer cresce esponenzialmente nel tempo, mentre il costo
+per transistor diminuisce. La scala di aumento è non lineare.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Martec%20Law%202.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>Law of Accelerating Returns di Ray Kurzweil (2001)</strong>:
+È un concetto proposto dal futurologo americano per descrivere come il
+progresso tecnologico tenda ad accelerare in modo esponenziale, anziché
+lineare, nel tempo. Questo accade perché ogni innovazione tecnologica
+fornisce gli strumenti per sviluppare ulteriori innovazioni a un ritmo
+sempre più rapido.</p>
+<p>Caratteristiche principali:</p>
+<ul>
+<li><strong>Crescita Esponenziale</strong>: il progresso tecnologico non
+avanza a un ritmo costante, ma raddoppia a intervalli specifici</li>
+<li><strong>Sistemi Auto-Amplificanti</strong>: ogni nuovo livello di
+innovazione si basa su quello precedente, accelerando lo sviluppo in
+settori come l’intelligenza artificiale, la biotecnologia e la
+nanotecnologia</li>
+<li><strong>Convergenza delle Tecnologie</strong>: diversi campi
+scientifici e tecnologici stanno sempre più interagendo e potenziando
+reciprocamente il loro progresso</li>
+</ul>
+<p>Ad esempio: sistemi Wearable che sono evoluti con anche sistemi di
+analisi dati che hanno portato insieme ad una innovazione anche nei
+sistemi Wearable. In questo periodo abbiamo una grande evoluzione nella
+robotica.</p>
+<h2 id="il-ciclo-dellinnovazione">Il ciclo dell’innovazione</h2>
+<p><em>“Nella storia di un’azienda non esistono momenti in cui non si
+discuta di come cambiare il modo di operare e interagire con il resto
+della società”</em></p>
+<p>Il <strong>ciclo di Deming</strong> sintetizza la logica secondo la
+quale gestire il ciclo di innovazione:</p>
+<ol type="1">
+<li><strong>Pianificazione</strong></li>
+<li><strong>Attuazione</strong></li>
+<li><strong>Verifica</strong></li>
+<li><strong>Intervento</strong></li>
+</ol>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Ciclo.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Il termine “ciclo” vuole enfatizzare la ripetitività delle fasi che
+si devono continuamente ripetere durante tutta la vita dell’azienda.</p>
+<p>L’adozione di un ciclo di pianificazione e controllo è il primo passo
+per mantenere attuale il Sistema Informativo minimizzando i rischi di
+<strong>incoerenza</strong> e i <strong>costi di
+realizzazione</strong>.</p>
+<p>Questo ciclo serve per non investire in scelte sbagliate.</p>
+<h3 id="fase-di-pianificazione">1. Fase di pianificazione</h3>
+<p>Nella fase di pianificazione si collocano:</p>
+<ul>
+<li>La <strong>formalizzazione delle strategie</strong> in termini di
+servizio e di utilizzo delle tecnologie</li>
+<li>La <strong>scelta delle priorità</strong> nell’attuazione dei vari
+interventi di automazione</li>
+<li>La <strong>validazione dei progetti</strong> da attivare</li>
+<li>La <strong>definizione degli impegni e delle risorse</strong>
+necessarie. L’azienda diventa responsabile del progetto e deve portarlo
+avanti con certi tempi e certi costi.</li>
+<li>La <strong>stesura del documento di piano</strong> e la correlata
+definizione del budget e delle responsabilità. Stabilisce target,
+obiettivi, budget, etc.</li>
+</ul>
+<p>Il nostro ciclo di innovazione è sincronizzato con quello di
+budgeting che si fa solitamente a frequenza annuale. Non è così in
+oriente, in Giappone in particolare.</p>
+<h3 id="fase-di-realizzazioneattuazione">2. Fase di
+realizzazione/attuazione</h3>
+<p>Nella fase di realizzazione si collocano:</p>
+<ul>
+<li>L’elaborazione di <strong>studi di fattibilità</strong>. Lo studio
+serve a capire se il progetto deve o meno essere portato avanti.</li>
+<li>La <strong>definizione di progetti esecutivi</strong> e di piani
+operativi</li>
+<li>L’<strong>acquisizione di prodotti e servizi dal
+mercato</strong></li>
+<li>La <strong>realizzazione dei progetti</strong></li>
+<li>La <strong>conduzione operativa dei sistemi</strong></li>
+</ul>
+<p>I progetti vengono messi in atto, quindi devo capire queli sono le
+tecnolgie per farlo, con chi fare il contratto per avere quelle
+tecnologie, arrivano quindi i consulenti, etc.</p>
+<h3 id="fase-di-verifica">3. Fase di verifica</h3>
+<p>Nella fase di verifica si collocano:</p>
+<ul>
+<li>La <strong>gestione dei progetti</strong> nelle loro varie
+componenti</li>
+<li>La <strong>raccolta di informazioni</strong> sullo stato dei
+processi di servizio</li>
+<li>La <strong>diagnosi di servizi e processi</strong></li>
+<li>La <strong>raccolta di informazioni</strong> sullo stato dei sistemi
+informativi automatizzati</li>
+<li>La <strong>diagnosi della risorsa informazione</strong></li>
+<li>La <strong>diagnosi dei sistemi informatici</strong></li>
+</ul>
+<p>Raccolgo informazioni sullo stato dei processi che sono stati messi
+in atto e faccio una diagnosi evidenziando i problemi con dialogo e
+numeri tecnici. La tecnologia è adeguata?</p>
+<p>Quindi dopo la raccolta di informazioni capisco quali sono
+lecriticità e capisco quali sono le innovazioni attraverso le quali
+possono essere risolte diverse problematiche. Sono momenti critici
+perchè tutto il gruppo dei sistemi informativi è a lavoro per capire
+come portarsi a casa i progetti in base al budget.</p>
+<h3 id="fase-di-intervento">4. Fase di intervento</h3>
+<p>Nella fase di intervento si collocano:</p>
+<ul>
+<li>L’<strong>elaborazione degli interventi di
+reingegnerizzazione</strong> dei processi di servizio</li>
+<li>L’<strong>individuazione di iniziative di reingegnerizzazione dei
+sistemi informatici</strong></li>
+</ul>
+<h2 id="definizione-degli-obiettivi">Definizione degli obiettivi</h2>
+<p>Per assicurare il raggiungimento degli obiettivi proposti è
+necessario che questi vengano individuati esattamente e formalizzati in
+modo da stabilire responsabilità, tempi e priorità.</p>
+<p>A tale scopo ogni azienda redige il <strong>piano di
+informatizzazione</strong> che riassume la strategia con gli obiettivi
+di ingegnerizzazione:</p>
+<h3 id="piano-strategico">Piano strategico</h3>
+<p>Copre normalmente dai 3 ai 5 anni. È necessario per dare unitarietà
+alle specifiche iniziative evitando di costruire sistemi frammentati,
+incoerenti e tecnologicamente incompatibili. Serve farlo ogni lasso di
+tempo abbastanza lungo perchè serve tempo per il completamente, in un
+anno non possono essere chiuse delle trasformazioni di rilievo.</p>
+<p>Contiene:</p>
+<ul>
+<li>Obiettivi strategici dell’informatizzazione</li>
+<li>Architetture tecnologiche e applicative come quadro di riferimento
+complessivo</li>
+<li>Progetti di grande rilievo che richiedono elevati tempi di
+realizzazione e risorse</li>
+</ul>
+<h3 id="piano-operativo">Piano operativo</h3>
+<p>Ha validità annuale e definisce in maniera dettagliata gli interventi
+previsti dal piano triennale per l’esercizio in corso. Definisce chi fa
+cosa e quando.</p>
+<p>Le correzioni agli obiettivi devono essere valutate
+continuamente:</p>
+<ul>
+<li>Aggiungendo a ogni piano operativo degli elementi correttivi che
+incidono sul piano strategico</li>
+<li>Producendo annualmente un <strong>piano strategico a
+scorrimento</strong> ma mantenendo sempre un orizzonte di 3 anni.</li>
+</ul>
+<h3 id="definizione-degli-obiettivi-top-down-vs-bottom-up">Definizione
+degli obiettivi: top down VS bottom up</h3>
+<p>Ci vuole sempre attenzione all’aspetto metodologico anche alle
+persone.</p>
+<p><strong>Top down</strong>: Partendo dagli obiettivi strategici
+dell’organizzazione si definiscono le caratteristiche generali del
+sistema informativo. E’ quindi il manager che decide.</p>
+<ul>
+<li>Maggiormente innovativo e discontinuo</li>
+<li>Permette di identificare e pianificare soluzioni che rispondono a
+necessità di mutamenti radicali</li>
+<li>Causa maggiori tensioni e rischi organizzativi perchè le persone non
+si sentono partecipi al cambiamento e quindi più restii ad
+accettarlo.</li>
+</ul>
+<p><strong>Bottom up</strong>: Partendo dalle indicazioni delle diverse
+unità organizzative. Raccolto quindi informazioni da tutti i
+dipendenti.</p>
+<ul>
+<li>Maggiormente conservativo, le persone che lavorano nei processi
+hanno una visione molto limitata perchè ognuno racconta la sua storia.
+Non molto innovativi.</li>
+<li>Difficilmente riesce a produrre ipotesi di innovazione radicale</li>
+<li>Presenta scarsi rischi realizzativi</li>
+</ul>
+<p>Possiamo avere un approccio ibrido perchè i due approcci sono gli
+estremi, cercando di avere il meglio delle due metodologie.</p>
+<p><strong>Approccio ibrido</strong> (più diffuso):</p>
+<ol type="1">
+<li>Individuazione e diffusione delle strategie generali di
+evoluzione</li>
+<li>Richiesta alle diverse unità dell’organizzazione di elaborare una
+loro proposta specifica</li>
+<li>Integrazione delle varie proposte con verifica della coerenza
+globale</li>
+<li>Definizione degli interventi infrastrutturali e definizione del
+piano finale</li>
+</ol>
+<h2 id="il-percorso-di-adozione-nei-sistemi-informativi">Il percorso di
+adozione nei Sistemi Informativi</h2>
+<p>Il percorso di digitalizzazione è incrementale e raramente permette
+di saltare dei passaggi.</p>
+<p>È <strong>rischioso, costoso e inutile</strong> adottare soluzioni
+avanzate senza avere completamente sfruttato quelle semplici perché:</p>
+<ul>
+<li>I manager non sono pronti (non hanno il mindset giusto), non sanno
+sfruttare le innovazioni tecnologiche.</li>
+<li>I dati non sono pronti (non sono di qualità sufficiente per un certo
+livello di digitalizzazione)</li>
+<li>I processi delle aziende non sono pronti, non sono definiti in modo
+da appoggiarsi ai dati e di reagire a essi</li>
+</ul>
+<p>Dobbiamo quindi considerare sempre gli elementi esterni al sistema
+che sono le persone e anche i materiali che l’azienda utilizza.</p>
+<p><strong>Dubitate dei consulenti e dei fornitori di software che
+offrono analisi avanzate se la vostra azienda sfrutta a malapena un
+foglio Excel</strong></p>
+<h2 id="creare-aziende-data-driven">Creare aziende data-driven</h2>
+<p>Il termine <strong>aziende data-driven</strong> si riferisce ad
+aziende in cui le decisioni e i processi sono supportate dai dati:</p>
+<ul>
+<li>Le decisioni si basano su conoscenze quantitative piuttosto che
+qualitative</li>
+<li>I processi e le conoscenze sono una risorsa dell’azienda e non vanno
+persi se i manager cambiano</li>
+</ul>
+<p>Anche solo i manager hanno a disposizione dei dati questo cambia
+molto perchè possiamo ragionare su cose oggettive e non solo
+sull’esperienza.</p>
+<p><strong>La differenza tra una decisione basata sui dati e una buona
+decisione è un buon manager</strong></p>
+<p>L’adozione di una mentalità basata sui dati comporta:</p>
+<ul>
+<li>Creare una cultura dei dati</li>
+<li>Cambiare la mentalità dei manager</li>
+<li>Cambiare i processi</li>
+<li>Migliorare la qualità di tutti i dati</li>
+</ul>
+<h3 id="le-tre-dimensioni-della-digitalizzazione">Le tre dimensioni
+della digitalizzazione</h3>
+<p>Passare da A a B è un processo pluriennale fatto di obiettivi
+intermedi, ciascuno dei quali deve essere raggiungibile:</p>
+<ul>
+<li>Deve risolvere un problema e apportare valore</li>
+<li>Deve essere realizzabile in un intervallo di tempo limitato (in
+genere meno di un anno)</li>
+<li>I costi devono essere economicamente correlati agli utili …</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Data-driven.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Ogni passo del progetto deve essere giustificato</p>
+<p><strong>Digital culture</strong>: Abbiamo le persone giuste per
+guidare i processi e sfruttare i risultati?</p>
+<p><strong>Data quality &amp; quantity</strong>: I processi sono
+completamente digitalizzati e producono dati affidabili?</p>
+<p><strong>Technological infrastructure</strong>: L’infrastruttura
+tecnologica è appropriata per supportare la raccolta e l’analisi dei
+dati? (potenza di calcolo ad esempio)</p>
+<h2 id="il-miglioramento-incrementale">Il miglioramento
+incrementale</h2>
+<p>Il miglioramento si ripete nel tempo.</p>
+<h3 id="approccio-occidentale-vs.-approccio-giapponese">Approccio
+occidentale vs. approccio giapponese</h3>
+<ul>
+<li><strong>Approccio occidentale</strong>: Il miglioramento discontinuo
+perchè abbiamo un miglioramento annuo</li>
+<li><strong>Approccio Giapponese</strong>: Il miglioramento continuo,
+abbiamo anche passo settimanali</li>
+</ul>
+<figure>
+<img
+src="./asset/ingegneria_dei_processi/Approccio_occidentale_giappo.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="perché-il-miglioramento-incrementale-non-basta">Perché il
+miglioramento incrementale non basta</h3>
+<p>Il miglioramento continuo non basta a eliminare il gap tra la
+percezione del valore da parte del cliente e ciò che offre l’azienda
+rispetto ai leader del settore.</p>
+<figure>
+<img
+src="./asset/ingegneria_dei_processi/miglioramento_incrementale.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="il-business-process-reengineering">Il Business Process
+Reengineering</h2>
+<p>Il miglioramento incrementale non sempre basta quindi ogni tanto
+abbiamo la necessità di adottare cambiamenti rivoluzionari
+(reingegnerizzazione ex novo) per fare un salto dal cambiamento
+lento.</p>
+<p>Il <strong>BPR</strong> (Business Process Reengineering) nasce come
+completo ripensamento e radicale ridisegno dei fondamentali processi di
+un’organizzazione alla luce delle potenzialità offerte dai nuovi
+strumenti informatici.</p>
+<p>L’accento è sulla discontinuità, sul salto nelle prestazioni, sulla
+completa assenza di vincoli di riprogettazione.</p>
+<p>Quindi dobbiamo ripensare completamente con le possibilità che il
+sistema ci mette a dispozione. Se riusciamo abbiamo un salto di
+performance (Breakthrough).</p>
+<p>Il concetto di B.P.R. nasce agli inizi degli anni ’90 per impulso di
+Michael Hammer:</p>
+<p><em>“… It is time to stop paving the cow paths. Instead of embedding
+outdated processes in silicon and software, we should obliterate them
+and start over. We should”reengineer” our businesses: use the power of
+modern information technology to radically redesign our business
+processes in order to achieve dramatic improvements in their
+performance.”</em></p>
+<h2 id="i-processi-aziendali">I processi aziendali</h2>
+<p><strong>Processo</strong>: insieme delle attività tra loro
+interrelate, finalizzate alla realizzazione di un risultato definito e
+misurabile che contribuisce al raggiungimento della missione
+dell’azienda.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Processi_aziendali.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Il <strong>cliente</strong> è la persona o gruppo che richiede o usa
+un prodotto o servizio realizzato tramite il processo. Non per forza è
+un cliente dell’azienda ma anche un cliente interno all’azienda quindi
+un processo interno ha necessità di fornire un materiale alla produzione
+ad esempio, o al magazzino.</p>
+<p>Il processo e la sua “manutenzione” diventano gli elementi centrali
+del ciclo di innovazione dei SI.</p>
+<p>Primo compito del progettista è quello di <strong>descrivere e
+classificare i processi</strong>:</p>
+<ul>
+<li>Le classificazioni normative descrivono la struttura dei processi
+come dovrebbe essere (best practice)</li>
+<li>Le classificazioni normative vengono mappate nei principali
+pacchetti software</li>
+<li>Le classificazioni normative forniscono una informazione della
+situazione “to be”</li>
+</ul>
+<h3 id="cosè-il-business-process-re-engineering">Cos’è il Business
+Process Re-engineering</h3>
+<p>Il BPR è la completa revisione dei processi aziendali al fine di
+massimizzarne il valore derivante dalle singole componenti, attraverso
+interventi sia di riduzione dei costi sia di massimizzazione
+dell’efficacia. <strong>Il BPR può essere innescato da un aggiornamento
+tecnologico</strong>.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Business_processing.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Lo Streamlining è un cambiamento (piccolo) continuo che va a
+migliorare il processo. Il Re-engineering significa cambiare un processo
+radicalmente ma mantenendo lo stesso prodotto e servizio che forniamo
+con quel processo. <strong>Nuovi processi a parità di prodotto</strong>.
+La Trasformazione è quando decido di fare anche prodotti differenti. Ad
+esempio la BMV che faceva veicoli militari, dopo la guerra e il divieto
+alla Germania di prodirne altri hanno deciso di spostare il prodotto
+producendo veicoli non militari. Utilizzo quindi la mia conoscenza per
+fornire ai clienti (diversi) un prodotto nuovo.</p>
+<p>Obiettivi:</p>
+<ul>
+<li><strong>Rapidità dei tempi di ciclo</strong></li>
+<li><strong>Zero difetti</strong></li>
+<li><strong>Eccellenza nel servizio</strong></li>
+<li><strong>Produttività World-Class</strong></li>
+</ul>
+<h3 id="gli-approcci-di-miglioramento">Gli approcci di
+miglioramento</h3>
+<p>Il Business Process Reengineering permette di realizzare “il salto di
+qualità” (Breakthrough) combinando:</p>
+<ul>
+<li>Miglioramento continuo</li>
+<li>Miglioramento discontinuo</li>
+<li>BPR</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Approcci_miglioramento.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="le-varie-modalità-di-reingegnerizzazione">Le varie modalità di
+reingegnerizzazione</h2>
+<p>Variano in funzione dello scopo e dell’ampiezza del cambiamento:</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Modalità.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="streamlining">Streamlining</h3>
+<ul>
+<li><strong>Ambito</strong>: Processo/Funzione</li>
+<li><strong>Grandezza cambiamento</strong>: Riduzione
+costi/Semplificazione</li>
+<li><strong>Approccio</strong>: Incrementale sui processi</li>
+<li><strong>Focus</strong>: Pianificare il presente</li>
+</ul>
+<h3 id="re-engineering">Re-engineering</h3>
+<ul>
+<li><strong>Ambito</strong>: Business Unit / Prodotto/mercato</li>
+<li><strong>Grandezza cambiamento</strong>: Miglioramento Servizi</li>
+<li><strong>Approccio</strong>: Radicale sui processi</li>
+<li><strong>Focus</strong>: Pianificare il futuro a parità di
+business</li>
+</ul>
+<h3 id="enterprise-transformation">Enterprise Transformation</h3>
+<ul>
+<li><strong>Ambito</strong>: Azienda / Gruppo settore</li>
+<li><strong>Grandezza cambiamento</strong>: Riposizionamento
+strategico/Nuove linee di business</li>
+<li><strong>Approccio</strong>: Radicale sul business</li>
+<li><strong>Focus</strong>: Pianificare il business</li>
+</ul>
+<h2 id="fasi-del-bpr">Fasi del BPR</h2>
+<ol type="1">
+<li><p><strong>Identificazione dei processi da
+reingegnerizzare</strong></p>
+<ul>
+<li>1.1 Descrivere i processi</li>
+<li>1.2 Identificazione del breakthrough</li>
+<li>1.3 Analisi dei tempi di ciclo</li>
+<li>1.4 Analisi della creazione del valore</li>
+</ul></li>
+<li><p><strong>Definizione delle priorità di intervento</strong> sulla
+base del loro impatto</p>
+<ul>
+<li>Analisi di Pareto</li>
+</ul></li>
+<li><p><strong>Reingegnerizzazione dei processi</strong> per rimuovere
+le barriere alla performance</p></li>
+<li><p><strong>Implementazione del cambiamento</strong></p></li>
+<li><p><strong>Istituzionalizzazione delle misure</strong> per il
+miglioramento continuo</p></li>
+</ol>
+<h3 id="descrivere-i-processi">1.1 Descrivere i Processi</h3>
+<p>La scomposizione dei processi dettaglia i processi per successivi
+livelli di approfondimento:</p>
+<ul>
+<li>Macroprocesso: ne è un esempio la catena del valore di Porter. È
+utile soprattutto nelle fasi iniziali per strutturare l’analisi e per
+individuare l’area di intervento.</li>
+<li>Processo: Illustra a un livello ragionevolmente dettagliato le
+operazioni svolte da un’azienda. <em>Esempio: Il macroprocesso “Sviluppo
+prodotti” si decompone in: “Concept” – “Pianificazione” –
+“Progettazione” – “Prototipazione” – “Test” –
+“Ingegnerizzazione”</em></li>
+<li>Fase: Ha lo scopo di descrivere il modo in cui un processo è
+implementato. Una fase è una tappa di un processo. <em>Esempio: Il
+processo “Progettazione” comprende le fasi di: “Sviluppo specifiche” –
+“Gestione del concurrent engineering” – “Realizzazione del value
+engineering” – “Documentazione delle specifiche di progetto” – “Sviluppo
+prototipi” – “Gestione delle richieste di brevetto”</em></li>
+<li>Attività: È il livello adottato nella fase di studio dei processi.
+Sono determinate scomponendo ulteriormente le fasi secondo una logica
+sequenziale.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Scomposizione_gerarchica.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>Note</strong>:</p>
+<ul>
+<li><em>Concurrent engineering</em>: Approccio sistematico alla
+progettazione che considera contemporaneamente tutti gli aspetti del
+ciclo di vita</li>
+<li><em>Value engineering</em>: Analisi delle caratteristiche di un
+prodotto/servizio per migliorarne efficacia, affidabilità, qualità,
+sicurezza e costo</li>
+</ul>
+<h4
+id="le-variabili-di-progettazione-dei-processi-descrivere-i-processi">Le
+variabili di progettazione dei processi (Descrivere i processi)</h4>
+<ul>
+<li><p><strong>Flusso delle attività</strong>: Sequenza di attività
+attraverso cui il processo è svolto. Può essere modellato con Activity
+Diagram (UML). Oppure ci sono anche altri diagrammi come il DFD (Data
+flow diagram). Definisco i legami tra le attività.</p></li>
+<li><p><strong>Organizzazione del processo</strong>: Sia dal punto di
+vista della suddivisione operativa del lavoro, sia della struttura di
+coordinamento e controllo aziendale. Il legame può essere modellato
+mediante Linear Responsability Charting (LRC) mi dice quindi chi fa
+cosa.</p></li>
+<li><p><strong>Competenze delle risorse umane</strong>: La cui
+adeguatezza è condizione fondamentale per la trasformazione</p></li>
+<li><p><strong>Sistema di misurazione e controllo delle
+prestazioni</strong>: Necessario per governare il processo. Viene
+realizzato tramite sistemi di Key Performance Indicator (KPI) o di
+Balanced Scorecard. Mi devo creare degli indicatori numerici che mi
+dicano qualcosa sul processo, quindi delle feature che mi descrivano il
+processo.</p></li>
+</ul>
+<p>Nota: il risultato non è solo il diagramma ma anche lo sforzo che c’è
+dietro di essi. Non ci dà una verità implementabile ma ci permette di
+capire e ragionare su un certo ambito e un certo processo.</p>
+<hr />
+<h2 id="linear-responsability-charting-lrc">Linear Responsability
+Charting (LRC)</h2>
+<p>Determina una visione tabellare della responsabilità organizzativa
+che integra quella dell’organigramma, specificando il
+<strong>ruolo</strong> delle varie strutture nel processo
+considerato.</p>
+<p>L’idea è capire su ogni attività (riga) quali sono i soggetti che
+interagiscono.</p>
+<p>Si ottiene incrociando le attività del processo con le divisioni. Il
+ruolo è indicato dalle etichette:</p>
+<ul>
+<li><strong>D</strong> = decide, autorizza, ratifica</li>
+<li><strong>E</strong> = esegue</li>
+<li><strong>A</strong> = partecipa a tempo parziale, fornisce assistenza
+operativa e supporto</li>
+<li><strong>I</strong> = è sistematicamente informato</li>
+</ul>
+<figure>
+<img
+src="./asset/ingegneria_dei_processi/Linear_responsability_charting.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="le-risorse-umane">Le risorse umane</h2>
+<p>Deve tarare i processi in base alle conoscenze che hanno i
+dipendenti.</p>
+<ul>
+<li>Le risorse umane determinano la differenza tra il risultato
+effettivo e il massimo teoricamente possibile</li>
+<li>Le tecnologie innovative necessitano di figure professionali che non
+esistono in azienda</li>
+<li>Il reperimento può essere costoso e complesso</li>
+<li>La formazione degli utenti pone molti problemi gestionali:
+<ul>
+<li>Gli utenti devono superare l’avversione al cambiamento</li>
+<li>I vantaggi delle nuove soluzioni non sono subito evidenti</li>
+<li>Il rischio maggiore è introdurre un cambiamento maggiore delle
+capacità individuali di adattamento</li>
+</ul></li>
+</ul>
+<p>Se io ho bisogno del personale di una specifica tecnologia, la
+facilità di trovarla è proporzionale alla diffusione della tecnologia
+stessa (curva rossa nell’immagine). Quindi oggi molte aziende
+informatiche sono orientate al lavoratore specializzato e non più al
+clienti.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/risorse_umane.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="key-performance-indicator-kpi">Key Performance Indicator
+(KPI)</h2>
+<p>Per verificare l’efficacia del processo è necessario misurare
+quantitativamente come questo soddisfa i requisiti del cliente. Ogni
+processo ha dei requisiti da rispettare e dobbiamo capire come misurarli
+e cosa cerchiamo.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Key_performance_indicator.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Un <strong>KPI</strong> è un indicatore quantificabile dell’efficacia
+e/o dell’efficienza di un processo o di un sottoprocesso.</p>
+<p>Questo tipo di indicatori sono anche nei contratti, pensiamo ad un
+contratto di fibra in cui l’azienda che lo fornisce definisce delle
+specifiche tecniche che è ritenuta a ripsettare (es: velocità).</p>
+<p>Costruire un KPI vuol dire partire da una caratteristica qualitativa
+del prodotto e tradurre questa in un valore quantitativo.</p>
+<p>Caratteristiche di un KPI:</p>
+<ul>
+<li>È quantificabile dell’efficienza e efficacia. Calcolabile con una
+formula.</li>
+<li>È rilevabile</li>
+<li>È correlato con l’obiettivo di business interno di processo</li>
+</ul>
+<p>Esempio: Ho un supermercato e devo capire l’assortimento. La mia
+capacità descritta a parola è quella di massimizzare la vendita,
+riempire il superemercato e far tornare il cliente.</p>
+<p>Studio il flusso dell’attività: classifico i clienti (quante famiglia
+e quanti single), guardo il mercato, capisco i macroassortimenti che
+possono servire ai clienti, definisco i microassortimenti (quanti tipi
+di carta igienica voglio avere), capisco come organizzo il
+supermercato.</p>
+<p>Quali possono essere i miei indicatori che mi dicono se ho i prodotti
+giusti nella quantità giusta?</p>
+<ol type="1">
+<li>io devo avere persone che mi comprano i prodotti ad una certa
+velocità e quantità nel tempo (se mi rimane ne ho preso troppo, se
+finisce spesso ne ho preso troppo poco)</li>
+<li>le fidelity card sono molto utili a capire quante volte il cliente
+torna. Ad esempio Zara ha delle tecniche di rinnovamento che porta le
+persone a tornare molto spesso.</li>
+</ol>
+<figure>
+<img src="./asset/ingegneria_dei_processi/KPI_2.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="proprietà-dei-kpi">Proprietà dei KPI</h3>
+<ul>
+<li><p><strong>Significatività</strong>: Collegamento con gli obiettivi
+strategici</p></li>
+<li><p><strong>Controllabilità</strong>:</p>
+<ul>
+<li>Misurazione di risultati che possono essere influenzati</li>
+<li>Focalizzazione su un ben definito periodo di tempo</li>
+</ul></li>
+<li><p><strong>Semplicità</strong>:</p>
+<ul>
+<li>Facilità concettuale</li>
+<li>Pochi indicatori sono preferibili a una metrica complessa</li>
+</ul></li>
+<li><p><strong>Misurabilità</strong>:</p>
+<ul>
+<li>Disponibilità dei dati</li>
+<li>Affidabilità e accuratezza dei dati</li>
+</ul></li>
+<li><p><strong>Equilibrio</strong>:</p>
+<ul>
+<li>Collegamento degli <strong>indicatori tecnici</strong> (ex-ante) con
+le attività</li>
+<li>Collegamento degli <strong>indicatori di risultato</strong>
+(ex-post) con gli obiettivi e gli output</li>
+</ul></li>
+</ul>
+<p>Gli <strong>indicatori di risultato</strong> misurano la performance
+a un momento dato, mentre gli <strong>indicatori tecnici</strong>
+misurano attività che influenzano la performance.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/KPI_3.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="la-mappa-degli-indicatori">La mappa degli indicatori</h3>
+<p>Per misurare efficacemente un fenomeno è necessario definire una
+mappa integrata di KPI che copra diversi punti di vista a diversi
+livelli di dettaglio. Ovviamente perchè avere un solo indicatore non
+basta ma è molto più utile avere per ogni aspetto da identificare un
+indicatore a sè.</p>
+<p>La mappa deve chiarire:</p>
+<ul>
+<li><strong>Fenomeno da misurare</strong>: Il processo o il soggetto da
+valutare</li>
+<li><strong>Obiettivi</strong>: Quale scopo deve raggiungere il
+processo</li>
+<li><strong>Misure</strong>: Identificazione concreta ma ancora
+qualitativa degli aspetti da monitorare</li>
+<li><strong>Stakeholder</strong>: Soggetti interessati ai KPI</li>
+<li><strong>Sorgente dati</strong>: Determina l’effettiva calcolabilità
+dell’indicatore</li>
+<li><strong>Formulazione</strong>: Specifica la formula di calcolo
+dell’indicatore</li>
+</ul>
+<h3 id="visualizzazione-di-kpi">Visualizzazione di KPI</h3>
+<p>Gli <strong>indicatori di Sant’Anna</strong> sono una mappa di
+centinaia di indicatori finalizzati a valutare le performance della
+sanità pubblica.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/santanna.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Tecniche di visualizzazione:</p>
+<ul>
+<li><strong>Scatter plot</strong>: Evidenzia i trend di miglioramento e
+peggioramento. Se sono nella parte in alto a sinistra allora sto
+migliorando.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Visualizzazione_KPI_1.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<ul>
+<li><strong>Bersaglio</strong>: Evidenzia graficamente la performance su
+gruppi omogenei e disomogenei di KPI. Più il pallino bianco è vicino al
+centro e più sono bravo.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Visualizzazione_KPI_2.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<ul>
+<li><strong>Pentagramma</strong>: Evidenzia la performance di un
+processo. Ho 5 livelli.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Visualizzazione_KPI_3.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="overall-equipment-effectiveness-oee">Overall Equipment
+Effectiveness (OEE)</h2>
+<p><strong>OEE</strong> è il principale KPI per misurare la capacità di
+produzione di un’azienda manifatturiera. È spesso usato nella Lean
+Manufacturing per raggiungere l’eccellenza operativa.</p>
+<h3 id="formula">Formula</h3>
+<p><strong>OEE = Availability × Performance × Quality</strong></p>
+<ul>
+<li><p><strong>Availability</strong> [0;1]: Percentuale di tempo
+lavorato rispetto al tempo disponibile. Se io ho una macchina che viene
+utilizzata in 8 ore di turno ma la uso solo per 4 ore allora è
+0.5.</p></li>
+<li><p><strong>Performance</strong> [0;1]: Percentuale di pezzi
+effettivamente lavorati rispetto ai pezzi teoricamente lavorabili. Dato
+il tempo a sua disposizione doveva fare 54 pezzi ma ne ha fatti solo
+48.</p></li>
+<li><p><strong>Quality</strong> [0;1]: Rapporto percentuale dei pezzi
+conformi sul totale dei pezzi prodotti. Quanti dei pezzi che ho prodotto
+hanno superato il controllo qualità.</p></li>
+</ul>
+<p>Il calcolo dettagliato/automatico dell’OEE richiede
+<strong>SCADA</strong> e <strong>MES</strong>. Senza un sistema
+automatizzato non si riesce a misurare.</p>
+<h3 id="oee-example">OEE Example</h3>
+<p>Dati di produzione:</p>
+<ul>
+<li>Planned batch: 5.300 pezzi</li>
+<li>Theoretical processing time: 87 secs/pezzo</li>
+<li>Working shifts: 3 × 8h per day, 5 days/week</li>
+<li>Theoretical working time: 16,01 working shifts</li>
+</ul>
+<p>Fermi macchina:</p>
+<ul>
+<li>Machinery set up (primo turno): 90 mins</li>
+<li>Weekly start up (lunedì): 35 mins</li>
+<li>Manual checks: 24 mins</li>
+<li>12 alarms: 28 mins</li>
+</ul>
+<p><strong>Availability OEE</strong> = (480-90-35-24-28) / 480 =
+<strong>63%</strong></p>
+<p>Risultati completi:</p>
+<ul>
+<li><strong>Availability OEE</strong>: 71%</li>
+<li><strong>Performance OEE</strong>: 93%</li>
+<li><strong>Quality OEE</strong>: 97%</li>
+<li><strong>Working Shift OEE</strong>: <strong>64%</strong></li>
+</ul>
+<h2 id="costruiamo-una-mappa-di-kpi---training">Costruiamo una mappa di
+KPI - Training</h2>
+<p>Lezione di training con un eserizio. Le slide di riferimento sono
+“monitoring the timetable problem” e “Assortment Analysis”.</p>
+<h3 id="esempio-1">Esempio 1</h3>
+<p>Problema: costruzione dell’orario delle lezioni. Ogni anno
+l’università deve affrontare il problema di pensare all’orario delle
+lezioni per ogni corso di laurea.</p>
+<p>Persone coinvolte:</p>
+<ol type="1">
+<li>Docenti</li>
+<li>Segreteria (quella che decide) insieme alla commissione d’orario (da
+noi è un docente che è Ferrara) di ogni corso di laurea coinvolto</li>
+<li>Studenti che devono essere informati</li>
+</ol>
+<p>Informazioni importanti (variabili)</p>
+<ol type="1">
+<li>Corsi</li>
+<li>Capienza aule e laboratori</li>
+</ol>
+<p>Flusso di attività:</p>
+<ol type="1">
+<li>Quindi prendo le informazioni sui corsi e le aule e li
+colleziono</li>
+<li>cerco di capire quali sono i docenti e i vincoli dei docenti
+dividendo su vincoli hard che devono essere rispettati per forza e
+vincoli soft che possono essere delle richieste che si tende a
+rispettare ma che possono venire a meno. Ad esempio: se un docente ha
+due corsi non posso sovrapporre i due corsi (hard), se un docente deve
+venire da Bologna allora preferisce iniziare alle 11 per non dover
+prendere il treno troppo presto (soft)</li>
+<li>Si produce un prospetto di orario e viene mandato ai docenti e al
+direttore del corso di laurea che vede vedere se tutti i vincoli vengono
+rispettati</li>
+<li>Si va quindi in aula con quello ma ci sono dei corsi che di anno in
+anno possono cambiare. Ad esempio gli studenti si accorgono che in molti
+vogliono seguire due corsi facoltativi che sono in contemporanea quindi
+possono chiedere di modificare gli orari.</li>
+<li>Si fanno quindi le modifiche e poi di nuovo il giro ai docenti and
+co.</li>
+</ol>
+<figure>
+<img src="./asset/ingegneria_dei_processi/attività.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Facciamo quindi una bella tabella un cui si mettono sulle righe le
+persone coinvolte e nelle colonne le attività da fare e vediamo per ogni
+attività quale persone devono partecipare, approvare o eseguire quella
+specifica cosa.</p>
+<p>Come facciamo a capire se le varie attiivtà sono andate a buon fine?
+Prima cerco di capire le qualità che voglio andare a vedere nell’orario
+che ho fatto.</p>
+<ol type="1">
+<li>Carico giornaliero bilanciato (9 ore di lezione sarebbero
+impossibili da seguire).</li>
+<li>Mancanza di sovrapposizione</li>
+<li>Soddisfacimento delle richieste dei docenti (vincoli soft)</li>
+</ol>
+<p>Come posso passare da queste qualità a degli indicatori numerici?</p>
+<p>2.Indicatore per: Mancanza di sovrapposizione</p>
+<p>Per capire come misurare la sovrapposizione prima mi chiedo: cosa
+stiamo a identificare come sovrapposizione? Diciamo che due lezioni sono
+sovrapposte se due lezioni dello stesso corso di laurea e dello stesso
+anno sono dello stesso orario.</p>
+<p>Quindi l’indicatore che posso definire:</p>
+<p>–&gt; il numero di ore di sovrapposizione / le ore totale dei corsi =
+percentuale di sovrapposizione –&gt; Alla foruma aggiungo un indicatore
+di severità della sovrapposizione (overlap)</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/overlap.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="esempio-2">Esempio 2</h3>
+<p>Caso di studio: La Teddy di Rimini fa un progetto per i suoi negozi
+di abbigliamento per ottimizzare le quantità da mandare di prodotto ai
+diversi negozi per non mandare troppo o troppo poco prodotto perchè
+altrimenti per rinviarli indietro si andavano a spendere soldi
+inutilmente. L’azienda ha quindi bisogno di indictori specifici che mi
+aiutano a capire.</p>
+<p>Considerazioni:</p>
+<ul>
+<li>I prodotti non esposti non sono venduti. Se il negozio è troppo
+pieno non posso esporre nuovi prodotti.</li>
+<li>Se ho troppi pochi prodotti in esposizione e in diversi lo provano
+allora non ce ne sono più in esposizione.</li>
+<li>Avere sempre gli stessi articoli nel negozio non attrae la clientela
+a tornare dopo poco tempo.</li>
+</ul>
+<p>Il negozio ha due magazzini: uno è l’esposizione e uno nel negozio
+per il ricambio dei prodotti. Ogni giorni faccio un’immagine del
+magazzino per capire cosa ho e cosa non ho.</p>
+<p>Chi se ne occupa:</p>
+<ul>
+<li>Category manager (responsabile di una categoria di prodotti)</li>
+<li>Supervisor che guardo per i diversi paese la moda che c’è</li>
+<li>Layout manager che gestisce in che modo gestire l’esposizione delle
+diverse categorie</li>
+</ul>
+<p>Vediamo quali sono i criteri da voler analizzare:</p>
+<ul>
+<li>Tempo di esposizione</li>
+<li>Quanto sono vicino al numero ottimale di prodotto</li>
+<li>Dopo quanto si rinnova l’esposizione</li>
+<li>Quanti articoli sono esposti in ogni metro quadrato</li>
+</ul>
+<h2 id="fasi-del-bpr-business-process-reengineering">Fasi del BPR
+(Business Process Reengineering)</h2>
+<ol type="1">
+<li><p>Identificazione dei processi da reingegnerizzare –&gt; Descrivere
+i processi –&gt; <strong>Identificazione del breakthrough</strong> –&gt;
+<strong>Analisi dei tempi di ciclo</strong> –&gt; <strong>Analisi della
+creazione del valore</strong></p></li>
+<li><p>Definizione delle priorità di intervento</p></li>
+<li><p>Analisi di Pareto</p></li>
+<li><p>Reingegnerizzazione dei processi –&gt; Rimuovere le barriere alla
+performance</p></li>
+<li><p>Implementazione del cambiamento</p></li>
+<li><p>Istituzionalizzazione delle misure per il miglioramento
+continuo</p></li>
+</ol>
+<h2 id="lidentificazione-dei-breakthrough">L’identificazione dei
+Breakthrough</h2>
+<p>Esistono dei livelli di performance di un processo (in termini di
+costo, qualità, servizio o tempi di ciclo) il cui raggiungimento
+comporta un miglioramento significativo e più che proporzionale dei
+benefici.</p>
+<p><strong>Rappresentazione grafica</strong>: Il breakthrough è il punto
+di inflessione dove l’economic gain accelera significativamente rispetto
+al time investito.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Breakthrough1.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3
+id="due-modalità-fondamentali-per-lidentificazione-dei-breakthrough">Due
+modalità fondamentali per l’identificazione dei Breakthrough</h3>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Breakthrough2.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>1. La “voce del cliente” (VoC)</strong></p>
+<p>È un processo sistematico attraverso il quale un’azienda raccoglie,
+interpreta e comprende le opinioni, le aspettative e le esperienze dei
+propri clienti riguardo a prodotti, servizi o brand.</p>
+<p><strong>Metodi di raccolta</strong>:</p>
+<ul>
+<li><strong>Sondaggi e questionari</strong>: feedback diretti dai
+clienti</li>
+<li><strong>Interviste</strong>: incontri faccia a faccia o
+telefonici</li>
+<li><strong>Social media e recensioni online</strong>: monitoraggio
+opinioni digitali, sempre molto più diffuso quindi tutte le grandi
+aziende lanciano delle analisi dei social.</li>
+<li><strong>Focus group</strong>: discussioni con clienti
+selezionati</li>
+<li><strong>Analisi dei dati di supporto clienti</strong>: richieste e
+problematiche</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/fasi.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p><strong>Il cliente va inteso come</strong>:</p>
+<ul>
+<li>Cliente finale</li>
+<li>Cliente interno (di un processo)</li>
+<li>Stakeholder della supply chain</li>
+</ul>
+<p><strong>Conseguenze di non includere la VoC in un progetto
+BPR</strong> (se non ascolto il mio cliente):</p>
+<ul>
+<li>Rischio di non offrire ciò che il cliente vuole quando lo vuole</li>
+<li>Possibile perdita di posizionamento e clienti chiave</li>
+<li>Rischio di focalizzare il BPR su aree non a valore per il
+cliente</li>
+<li>Ambiente di lavoro stressante fra i clienti interni</li>
+</ul>
+<p><strong>2. Il Benchmarking</strong></p>
+<p>Il benchmarking è un processo di comparazione attraverso il quale
+l’organizzazione compara le performance interne con standard esterni di
+eccellenza.</p>
+<p><strong>Caratteristiche</strong>:</p>
+<ul>
+<li>Utilizza i KPI per quantificare la prestazione</li>
+<li>Obiettivo: ottenere e mantenere una performance best-in-class</li>
+<li>L’osservazione dell’approccio di altre organizzazioni può
+catalizzare soluzioni innovative</li>
+<li>Può accelerare notevolmente un processo di cambiamento con
+un’efficacia di comunicazione considerevole</li>
+</ul>
+<h2 id="tecniche-bpr-lanalisi-dei-tempi-ciclo">Tecniche BPR: l’analisi
+dei tempi ciclo</h2>
+<p>L’analisi dei tempi di ciclo (cycle time analysis) è una tecnica
+utilizzata per misurare e ottimizzare l’efficienza dei processi
+produttivi o operativi, analizzando il tempo necessario per completare
+un ciclo di lavoro. L’analisi cerca di capire se ci sono delle attività
+che prendono troppo tempo e che quindi vanno modificate.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/Consumo_confezionato.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="componenti-del-tempo-di-ciclo">Componenti del tempo di
+ciclo:</h3>
+<ol type="1">
+<li><p><strong>Tempo di lavorazione (Processing Time)</strong>: tempo
+effettivo dedicato alla realizzazione dell’attività o del prodotto.
+Unico tempo utile.</p></li>
+<li><p><strong>Tempo di attesa (Waiting Time)</strong>: tempo durante il
+quale il lavoro è in attesa tra una fase e l’altra</p></li>
+<li><p><strong>Setup Time</strong>: tempo richiesto per preparare una
+macchina o un processo prima di iniziare il lavoro</p></li>
+<li><p><strong>Tempo di movimentazione (Transport Time)</strong>: tempo
+impiegato per spostare materiali o informazioni da una fase
+all’altra</p></li>
+<li><p><strong>Tempo di inattività (Idle Time)</strong>: periodi in cui
+risorse o macchine non vengono utilizzate</p></li>
+</ol>
+<h3 id="obiettivi-dellanalisi">Obiettivi dell’analisi:</h3>
+<ul>
+<li>Identificare colli di bottiglia</li>
+<li>Ridurre i tempi morti</li>
+<li>Ottimizzare le risorse</li>
+<li>Aumentare l’efficienza complessiva</li>
+</ul>
+<h3 id="esempio-analisi-dei-tempi-ciclo---caso-utilities">Esempio:
+Analisi dei tempi ciclo - Caso Utilities</h3>
+<p><strong>Contesto</strong> Processo di fatturazione di un’azienda che
+commercializza energia elettrica:</p>
+<ul>
+<li>La fatturazione è posteriore al periodo di erogazione</li>
+<li>Il processo può iniziare solo dopo il termine del periodo di
+consumo</li>
+<li>Il calcolo è complicato per l’elevato numero di contratti/offerte
+variabili</li>
+<li><strong>Ogni ritardo determina una perdita finanziaria</strong>
+(pagamenti a X giorni data fattura)</li>
+<li>L’azienda era passata da poche centinaia a decine di migliaia di
+clienti in 3 anni</li>
+<li>Tempi di fatturazione: 4-5 giorni. Dobbiamo cercare di ridurre
+questa latenza perchè l’azienda per 5 giorni non possedeva milioni di
+euro per un ritardo nel tempoo di fatturazione.</li>
+</ul>
+<p><strong>Fasi del processo:</strong></p>
+<ol type="1">
+<li><p><strong>Raccolta dati di consumo (SCADA)</strong></p>
+<ul>
+<li>Lettura contatori (smart meter o manuali)</li>
+<li>Eventuali stime</li>
+</ul></li>
+<li><p><strong>Validazione e normalizzazione dati (ERP)</strong></p>
+<ul>
+<li>Controlli di coerenza</li>
+<li>Correzioni o rettifiche</li>
+</ul></li>
+<li><p><strong>Calcolo del consumo fatturabile (ERP)</strong></p>
+<ul>
+<li>Determinazione kWh consumati</li>
+<li>Ripartizione per fasce orarie (F1, F2, F3)</li>
+</ul></li>
+<li><p><strong>Applicazione delle tariffe (ERP)</strong></p>
+<ul>
+<li>Prezzo dell’energia (quota variabile)</li>
+<li>Quote fisse</li>
+<li>Oneri di sistema e imposte</li>
+</ul></li>
+<li><p><strong>Generazione della bolletta</strong></p>
+<ul>
+<li>Software generatore di PDF integrato nell’ERP.</li>
+</ul></li>
+<li><p><strong>Invio della fattura al cliente</strong></p>
+<ul>
+<li>Formato cartaceo o digitale (CRM)</li>
+</ul></li>
+<li><p><strong>Gestione del pagamento</strong></p>
+<ul>
+<li>Riconciliazione contabile</li>
+</ul></li>
+<li><p><strong>Gestione post-fatturazione</strong></p>
+<ul>
+<li>Solleciti e reminder</li>
+<li>Eventuali rateizzazioni</li>
+</ul></li>
+</ol>
+<h3 id="soluzione-identificata">Soluzione identificata</h3>
+<p><strong>Problema scoperto</strong>: L’80% del tempo era impegnato da
+controlli fuori sistema fatti su fogli Excel:</p>
+<ol type="1">
+<li>Download dei dati dall’ERP verso Excel</li>
+<li>Applicazione di controlli definiti da regole</li>
+<li>Verifica dati anomali (presenti in meno dello 0.1% delle
+fatture)</li>
+<li>Correzione dei dati sull’ERP</li>
+</ol>
+<p><strong>Opzioni considerate</strong>:</p>
+<ul>
+<li>A. Accettare il tempo di ciclo</li>
+<li>B. Implementare i controlli aggiuntivi personalizzando il processo
+di fatturazione</li>
+<li><strong>C. Eliminare i controlli dal processo di
+fatturazione</strong> ✓ (unica riposta giusta)</li>
+</ul>
+<p><strong>Motivazione della scelta</strong>:</p>
+<ul>
+<li>L’implementazione dei controlli sull’ERP risulta inadeguata
+(onerosa, ricorrente, genera lock-in)</li>
+<li>È stato valutato meno oneroso il rischio di emettere una fattura
+sbagliata su 1000 piuttosto che accettare una perdita finanziaria
+certa</li>
+</ul>
+<h2 id="tecniche-bpr-lanalisi-della-creazione-del-valore">Tecniche BPR:
+l’analisi della creazione del valore</h2>
+<figure>
+<img
+src="./asset/ingegneria_dei_processi/Processi_ad_alto_valore_aggiunto.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Permette di identificare le attività che “aggiungono valore al
+cliente” attraverso domande chiave:</p>
+<h3 id="domande-per-lanalisi-a-valore-aggiunto">Domande per l’Analisi a
+valore aggiunto</h3>
+<figure>
+<img src="./asset/ingegneria_dei_processi/domande.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3
+id="focalizzazione-sui-processi-ad-alto-valore-aggiunto">Focalizzazione
+sui processi ad alto valore aggiunto</h3>
+<p>È fondamentale focalizzarsi sui processi che contribuiscono
+maggiormente alla creazione del valore.</p>
+<p><strong>Matrice di prioritizzazione</strong>:</p>
+<ul>
+<li><strong>Asse X</strong>: Valore per il cliente (Basso → Alto)</li>
+<li><strong>Asse Y</strong>: Valore per gli azionisti (Basso →
+Alto)</li>
+</ul>
+<p><strong>Processi ad alto valore aggiunto</strong>: Alto valore sia
+per il cliente che per gli azionisti</p>
+<p><strong>Attenzione</strong>: Non tutti i processi inefficienti e
+distorti sono necessariamente ad alto valore aggiunto.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/impatto_potenziale.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="portafoglio-dei-processi---esempio-azienda-x">Portafoglio dei
+processi - Esempio Azienda X</h3>
+<figure>
+<img src="./asset/ingegneria_dei_processi/portafoglio.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="tecniche-bpr-lanalisi-di-pareto">Tecniche BPR: l’analisi di
+Pareto</h2>
+<p>L’analisi di Pareto è uno strumento statistico utilizzato per
+identificare e focalizzarsi sugli elementi che hanno il maggiore impatto
+su un determinato fenomeno, uno strumento di analisi che si basa
+sull’osservazione empirica secondo cui una minoranza di cause genera la
+maggioranza degli effetti.</p>
+<h3 id="principio-di-pareto-legge-8020">Principio di Pareto (Legge
+80/20)</h3>
+<p>Prende il nome dall’economista italiano Vilfredo Pareto, che nel 1896
+osservò che circa l’80% della ricchezza in Italia era posseduta dal 20%
+della popolazione. Successivamente si scoprì che questo rapporto si
+ripeteva in molti altri contesti. Si base su questa affermazione:</p>
+<div data-align="center">
+<p>“Circa l’80% degli effetti deriva dal 20% delle cause.”</p>
+</div>
+<h3 id="fasi-dellanalisi">Fasi dell’analisi:</h3>
+<ol type="1">
+<li><p><strong>Raccolta dei dati</strong>: dati in relazione a un
+fenomeno o problema specifico</p></li>
+<li><p><strong>Classificazione e ordinamento</strong>: le categorie
+vengono ordinate in ordine decrescente di frequenza o impatto</p></li>
+<li><p><strong>Creazione di un grafico di Pareto</strong>:</p>
+<ul>
+<li>Asse X: diverse categorie</li>
+<li>Asse Y: frequenza o importanza relativa</li>
+<li>Barre ordinate dalla più alta alla più bassa</li>
+<li>Linea cumulativa che mostra la percentuale accumulata</li>
+</ul></li>
+<li><p><strong>Identificazione del “20% cruciale”</strong></p></li>
+</ol>
+<h3 id="obiettivi-dellanalisi-1">Obiettivi dell’analisi:</h3>
+<ul>
+<li>Evidenziare le cause principali di un problema</li>
+<li>Permettere di concentrarsi sulle aree che generano il maggior
+impatto</li>
+<li>Evitare di disperdere risorse su fattori meno significativi</li>
+</ul>
+<h3 id="esempio-pratico">Esempio pratico:</h3>
+<p><strong>Reclami clienti</strong> ordinati per frequenza:</p>
+<ol type="1">
+<li>Bassa Qualità (~130 occorrenze) - 50% cumulativo</li>
+<li>Consegne in ritardo (~75 occorrenze) - 80% cumulativo</li>
+<li>Errori di produzione (~45 occorrenze) - 95% cumulativo</li>
+<li>Fatturazione errata (~25 occorrenze)</li>
+<li>Servizio scadente (~10 occorrenze)</li>
+<li>Quantità sbagliata (~5 occorrenze)</li>
+</ol>
+<p><strong>Il diagramma illustra graficamente la regola del
+80:20</strong>: Le prime 2-3 cause rappresentano circa l’80% dei
+problemi totali.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/analisi_di_pareto.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="la-scelta-dei-processi-sui-quali-intervenire">La scelta dei
+processi sui quali intervenire</h2>
+<p>Deve tenere conto di:</p>
+<ul>
+<li><strong>Impatto potenziale</strong></li>
+<li><strong>Difficoltà di implementazione</strong></li>
+<li><strong>Tempo disponibile per la realizzazione</strong></li>
+</ul>
+<h3 id="matrice-di-prioritizzazione">Matrice di prioritizzazione:</h3>
+<p><strong>Implementare subito</strong>:</p>
+<ul>
+<li>Alto impatto potenziale</li>
+<li>Bassa difficoltà / Veloce realizzazione</li>
+</ul>
+<p><strong>Perseguire “challenge”</strong>:</p>
+<ul>
+<li>Alto impatto potenziale</li>
+<li>Alta difficoltà / Lento</li>
+</ul>
+<p><strong>Perseguire con target conservativi</strong>:</p>
+<ul>
+<li>Basso impatto potenziale</li>
+<li>Bassa difficoltà / Veloce realizzazione</li>
+</ul>
+<p><strong>Differire</strong>:</p>
+<ul>
+<li>Basso impatto potenziale</li>
+<li>Alta difficoltà / Lento</li>
+</ul>
+<h2 id="complessità-del-ridisegno-per-tipologia-di-business">Complessità
+del ridisegno per tipologia di business</h2>
+<h3 id="matrice-complessità">Matrice Complessità:</h3>
+<p><strong>Asse X</strong>: Complessità organizzativa (Bassa → Alta)
+<strong>Asse Y</strong>: Complessità socio-politica (Bassa → Alta)</p>
+<p><strong>Posizionamento</strong>:</p>
+<ul>
+<li><strong>Piccola e media impresa</strong>: Bassa complessità
+organizzativa, Bassa complessità socio-politica</li>
+<li><strong>Grande impresa</strong>: Alta complessità organizzativa,
+Bassa complessità socio-politica</li>
+<li><strong>Enti locali</strong>: Bassa complessità organizzativa, Alta
+complessità socio-politica</li>
+<li><strong>Governo centrale</strong>: Alta complessità organizzativa,
+Alta complessità socio-politica</li>
+<li><strong>Sanità</strong>: Alta complessità organizzativa, Alta
+complessità socio-politica. Ci sono problemi di privacy e legalità
+maggiori. Inoltre il livello gerarchico piramidale è molto complesso e
+molte persone hanno poco potere, portando quindi il processo di
+decisione ad essere lungo e complesso. Gli enti pubblici hanno
+difficoltà anche nel capire se un certo cambiamento stia o meno andando
+bene perchè tende ad avere pochi indicatori economici che le aziende
+private invece hanno.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/conplessita.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2 id="strumenti-analitici">Strumenti analitici</h2>
+<p>(Appunto al lettore la parte degli strumenti analiti e il capitolo
+successivo del “L’Information Technology come fattore di successo” con
+gli esempi è stata spiegata interamente da Claude prendendo gli appunti
+del prof.)</p>
+<p>Nuovi strumenti analitici aiutano a concepire nuovi modi di
+organizzare il flusso di lavoro:</p>
+<h3 id="azienda-estesa">1. <strong>Azienda estesa</strong></h3>
+<p>Significa abbattere i confini rigidi dell’organizzazione e gestire i
+processi come se fossero un flusso continuo che attraversa fornitori,
+partner e clienti.</p>
+<p>Esempio pratico: Invece di avere un reparto acquisti che ordina
+materiali solo quando servono, il fornitore ha accesso diretto ai dati
+di produzione e rifornisce automaticamente il magazzino (come nel
+sistema Just-in-Time di Toyota). Il processo di approvvigionamento
+“esce” dai confini aziendali.</p>
+<h3 id="parallelizzazione">2. <strong>Parallelizzazione</strong></h3>
+<p>Trasformare attività che tradizionalmente si facevano una dopo
+l’altra in attività che si possono fare simultaneamente.</p>
+<p>Esempio pratico: Nello sviluppo di un nuovo prodotto, invece di fare
+prima tutto il design, poi l’ingegnerizzazione, poi il marketing
+(sequenziale), si fanno lavorare i team contemporaneamente con
+comunicazione continua. Questo riduce drasticamente i tempi di lancio
+sul mercato.</p>
+<h3 id="riallocazione">3. <strong>Riallocazione</strong></h3>
+<p>Invece di avere esperti centralizzati che vengono consultati ogni
+volta, si incorpora la loro conoscenza in sistemi, software o strumenti
+che tutti possono usare autonomamente.</p>
+<p>Esempio pratico: Anziché dover chiamare ogni volta l’ufficio legale
+per verificare un contratto, si crea un software con template
+intelligenti e checklist che permettono ai manager di validare contratti
+standard da soli. L’expertise legale è “distribuita” tramite il
+sistema.</p>
+<h3 id="eliminazione">4. <strong>Eliminazione</strong></h3>
+<p>Mettere in discussione le attività tradizionali chiedendosi: “Questo
+passaggio serve davvero?” Spesso si fanno cose “perché si sono sempre
+fatte così”.</p>
+<p>Esempio pratico: Eliminare le approvazioni multiple per spese sotto
+una certa soglia, eliminare report che nessuno legge veramente,
+rimuovere passaggi burocratici che servivano a controllare problemi che
+non esistono più. Gli “steccati” sono le barriere artificiali tra
+reparti (es. “non è compito mio, è del reparto X”).</p>
+<h3 id="cicli-di-miglioramento-continuo">5. <strong>Cicli di
+miglioramento continuo</strong></h3>
+<p>Costruire meccanismi di feedback nel processo stesso, in modo che si
+auto-migliori nel tempo basandosi sui dati reali.</p>
+<p>Esempio pratico: Un sistema di customer service che traccia
+automaticamente i tempi di risposta, la soddisfazione del cliente e i
+problemi ricorrenti, mostrando dashboard in tempo reale al team. Questo
+permette aggiustamenti continui invece di aspettare una revisione
+annuale.</p>
+<h2 id="linformation-technology-come-fattore-di-successo">L’Information
+Technology come fattore di successo</h2>
+<p>L’IT va strategicamente interpretata come fattore di successo
+ottimale per le prestazioni dei processi di business.</p>
+<p>Il concetto chiave è che la tecnologia non è solo un supporto
+operativo, ma un elemento strategico che può trasformare radicalmente
+come l’azienda compete e crea valore.</p>
+<h3 id="impatti-tipici-sulla-catena-del-valore">Impatti tipici sulla
+Catena del Valore:</h3>
+<p>La Catena del Valore di Porter identifica le attività primarie e di
+supporto di un’azienda. L’IT può trasformare ogni anello avendo un
+impatto positivo su essa.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/catena_del_valore.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2
+id="tecnologie-informatiche-abilitanti-per-il-reengineering">Tecnologie
+informatiche “abilitanti” per il reengineering</h2>
+<p>Le tecnologe ‘abilitanti’ sono quelle che non migliorano
+semplicemente l’esistente, ma rendono possibile fare cose completamente
+nuove.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/tecnologia_abilitante.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2
+id="lit-deve-essere-sviluppata-contestualmente-con-il-modello-dimpresa">L’IT
+deve essere sviluppata contestualmente con il “modello d’impresa”</h2>
+<p>Il modello di impresa (o business model) è la logica con cui
+un’azienda crea, distribuisce e cattura valore. In altre parole,
+descrive come un’impresa fa affari e genera profitto.</p>
+<p>Non si può prima definire il modello di business e poi “aggiungere”
+l’IT, né viceversa.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/processi.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<p>Esempio: Amazon non ha prima deciso di fare e-commerce e poi aggiunto
+l’IT. Ha ripensato l’intero modello di retail sfruttando le possibilità
+di internet, creando sistemi di raccomandazione, logistica
+automatizzata, cloud AWS, tutto insieme.</p>
+<h2 id="i-ruoli-della-tecnologia-nellinnovazione">I ruoli della
+tecnologia nell’innovazione</h2>
+<h3 id="la-tecnologia-è-un-fattore-abilitante-dellinnovazione">La
+tecnologia è un fattore abilitante dell’innovazione:</h3>
+<ul>
+<li>L’adozione di processi paralleli è abilitata dai software di
+collaboration</li>
+<li>Senza internet il commercio elettronico non esisterebbe</li>
+<li>Senza il machine learning non si potrebbero creare applicazioni di
+AI</li>
+</ul>
+<h3 id="due-tipologie-di-innovazione">Due tipologie di innovazione:</h3>
+<h4 id="innovazioni-technology-driven">1. <strong>Innovazioni
+technology-driven</strong></h4>
+<p>Si basano su tecnologie estremamente innovative (con riferimento al
+momento dell’innovazione) tale per cui gli stakeholder del
+servizio/problema non riescono neanche a immaginarne l’utilizzo.</p>
+<p><strong>Esempio con azienda che lavora per bandi a progetto</strong>:
+Ogni anno escono centinaia di bandi ma la divisione può studiarne solo
+un numero limitato. Si può chiedere a un LLM di fare un pre-screening di
+TUTTI i bandi e indicare quelli potenzialmente interessanti. Il
+personale dell’ufficio bandi NON conosce le potenzialità di un LLM e NON
+considera l’attività di analisi come un problema.</p>
+<h4 id="innovazioni-application-driven">2. <strong>Innovazioni
+application-driven</strong></h4>
+<p>Si basano su tecnologie note (con riferimento al momento
+dell’innovazione) tale per cui gli stakeholder ne conoscono le
+potenzialità. L’innovazione sta nell’immaginarsi l’utilizzo nello
+specifico contesto.</p>
+<p><strong>Esempio app come MyCicero per pagare il parcheggio</strong>:
+pagamento del parcheggio senza dover cercare la colonnina per il
+pagamento e senza avere monetine. Permettono inoltre di
+allungare/accorciare dinamicamente la sosta. Si basano su tecnologie
+note da 15 anni ma l’innovazione è legata all’utilizzo nel contesto
+specifico e agli accordi con le PA.</p>
+<p><strong>La maggior parte delle innovazioni di processo si basano
+sull’adozione di software con capacità note (ERP, CRM,
+ecc.)</strong></p>
+<h2 id="il-ridisegno-dei-processi-un-modello-in-6-fasi">Il ridisegno dei
+processi: un modello in 6 fasi</h2>
+<figure>
+<img src="./asset/ingegneria_dei_processi/fasi.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="fase-1-condivisione-obiettivi-aziendali">Fase 1:
+<strong>Condivisione obiettivi aziendali</strong></h3>
+<h4 id="attività-principali">Attività principali:</h4>
+<ul>
+<li>Documentare la visione aziendale di strategie ed obiettivi</li>
+<li>Rilevare piani di sviluppo, eventi chiave già pianificati</li>
+<li>Rilevare ruolo e attese dell’Azienda, dei clienti e “partecipi” del
+processo</li>
+</ul>
+<h4 id="risultati">Risultati:</h4>
+<ul>
+<li>Quadro di riferimento degli orientamenti strategici e obiettivi di
+sviluppo</li>
+<li>Linee guida per lo sviluppo dell’attività</li>
+<li>Modello di interrelazione volumi, costi, servizio</li>
+</ul>
+<hr />
+<h3 id="fase-2-definizione-linee-guida">Fase 2: <strong>Definizione
+linee guida</strong></h3>
+<h4 id="attività-principali-1">Attività principali:</h4>
+<ul>
+<li>Selezionare i processi di gestione da considerare</li>
+<li>Identificare gli skill necessari e selezionare le risorse</li>
+<li>Strutturare i team e pianificare le attività</li>
+<li>Sviluppare e promuovere il programma di comunicazione</li>
+</ul>
+<h4 id="risultati-1">Risultati:</h4>
+<ul>
+<li>Quadro processi e priorità</li>
+<li>Macro target definiti</li>
+<li>Risorse da coinvolgere e composizione dei team</li>
+<li>Struttura operativa del programma</li>
+<li>Approccio alla comunicazione, con programma e scopi</li>
+</ul>
+<hr />
+<h3 id="fase-3-analisi-di-base-e-benchmark">Fase 3: <strong>Analisi di
+base e Benchmark</strong></h3>
+<h4 id="attività-principali-2">Attività principali:</h4>
+<ul>
+<li>Analizzare i processi attuali ed i sottoprocessi chiave</li>
+<li>Confrontare i processi con maggiore potenziale di miglioramento con
+le Best Practice</li>
+<li>Analizzare e definire le priorità per i processi chiave ed i
+sottoprocessi</li>
+<li>Sviluppare processi interni ed esterni per la definizione dei
+requisiti dei clienti</li>
+<li>Definire le priorità relative alle opportunità di miglioramento</li>
+</ul>
+<h4 id="output-fondamentali">Output fondamentali:</h4>
+<ul>
+<li><strong>Diagrammi di flusso dei processi</strong> (Livello
+macro)</li>
+<li><strong>Mappatura dei processi</strong>: Processi → Portatori di
+interesse</li>
+<li><strong>Benchmark con i concorrenti</strong>: Criteri di misurazione
+→ Prassi migliore vs Situazione attuale</li>
+<li><strong>I rischi competitivi</strong></li>
+<li><strong>Le opportunità e le necessità di miglioramento</strong></li>
+<li><strong>Gli output dei processi</strong>: Output, Costo, Valore</li>
+<li><strong>Il posizionamento degli output sulla matrice
+costo-valore</strong></li>
+<li><strong>Sessioni per la ricostruzione dei requisiti dei
+clienti</strong>: Problema/opportunità → Causa origine → Possibile
+soluzione</li>
+<li><strong>Lista aggregata delle opportunità</strong>: Area progetto,
+Benefici, Costi, Rischi, Rilevanza strategica</li>
+<li>Crescita della domanda, Obiettivi di redditività, Servizi
+condivisi</li>
+</ul>
+<h3 id="early-wins-risultati-immediati">Early Wins (Risultati
+immediati)</h3>
+<p><strong>Risultati immediati e tangibili sono essenziali</strong>:</p>
+<ul>
+<li>Giustificano l’impegno delle risorse</li>
+<li>Determinano la credibilità del processo di gestione del
+cambiamento</li>
+<li>Forniscono la prova che il management è impegnato nel processo di
+cambiamento</li>
+<li>Creano entusiasmo tra le persone</li>
+</ul>
+<hr />
+<h3 id="fase-4-sviluppo-dei-concetti-innovativi">Fase 4:
+<strong>Sviluppo dei concetti innovativi</strong></h3>
+<h3 id="fase-5-progettazione-del-cambiamento">Fase 5:
+<strong>Progettazione del cambiamento</strong></h3>
+<h4 id="attività-principali-3">Attività principali:</h4>
+<ul>
+<li>Sviluppare la visione di un processo eccellente</li>
+<li>Disegnare le opzioni per i nuovi processi</li>
+<li>Definire i requisiti in termini di risorse e tecnologia</li>
+</ul>
+<h4 id="output-fondamentali-1">Output fondamentali:</h4>
+<ul>
+<li><strong>Diagrammi di flusso</strong></li>
+<li><strong>Cambiamenti necessari</strong></li>
+<li><strong>Azioni prioritarie - Lista dei cambiamenti</strong>: 1, 2,
+3…</li>
+<li><strong>Tabella</strong>: Obiettivi → Cambiamenti richiesti →
+Processi coinvolti</li>
+<li><strong>Interfacce critiche dei nuovi processi</strong>: Matrice
+Processi × Processi (A, B, C…)</li>
+<li><strong>Richieste di risorse umane</strong></li>
+<li><strong>Richieste di investimenti</strong></li>
+<li><strong>Disegno dei futuri macro processi</strong>: Processi →
+Portatori di interesse</li>
+</ul>
+<hr />
+<h3 id="fase-6-pianificare-limplementazione">Fase 6: <strong>Pianificare
+l’implementazione</strong></h3>
+<h4 id="attività-principali-4">Attività principali:</h4>
+<ul>
+<li>Preparare e concordare piano d’implementazione</li>
+<li>Accordarsi sulla futura struttura organizzativa
+post-implementazione</li>
+<li>Accordarsi sull’architettura ed il piano di migrazione</li>
+<li>Allineare i criteri di misurazione delle prestazioni</li>
+</ul>
+<h4 id="risultati-2">Risultati:</h4>
+<ul>
+<li><strong>Programma</strong> con i passaggi fondamentali</li>
+<li>Struttura organizzativa futura</li>
+<li>Architettura e piano di migrazione</li>
+<li>Criteri di misurazione delle prestazioni allineati</li>
+</ul>
+<hr />
+<h2 id="la-realizzazione-del-cambiamento-è-un-processo-continuo">La
+realizzazione del cambiamento è un processo continuo</h2>
+<h3 id="attività-chiave">Attività chiave:</h3>
+<ul>
+<li>Condurre incontri frequenti sullo stato di avanzamento</li>
+<li>Impiegare le risorse in modo flessibile, in funzione delle necessità
+realizzative</li>
+<li>Incoraggiare, supportare e guidare tutti coloro che stanno lavorando
+per il processo di cambiamento</li>
+<li>Monitorare i sistemi di misurazione dei processi</li>
+<li>Individuare le azioni di miglioramento delle prestazioni</li>
+<li>Comunicare i risultati a tutta l’organizzazione</li>
+</ul>
+<h3 id="risultato">Risultato:</h3>
+<ul>
+<li>Gestione del processo di cambiamento</li>
+<li>Il raggiungimento dei risultati viene monitorato e comunicato</li>
+</ul>
+<hr />
+<h2 id="integrazione-delle-attività">Integrazione delle attività</h2>
+<p>In un programma di trasformazione aziendale il “process
+reengineering” va integrato con la realizzazione dei nuovi supporti
+informatici e la gestione del cambiamento.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/legenda.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<figure>
+<img src="./asset/ingegneria_dei_processi/change_management.png"
+alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h2
+id="modellazione-fuzionale-con-data-flow-diagram-flusso-di-attività">Modellazione
+fuzionale con Data Flow Diagram (Flusso di attività)</h2>
+<p>I dataflow diagram sono diagrammi per la modellazione funzionale di
+dati e flussi in cui ogni bolla è una funzione che fa qualcosa per un
+determinato scopo.</p>
+<p>I DFD:</p>
+<ol type="1">
+<li>Traggono origine dalla teoria dei grafi e sono stati utilizzati
+anche precedentemente all’avvento dei computer per la gestione delle
+informazioni.</li>
+<li>Sono stati impiegati per la prima volta, nel settore dell’ingegneria
+del software, solo verso la metà degli anni 70.</li>
+<li>Non esiste in letteratura a tutt’oggi una definizione universalmente
+accettata e sono presenti molteplici differenti formulazioni
+operative.</li>
+</ol>
+<p>Che cosa modella un DFD?</p>
+<ol type="1">
+<li>Un sistema è visto come una rete di processi funzionali
+interconnessi da depositi di dati.</li>
+<li>I DFD enfatizzano le operazioni effettuate sulle informazioni e le
+dipendenze funzionali che vengono a crearsi fra i vari processi in base
+ai flussi di informazione.</li>
+<li>I processi possono essere definiti a qualunque livello di
+astrazione, raffinabili mediante scomposizione gerarchica in un insieme
+di processi più elementari.</li>
+</ol>
+<p>Le etità sono:</p>
+<ol type="a">
+<li>processi o bolle che trasformano dati</li>
+<li>flussi che muovono dati</li>
+<li>agenti esterni (terminatori) che produzono e condumano dati- Non
+fanno parte dell’azienda ma servono (es: fattura inviata da una banca
+che non fa parte dell’azienda)</li>
+<li>deposito di dati (fisici o virtuali) che memorizzano informazioni in
+modo passivo</li>
+</ol>
+<figure>
+<img src="./asset/ingegneria_dei_processi/simboli.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="definizione-formale">Definizione formale</h3>
+<p>un DFD è una quartupla &lt;P,D,A,F&gt; dove:</p>
+<ul>
+<li>P = {p1,p2,…,pn} è un insieme finito, non vuoto, di processi;</li>
+<li>D = {d1,d2,…,dr} è un insieme finito di depositi;</li>
+<li>A = {a1,a2,…,as} è un insieme finito di agenti;</li>
+<li>F= { f ∈ (P×(P∪D∪A)) ∪ ((P∪D∪A)×P) } è un insieme finito di
+flussi.</li>
+</ul>
+<figure>
+<img src="./asset/ingegneria_dei_processi/libreria.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="consigli">Consigli</h3>
+<ul>
+<li>Nomi univoci per identificare processi, flussi di dati, agenti e
+depositi.</li>
+<li>Non rappresentare le eccezioni e il trattamento degli errori,
+rimandando questi dettagli alle fasi finali dell’analisi.</li>
+<li>Un DFD non è un diagramma di flusso, dove le frecce indicano un
+ordinamento negli eventi.</li>
+<li>In alcune estensioni, come nella notazione OMT è possibile
+rappresentare anche flussi di controllo; anticiparli in un DFD comporta
+di fatto una duplicazione se si usa anche un modello dinamico.</li>
+</ul>
+<h3 id="regole">Regole</h3>
+<ul>
+<li>Scegliere nomi significativi per i processi, flussi, depositi, e
+agenti.</li>
+<li>Numerare i processi.</li>
+<li>Disegnare i DFD seguendo criteri estetici.</li>
+<li>Evitare DFD eccessivamente complessi.</li>
+<li>Accertarsi della coerenza interna di un DFD e che sia coerente con
+quelli ad esso associati.</li>
+</ul>
+<h3 id="vincoli">Vincoli</h3>
+<ul>
+<li>Evitare processi a consumo infinito (pozzi).</li>
+<li>Sospettare di processi a generazione spontanea.</li>
+<li>Depositi a sola lettura o a sola scrittura sono rari.</li>
+<li>Non devono esistere flussi di dati fra :
+<ol type="1">
+<li>due agenti esterni,</li>
+<li>due depositi,</li>
+<li>un’entità esterna e un deposito.</li>
+</ol></li>
+</ul>
+<p>Ci sono anche DFD con flussi di controllo e multilivello (conta che
+un’applicazione di medie dimensioni richiede dai 3 ai 6 livelli) nel
+quale vengono specializzate specifiche parte e cambia il livelo di
+dettaglio in cui vengono viste.</p>
+<figure>
+<img src="./asset/ingegneria_dei_processi/scomposizioni.png" alt="." />
+<figcaption aria-hidden="true">.</figcaption>
+</figure>
+<h3 id="strategie">Strategie</h3>
+<p>top-down</p>
+<ul>
+<li>decomposizione di un processo in una serie di sottoprocessi
+chiaramente identificabili e indipendenti.</li>
+</ul>
+<p>bottom-up</p>
+<ul>
+<li>a partire da una collezione di concetti elementari si costruiscono
+via via le connessioni fra essi.</li>
+</ul>
+<p>mixed</p>
+<ul>
+<li>raffinamento di un DFD di massima in stadi successivi con tecniche
+top-down e bottom-up</li>
+</ul>
+<p>outside-in</p>
+<ul>
+<li>parte dalle interfacce con il sistema e propaga in avanti gli
+ingressi evidenziando i processi coinvolti nei flussi di dati o, in
+alternativa, propaga all’indietro le uscite.</li>
+</ul>
+</body>
+</html>
