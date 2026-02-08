@@ -1,6 +1,6 @@
-pandoc IngegneriaDeiProcessi.md -o IngegneriaDeiProcessi.html -s --toc \
+pandoc Integrazione.md -o Integrazione.html -s --toc \
  --toc-depth=3 \
- --metadata title="Ingegneria dei processi" \
+ --metadata title="Integrazione" \
  --metadata author="Matilde D'Antino" \
  -c https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css \
  -H <(cat << 'EOF'
@@ -113,4 +113,4 @@ pandoc IngegneriaDeiProcessi.md -o IngegneriaDeiProcessi.html -s --toc \
 EOF
 )
 
-open IngegneriaDeiProcessi.html
+open Integrazione.html

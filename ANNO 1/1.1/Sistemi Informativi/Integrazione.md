@@ -6,6 +6,8 @@ Una volte che inizio a digitalizzare i processi nasce una costante richieste di 
 
 Lo sviluppo di un sistema informativo è di tipo **incrementale** ed **evolutivo** e quindi il suo risultato è un mosaico composto da più frammenti ognuno dei quali utilizza la tecnologia in voga al momento della sua realizzazione e che modella la realtà esistente in quel momento.
 
+![.](./asset/Integrazione/motivi.png)
+
 Per operare efficacemente con le informazioni è necessario che:
 
 - Il modello della realtà utilizzato sia consistente e veritiero (problema del divario percettivo)
@@ -23,7 +25,7 @@ Con il termine di integrazione si indicano l'insieme di attività atte a costrui
 
 ETL = Extraction Trasformation and Loading ovvero un sistema che estragga dei dati, li trasforma e li manda ad un sistema di destinazione.
 
-// IMMAGINE
+![.](./asset/Integrazione/aspetti.png)
 
 Nel tempo cambiano le tecniche ma questi flussi e il tema dell'integrazione c'è sempre stato e sempre ci sarà.
 
@@ -31,7 +33,7 @@ Prima avevamo solo Base di dati relazionali ma ora abbiamo anche db non relazion
 
 ## I passi dell'integrazione dello schema
 
-// IMMAGINE
+![.](./asset/Integrazione/passi.png)
 
 Analizzando più in dettaglio la fase di integrazione si evidenziano le seguenti operazioni:
 
@@ -42,6 +44,8 @@ Analizzando più in dettaglio la fase di integrazione si evidenziano le seguenti
 ## Architettura per il SI integrato
 
 La presenza di un livello di dati integrato modifica l'architettura del SI.
+
+![.](./asset/Integrazione/architettura.png)
 
 Le applicazioni operano su viste dello schema integrato che può essere:
 
@@ -69,7 +73,7 @@ Lo schema concettuale delle sorgenti rappresenta senz'altro il risultato princip
 
 Gli schemi di un sistema ERP è difficile modellarli in uno schema ma avviene attraverso una meta-modellazione.
 
-// Immagine
+![.](./asset/Integrazione/analisi.png)
 
 La normalizzazione a destra abbiamo aggiunto un concetto di sottocategoria che non esisteva prima. Ho quindi aggiunto un'informazione.
 
@@ -93,7 +97,7 @@ Mettendo assieme più informazioni che prima erano separate verranno fuori delle
 
 Il punto di vista rispetto al quale diversi gruppi di utenti vedono uno stesso oggetto del dominio applicativo può differenziarsi notevolmente in base agli aspetti rilevanti ai fini della funzione a cui essi sono preposti.
 
-// Immagine
+![.](./asset/Integrazione/diversita.png)
 
 A sinistra ho che un dipendente fa capo a progetto che è di uno specifio dipartimento mentre a destra ho che ho un dipendente che fa parte di un dipentimento. Però magari possiamo scoprire che un dipendente non può lavorare ad un progetto che non sia di un suo dipartimento quindi ho la stessa informazione ripetuta.
 
@@ -101,7 +105,7 @@ A sinistra ho che un dipendente fa capo a progetto che è di uno specifio dipart
 
 I formalismi di modellazione permettono di rappresentare uno stesso concetto utilizzando combinazioni diverse dei costrutti a disposizione.
 
-// Immagine
+![.](./asset/Integrazione/equivalenza.png)
 
 La diversità è puramente di tipo sintattico: le due modellazioni sono perfettamente equivalenti.
 
@@ -111,7 +115,7 @@ Si verifica quando due schemi modellano una stessa porzione del dominio applicat
 
 Un professore insegna da massimo un corso da una parte mentre dall'altra abbiamo che un corso può avere almeno 2 professori ma sono incompatibili perchè dicono due cose diverse. Questa cosa può avvenire per evoluzione oppure se c'è solo un'omonimia, quindi se corso di sinistra = corso di destra. Ad esempio a sinistra potrebbe essere considerato come il docente titolare del corso e a destra invece i docenti che insegnano in un modulo del corso.
 
-// Immagine
+![.](./asset/Integrazione/incompatibilita.png)
 
 ## Concetti comuni
 
@@ -128,11 +132,9 @@ Domanda da esame: "Nell'ambito delle intergrazioni delle basi di dati mi spieghi
 
 **Def.** Si verifica un **conflitto** tra due rappresentazioni R₁ e R₂ di uno stesso concetto ogniqualvolta le due rappresentazioni non sono identiche.
 
-// Immagine
-
 **Def.** Due schemi R₁ e R₂ sono **equivalenti** se le loro istanze possono essere messe in corrispondenza uno-a-uno.
 
-// Immagine
+![.](./asset/Integrazione/concetti.png)
 
 L'equivalenza tra schemi implica che a livello estensionale esistono sempre due insiemi di dati, diversi ma equivalenti, che memorizzano le stesse informazioni.
 
@@ -140,7 +142,7 @@ L'equivalenza tra schemi implica che a livello estensionale esistono sempre due 
 
 A seguito dell'integrazione, molti concetti diversi ma correlati verranno a trovarsi nello stesso schema dando vita a nuove relazioni che non erano percepibili in precedenza. Tali relazioni sono dette **proprietà inter-schema** e devono essere identificate e rappresentate esplicitamente.
 
-// Immagine
+![.](./asset/Integrazione/concetti2.png)
 
 Una volta che lego le due cose possiamo esprimere una nuova informazione: nello schema è per quale casa editrice lavora uno scrittore. Prima quest'ultima informazione non era accessibile perchè avevamo le informazioni in schemi separati.
 
@@ -160,7 +162,7 @@ Indicano l'ordine con cui si procederà all'integrazione degli schemi.
 - **Tecniche ennarie**: processo di integrazione considera più di due schemi contemporaneamente
 - **Tecniche binarie**: il processo di integrazione considera sempre coppie di schemi. Le tecniche binarie sono dette **a scala** quando i nuovi schemi sono integrati allo schema temporaneo determinato fino a quel momento
 
-//Immagine
+![.](./asset/Integrazione/strategie.png)
 
 Quale approccio scelgo?
 
@@ -189,7 +191,7 @@ I conflitti che possono essere evidenziati appartengono a 4 categorie:
   - **Omonimie**: lo stesso termine viene utilizzato per denotare due concetti diversi (vedo prezzo ma uno è lordo e l'altro no)
   - **Sinonimie**: due nomi diversi denotano uno stesso concetto
 
-// Immagine
+![.](./asset/Integrazione/comparazione.png)
 
 Mentre le omonimie possono essere individuate da una semplice comparazione dei concetti che presentano gli stessi nomi in schemi diversi, per riconoscere eventuali sinonimi è necessaria una conoscenza approfondita del dominio applicativo.
 
@@ -197,7 +199,7 @@ I **conflitti semantici** si verificano quando due schemi sorgenti modellano la 
 
 Nell'immagine siamo in un conflitto di comparabilità, i due schemi possono portare la stessa informazione in uno ma se mappo quello sopra in quello sotto perdo l'informazione di piano.
 
-// Immagine
+![.](./asset/Integrazione/comparazione2.png)
 
 Il livello di dettaglio adottato negli schemi locali è diverso e di conseguenza anche l'insieme di informazioni rappresentabili cambia.
 
@@ -242,7 +244,7 @@ Non sempre i conflitti possono essere risolti poiché derivano da inconsistenze 
 
 - **Minimalità**: la sovrapposizione di più schemi può generare una forte ridondanza dei concetti che, sebbene espressi in modo univoco negli schemi sorgenti, risultano duplicati o comunque derivabili l'un l'altro in quello riconciliato. Altre comuni fonti di ridondanza sono le relazioni cicliche tra i concetti e gli attributi derivati
 
-// immagine
+![.](./asset/Integrazione/principi.png)
 
 - **Leggibilità**: il miglioramento della leggibilità dello schema facilita e sveltisce le successive fasi di progettazione. Sebbene sia difficile misurare la differenza di leggibilità tra i due schemi, la nozione qualitativa del termine è relativamente semplice
 
@@ -250,15 +252,17 @@ Non sempre i conflitti possono essere risolti poiché derivano da inconsistenze 
 
 "......I dati riguardano i libri. I libri hanno un titolo. Sono pubblicati da editori che hanno un nome e un indirizzo. I libri sono adottati da Università che hanno un nome e appartengono a uno Stato. Ogni libro è relativo ad alcuni argomenti........"
 
-// Immagine
+![.](./asset/Integrazione/integrazione.png)
 
 ".....I dati riguardano delle pubblicazioni di diversi tipi. Ogni pubblicazione ha un titolo un editore e una lista di parole chiave. Ogni parola chiave è composta da un nome, un codice e un'area di ricerca........"
 
-// Immagine
+![.](./asset/Integrazione/integrazione2.png)
 
 Vediamo una sovrapposizione tra argomento e parola chiave ed pubblicazione ed editore.
 
-// Immaginei di fusione
+![.](./asset/Integrazione/integrazione3.png)
+![.](./asset/Integrazione/integrazione4.png)
+![.](./asset/Integrazione/integrazione5.png)
 
 Possiamo semplificare ulteriormente lo schema.
 
@@ -371,7 +375,7 @@ Con questo termine si indicano le tecniche di verifica della correttezza dei val
 
 Sono applicabili solo quando il dominio del campo è conosciuto e limitato.
 
-// Immagini
+![.](./asset/Integrazione/tecniche.png)
 
 Le tecniche basate su dizionari possono essere applicate anche a più campi contemporaneamente al fine di verificare eventuali inconsistenze tra due campi correlati. Per esempio, avendo a disposizione una tabella di riferimento che riporta le regioni italiane e, per ognuna di esse, l'elenco delle città che vi appartengono, è possibile verificare se i campi città e regione di un indirizzo sono tra loro consistenti.
 
@@ -381,11 +385,11 @@ Se non riesco a risolvere un errore allora il dato viene scartato e ci deve esse
 
 Ogniqualvolta si debbano combinare in un'unica destinazione dati provenienti da sorgenti diverse senza una chiave comune, nasce la necessità di identificare i record corrispondenti.
 
-// Immagine
+![.](./asset/Integrazione/tecniche2.png)
 
 Quando due istanze diverse di uno stesso schema devono essere fuse assieme si parla di **purge/merge problem**. Le due istanze non sono disgiunte (un cliente può acquistare sia a Roma che a Milano), inoltre anche nei singoli database i clienti potrebbero essere inseriti più volte a causa di errori di battitura che non hanno permesso di verificare un precedente inserimento.
 
-// Immagine
+![.](./asset/Integrazione/tecniche3.png)
 
 L'unico modo per riconciliare lo schema sopra devo lavorare per similarità.
 
@@ -397,10 +401,7 @@ Ci sono tantissimi strumenti che gestiscono i pattern di similarità, un modo è
 
 Comparano le sottostringhe di Aᵢ ∈ A e Bᵢ ∈ B, calcolando la similarità in base alla formula ricorsiva:
 
-```
-affinità(A,B) = (1/|A|) Σ max affinità(Aᵢ,Bⱼ)
-                        i=1  j=1
-```
+![.](./asset/Integrazione/affinita.png)
 
 dove la comparazione tra i sottocampi elementari è basata sul confronto tra stringhe e sulla verifica della presenza di abbreviazioni che vengono ricercate in base a pattern ben definiti:
 
@@ -470,6 +471,8 @@ Per risolvere questi problemi si procede spostando i MD al di fuori delle singol
 - Si modificano i processi di business che toccano i MD, per alimentare e sfruttare al meglio la nuova base dati "master"
 - Va definita la "ownership" dei MD e dei processi di alimentazione e gestione che li riguardano
 
+![.](./asset/Integrazione/mdm.png)
+
 ## Scegliere i master data
 
 ### Tipologie dei dati
@@ -495,7 +498,7 @@ Per risolvere questi problemi si procede spostando i MD al di fuori delle singol
 
 - **Centralità**: i MD sono centrali a più applicazioni e vengono da essi creati, modificati, letti e cancellati
 
-// IMMAGINE
+![.](./asset/Integrazione/scegliere.png)
 
 ## La gestione dei Master Data
 
@@ -541,7 +544,7 @@ Il MDM include sia la creazione, sia la manutenzione dei MD di conseguenza un pr
 
 **Quale fase è risultata più difficile?**
 
-// IMMAGINE
+![.](./asset/Integrazione/complessita.png)
 
 - 10% Implementazione della soluzione
 - 50% Data cleaning e standardizzazione
@@ -553,15 +556,24 @@ La tecnologia è importante ma la progettazione molto di più.
 
 ## Architetture per MDM
 
-Le architetture le classifichiamo per essere sincrona o asincrona (se il passaggio del dato è periodico e non immediato) e che non cambi o cambi le proprietà del dato, ovvero le sorgenti sono libere di applicare le policy che vogliono nella logica di update del dato.
+Le architetture MDM possono essere classificate in base a due dimensioni principali:
 
-1. Le architetture di consolidamento e di coesistenza sono ASINCRONE e senza di cambio di proprietà del dato. Può capitare quindi che i siano dei dati che hanno avuto un update ma che l'hub non lo sa: delay nell'aggiornamento. La sorgente e l'hub hanno delle logiche diverse di aggiornamento e non sono forzati all'integrazione. Se ad esempio sono il pronto soccorso e ho dei dati che non sono del tutto attendibili perchè hai a che fare con un'emergenza e basta allora posso decidere di non avere tutti i dati che sono forniti dal PS.
+Sincrone o asincrone, a seconda che il passaggio del dato sia immediato o periodico
+
+Con o senza cambio di proprietà del dato, ovvero se le sorgenti mantengono la libertà di applicare le proprie policy di aggiornamento
+
+Le architetture di consolidamento e coesistenza sono asincrone e non prevedono il cambio di proprietà del dato.
+Di conseguenza, può accadere che alcune sorgenti abbiano dati aggiornati che l’hub non conosce ancora, generando un ritardo nell’aggiornamento.
+
+Sorgenti e hub seguono logiche di aggiornamento diverse e non sono forzate all’integrazione.
+Ad esempio, nel contesto del pronto soccorso, alcuni dati possono essere incompleti o meno attendibili a causa della gestione dell’emergenza: si può quindi decidere di non integrare completamente tali informazioni.
 
 ### Architetture per MDM: consolidamento
 
-L'idea è avere un hub fisico di dati (rosso nell'immagine) e e avere dei flussi di dati in pull e push dalle sorgenti verso l'area centrale. Le sorgenti non sono tenute a cambiare nulla ma costruiscono un hub centrale di dati.
+L’idea è quella di costruire un hub fisico centrale dei dati (indicato in rosso nell’immagine), alimentato tramite flussi pull e push dalle sorgenti verso l’area centrale.
+Le sorgenti non sono obbligate a modificare i propri sistemi, ma contribuiscono alla costruzione dell’hub.
 
-//Immagine
+![.](./asset/Integrazione/arc_consolidamento.png)
 
 L'architettura viene fisicamente istanziata mediante un hub centrale che contiene i "golden record":
 
@@ -574,7 +586,9 @@ L'architettura viene fisicamente istanziata mediante un hub centrale che contien
 
 ### Architetture per MDM: coesistenza
 
-Non è altro che un'architettura più cimplicata della prima.
+Si tratta di un’architettura più complessa rispetto al consolidamento.
+
+![.](./asset/Integrazione/coesistenza.png)
 
 Viene costruito un hub centrale che mantiene una versione aggiornata dei dati che viene in seguito (con modalità non sincrona) riversata sulle sorgenti:
 
@@ -585,7 +599,9 @@ Viene costruito un hub centrale che mantiene una versione aggiornata dei dati ch
 
 ### Architetture per MDM: a registro
 
-// immagine
+Importante quando si parlerà tra poco di data fabric e data meshing.
+
+![.](./asset/Integrazione/registro.png)
 
 Viene costruito un registro centrale che collega le versioni locali dei dati di cui si è verificata la corrispondenza:
 
@@ -601,9 +617,14 @@ Viene costruito un registro centrale che collega le versioni locali dei dati di 
 
 ### Architetture per MDM: Transazionale
 
-E' molto diverso dalle precedenti. Ossia i dati sono aggiornati in maniera sincrona tramite una transazione di database e la proprità del dato passa dalle sorgenti all'hub del master data. Quindi se una sorgente vuole modificare un dato chiede un lock al MD e se viene concessa la notifica allora tutte le applicazioni la vedono. Sicuramente è un'architettura più invasiva andando a modificare diverse parti. Le regole di gestione del dato sono per tutti gli applicativi.
+Questa architettura è profondamente diversa dalle precedenti.
+I dati vengono aggiornati in modo sincrono tramite transazioni di database e la proprietà del dato passa dalle sorgenti all’hub MDM.
 
-// immagine
+Quando una sorgente deve modificare un dato, richiede un lock al sistema MDM. Se il lock viene concesso e l’aggiornamento accettato, la modifica diventa immediatamente visibile a tutte le applicazioni.
+
+Si tratta di un’architettura più invasiva, poiché richiede modifiche significative ai sistemi esistenti. Le regole di gestione del dato diventano comuni a tutti gli applicativi.
+
+![.](./asset/Integrazione/transazionale.png)
 
 Viene costruito un hub centrale che mantiene una versione aggiornata utilizzata in modo sincrono da tutte le applicazioni:
 
@@ -616,28 +637,29 @@ Viene costruito un hub centrale che mantiene una versione aggiornata utilizzata 
 
 ## Un esempio concreto: il caso dell'AUSL di Cesena
 
-Un'AUSL vuole valutare possibili soluzioni all'annoso problema dell'anagrafica assistiti:
+Un’AUSL deve affrontare il problema dell’anagrafica assistiti, che comprende:
 
-- I residenti nella provincia di riferimento dell'AUSL
-- I non residenti che per scelta o necessità usufruiscono di prestazioni (es. un ricovero, una visita specialistica) presso gli ospedali, cliniche dell'AUSL
+- I residenti nella provincia di riferimento
+- I non residenti che usufruiscono di prestazioni sanitarie (ricoveri, visite specialistiche, ecc.)
 
-(Solo con PnRR abbiamo iniziato ad un'anagrafe unica italiana, per dire che è un problema ancora attuale quello dell'anagrafica)
+(Solo con il PNRR si è iniziato a realizzare un’anagrafe unica nazionale, a dimostrazione del fatto che il problema è tuttora attuale.)
 
-Al momento i dati anagrafici degli assistiti sono mantenuti da più applicazioni, tra loro parzialmente incoerenti e ridondanti. In caso si vuole una visita abbiamo un applicativo, per ricovero abbiamo un altro applicativo e così via.
+Attualmente, i dati anagrafici sono mantenuti da più applicazioni, tra loro parzialmente incoerenti e ridondanti.
+A seconda della prestazione richiesta (visita, ricovero, emergenza), vengono utilizzati sistemi diversi.
 
-// immagini
+![.](./asset/Integrazione/esempio.png)
 
-Inoltre l'impianto della sanità è basato su 3 livelli:
+Inoltre, il sistema sanitario è organizzato su tre livelli:
 
 - AUSL
 - Regioni
 - Stato
 
-Di conseguenza c'è un importante insieme di flussi che va fuori dall'AUSL.
+Di conseguenza, esiste un insieme rilevante di flussi informativi che escono dall’AUSL.
 
 ### AUSL: descrizione della situazione attuale
 
-Ogni applicativo ha le sue caratteristiche a libvello di prestazioni e di gestione dei dati.
+Ogni applicativo presenta caratteristiche specifiche in termini di prestazioni e gestione dei dati.
 
 - **Scelta/Revoca medico di base**: è l'ufficio che si occupa, di associare a tutti i residenti un medico di base/pediatra. La scelta/revoca deve essere fatta forzatamente presentandosi all'ufficio
 
@@ -701,7 +723,7 @@ La frequenza degli aggiornamenti è troppo bassa.
 
 ### AUSL soluzione coesistenza
 
-// Immagine
+![.](./asset/Integrazione/coesistenza_esempio.png)
 
 Si costruisce un nuovo DB per i master data (implementazione fisica) e si definiscono i flussi di alimentazione da e verso le applicazioni:
 
@@ -726,9 +748,13 @@ Va definita una politica per il merge dei dati presso l'hub:
 
 Per aumentare la qualità dei dati sarebbe utile concordare la modalità e la tempistica di aggiornamento dei dati presso le sorgenti.
 
-L'impatto sulle singole applicazioni è stata quella di andare a pescare i dati nell'hub in base alle logiche stabilite. Ad esempio un nuovo dato del PS viene scartato mentre un dato dal CUP andava ad aggiornare i dati. Vince l'informazione più recente e più affidabile.
+L’impatto sulle singole applicazioni consiste nell’accesso ai dati dell’hub secondo le logiche stabilite.
+Ad esempio, un nuovo dato proveniente dal pronto soccorso può essere scartato, mentre un dato proveniente dal CUP può aggiornare l’anagrafica centrale.
+Prevale quindi l’informazione più recente e più affidabile.
 
 ### AUSL soluzione transazionale
+
+![.](./asset/Integrazione/transazionale_esempio.png)
 
 Si costruisce un nuovo DB per i master data e si modificano tutte le applicazioni per permettere la gestione transazionale dei dati:
 
@@ -740,7 +766,7 @@ Si costruisce un nuovo DB per i master data e si modificano tutte le applicazion
 5. Il sistema verifica la qualità del dato e accetta/rifiuta l'aggiornamento
 6. Il lock viene rilasciato e il dato diventa visibile a tutti
 
-Si sincronizzano le applicazioni.
+In questo modo, le applicazioni risultano sincronizzate.
 
 ### AUSL transazionale vs coesistenza
 
@@ -759,6 +785,8 @@ Si sincronizzano le applicazioni.
 - Garantisce sempre l'allineamento dei dati tra le applicazioni interne (circolarità dell'informazione)
 - Centralizza la gestione dei dati e le politiche di aggiornamento
 
+Negli enti pubblici, caratterizzati da vincoli politici, complessità organizzativa e limitazioni operative, le soluzioni transazionali spesso risultano difficili da adottare.
+
 ## What's Next: Integration, integration integration
 
 L'integrazione dei dati è un obiettivo a tendere che i sistemi informativi inseguono dagli anni '70 perché con essa determina:
@@ -771,6 +799,19 @@ Con il procedere della digitalizzazione aumenta il numero di sorgenti dati e div
 
 ## What's Next: Data Fabric
 
+Il data fabric ha iniziato a essere preso in considerazione negli ultimi anni ed è fortemente basato su metadati e sulle tecnologie che ne consentono la gestione.
+
+Negli ultimi tempi si è assistito a un forte sviluppo di questo approccio, caratterizzato da una ricca produzione di metadati.
+Questi metadati permettono di adottare una logica distribuita, nella quale:
+
+non esiste una vera e propria integrazione fisica dei dati
+
+è presente invece un registro che consente di individuare corrispondenze e possibili integrazioni tra dati diversi
+
+L’integrazione avviene quindi sulla base di similarità sintattiche e semantiche tra i dati, senza la necessità di centralizzarli.
+
+In questo contesto, si costruiscono relazioni strutturate sotto forma di metadati, che collegano tra loro i dati presenti nei diversi sistemi, consentendone l’individuazione, la comprensione e l’utilizzo in modo coerente.
+
 Il **Data fabric** permette un accesso e una condivisione in un ambiente distribuito anche multi-cloud:
 
 - Consente un quadro di gestione dei dati unico e coerente, che permette l'accesso ai dati e l'elaborazione senza soluzione di continuità a sorgenti che altrimenti sarebbero a silo
@@ -782,9 +823,33 @@ Il **Data fabric** permette un accesso e una condivisione in un ambiente distrib
 - Progettata per fornire dati integrati e arricchiti - al momento giusto, nel metodo giusto e al giusto consumatore di dati - a supporto dei carichi di lavoro sia operativi che analitici
 - Combina le tecnologie chiave di gestione dei dati, come il catalogo dei dati, la governance dei dati, l'integrazione dei dati, il pipeline dei dati e l'orchestrazione dei dati
 
+![.](./asset/Integrazione/dataFabric.png)
+
+Il punto centrale del data fabric è rappresentato da:
+
+- Data Catalog
+- Knowledge Graph, in cui le tabelle fungono da nodi collegati tramite informazioni di relazione
+
+Il dato viene tracciato, catalogato e collegato: questa struttura costituisce la base su cui vengono poi eseguite le trasformazioni del dato.
+
+La componente più critica di un sistema di questo tipo riguarda:
+
+- la generazione dei metadati, che risulta estremamente complessa
+- l’aumento della complessità del reasoning all’aumentare della dimensione della struttura
+- Il livello di complessità è quindi elevato.
+  Viene fatto uso anche dell’intelligenza artificiale, ma manca ancora un vero e proprio “oracolo” basato su AI in grado di gestire e interrogare efficacemente una complessità di dati di questo tipo.
+
+Un LLM nasce per comprendere il linguaggio naturale e incontra difficoltà nell’interpretazione diretta di grafi complessi.
+È possibile tradurre le tuple in linguaggio naturale, ma ciò risulta praticabile solo nel caso di grafi di dimensioni contenute.
+
+Il data fabric rappresenta quindi una scommessa prevalentemente tecnologica.
+
 ## What's Next: Data Ops
 
 **DevOps** deriva dalla contrazione inglese di development, "sviluppo", e operations, inteso come "messa in produzione" o "deployment".
+
+![.](./asset/Integrazione/dataOps.png)
+![.](./asset/Integrazione/dataOps2.png)
 
 ### Dal DevOps al DataOps
 
@@ -799,11 +864,24 @@ Il **Data fabric** permette un accesso e una condivisione in un ambiente distrib
 
 ## What's Next: Data Mesh
 
+Il Data Mesh è un approccio socio-tecnologico.
+Gartner assume una posizione piuttosto pessimistica rispetto a questo modello.
+
+La logica di fondo è la seguente: nelle organizzazioni grandi e complesse, la complessità dell’integrazione dei dati cresce rapidamente e diventa difficile da gestire con approcci tradizionali e centralizzati.
+Il fallimento di queste tecniche porta al cosiddetto data mashing, ovvero all’accettazione del fatto che l’integrazione centralizzata sia utopica.
+
+Si introduce quindi un approccio distribuito all’integrazione dei dati.
+
+L’idea è quella di definire domini di competenza dei dati, ciascuno gestito da persone competenti in quello specifico ambito.
+Ogni dominio è libero di integrare i propri dati, ma deve farlo rispettando regole rigorose affinché i dati risultino ricercabili e utilizzabili.
+
 **Data mesh is a decentralized sociotechnical approach in managing and accessing analytical data at a scale**
 
 **Obiettivo**: abilitare le organizzazioni a diventare maggiormente Data Driven cambiando il modo in cui queste organizzano i propri team e le proprie architetture dati.
 
 L'approccio data mesh richiede competenze diffuse di Data Architect e Data Science in azienda!
+
+![.](./asset/Integrazione/dataMesh.png)
 
 ## Limiti delle Data Platform
 
@@ -824,7 +902,7 @@ Difficoltà nell'individuazione di chi ha **l'ownership sul dato**.
 3. **Self-serve data platform**
 4. **Federated computational governance**
 
-## Domain ownership: domain-oriented decentralization
+### Domain ownership: domain-oriented decentralization
 
 Nel paradigma Data Mesh l'infrastruttura dati è responsabile della fornitura delle tecnologie utili alla gestione e al processamento dei dati, ma sono i **domini** ad essere responsabili delle pipeline di ingestion, pulizia e aggregazione dei dati al fine di generare assets (Data Products) utilizzabili e consumabili da applicazioni e/o altri domini.
 
@@ -834,7 +912,7 @@ Una volta che i dati sono stati forniti e in seguito trasformati dal rispettivo 
 
 La decentralizzazione domain-oriented richiede che i team sui domini abbiano competenze pratiche nella gestione e analisi del dato. I **data scientist sono decentralizzati**.
 
-## Data as a product
+### Data as a product
 
 Le caratteristiche più importanti che un Data Product deve mappare sono:
 
@@ -848,7 +926,7 @@ Il principio del «Data as a product» è pensato per indirizzare problematiche 
 
 > Gartner definisce i dark data come gli asset informativi che le organizzazioni raccolgono, elaborano e archiviano durante le normali attività aziendali, ma che generalmente non riescono a utilizzare per altri scopi (per esempio, analisi, relazioni commerciali e monetizzazione diretta). Simili alla materia oscura in fisica, i dati oscuri spesso comprendono l'universo delle risorse informative della maggior parte delle organizzazioni. Quindi, le organizzazioni spesso conservano i dati oscuri solo per scopi di conformità. Conservare e mettere in sicurezza i dati comporta tipicamente più spese (e a volte un rischio maggiore) che valore.
 
-## Federated Computational Governance
+### Federated Computational Governance
 
 Il Data Mesh segue i principi dei sistemi distribuiti, attraverso una collezione di Data Product indipendenti, con una propria gestione del lifecycle messa direttamente in mano ai team di dominio. Al fine di rendere questi Data Product interoperabili tra loro (generando quindi ulteriore valore all'interno dell'organizzazione), un'implementazione di Data Mesh richiede un **modello di governance** che abbracci allo stesso tempo:
 
@@ -857,7 +935,7 @@ Il Data Mesh segue i principi dei sistemi distribuiti, attraverso una collezione
 
 Un fattore critico di successo per il Data Mesh è quindi riuscire a trovare e mantenere un **giusto equilibrio tra centralizzazione e decentralizzazione**, definendo quali decisioni debbano essere prese localmente e quali invece vadano definite globalmente, quali Data Product decentralizzare maggiormente e quali mantenere sotto un'ownership più centrale.
 
-## Self-Service Platform
+### Self-Service Platform
 
 Per sviluppare, distribuire, eseguire, monitorare e, infine, accedere ai nostri Data Product occorre un'infrastruttura (Data Platform) adeguata. Le competenze necessarie per definire e sviluppare un ecosistema infrastrutturale di questa complessità sono altamente specializzate ed è necessario un coordinamento e una governance architetturale centralizzata.
 
@@ -865,18 +943,21 @@ La Data Platform deve fornire i servizi utili ai team di dominio al fine di pote
 
 È necessario quindi predisporre una **self-serve data infrastructure**: una Data Platform che espone servizi e funzionalità che abilitano i team di dominio a gestire il ciclo di vita dei Data Product in autonomia.
 
-## Il Data Mesh non fa per voi se….
+## Il Data Mesh non fa per voi se…
+
+Il Data Mesh va inteso come modello operativo, non come semplice tecnologia.
 
 - Pensate al Data Mesh come a una tecnologia e non come a un modello operativo
 - Pensate al Data Mesh come a una soluzione a scaffale
-- Non è stata definita una Data strategy aziendale
+- Non è stata definita una Data strategy aziendale (non è voluta in maniera seria)
 - Non emergono business-case (data driven) che portano valore alla business unit (dominio)
 - Manca il mindset culturale rispetto a processi di decision-making in modalità bottom-up
-- C'è scarsità di risorse data-addicted all'interno dell'organizzazione e dei team (data analyst, data scientist, data engineer)
+- C'è scarsità di risorse data-addicted all'interno dell'organizzazione e dei team (data analyst, data scientist, data engineer). E' molto difficile trovare specialisti con una seria conoscenza dei dati.
 
 ## Data Mesh vs Data Fabric
 
-Data fabric e data mesh definiscono architetture per accedere ai dati attraverso più tecnologie e piattaforme:
+I due approcci non si escludono a vicenda.
+Entrambi definiscono modalità di accesso ai dati attraverso tecnologie e piattaforme diverse.
 
 ### Data fabric
 
@@ -894,3 +975,31 @@ Definiscono approcci risolutivi, non soluzioni pratiche:
 - Sono framework architetturali, non architetture
   - I framework devono essere adattati e personalizzati alle vostre esigenze, ai vostri dati, ai vostri processi e alla vostra terminologia
   - Gartner stima che il 25% dei fornitori di gestione dei dati fornirà una soluzione completa di data fabric entro il 2024, rispetto all'attuale 5%
+
+## INTEGRAZIONE DI BASI DI DATI - CASO DI STUDIO
+
+Per il caso di studio si rimanda direttamente alle slide, che presentano una tesi di laurea dedicata allo studio dell’integrazione delle sorgenti applicative di un’azienda di costumi da piscina, Arena.
+Qui vengono riportati esclusivamente gli appunti emersi dalla spiegazione orale del docente.
+
+Durante la fase di pianificazione, l’azienda decide ogni anno quanto investire in ciascuna area.
+
+Le sorgenti applicative da integrare erano due:
+
+- Database di amministrazione
+- Database di marketing
+
+Il sistema metteva a disposizione una serie di tabelle, accompagnate da una tabella di documentazione, dalla quale è stato possibile ricavare la struttura delle tabelle presenti.
+
+L’esercizio consisteva nello svolgere un lavoro di reverse engineering, con l’obiettivo di:
+
+comprendere come le tabelle fossero collegate tra loro
+
+valutare quali relazioni e strutture avessero senso e quali no
+
+Criticità emerse
+
+Durante l’analisi sono emerse alcune incongruenze:
+
+- La superchiave della classe Ordine contiene attributi ridondanti. È possibile individuare una chiave composta da soli due attributi anziché tre. Non è quindi necessario mantenere una superchiave, che può essere semplificata
+- L’attributo Venditore è presente due volte nella classe Ordine. Una possibile interpretazione è che un venditore sia legato alla fatturazione e l’altro a un contesto diverso. In alternativa, una delle due colonne può essere eliminata
+- … (altre considerazioni riportate nelle slide)
