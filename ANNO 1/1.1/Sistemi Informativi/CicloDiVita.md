@@ -1,28 +1,14 @@
 # Il ciclo di vita di un progetto informatico
 
-## Sistemi Informativi
-
-**Prof. Matteo Golfarelli**  
-Alma Mater Studiorum - Università di Bologna
-
----
-
 ## Il ciclo di vita di un progetto SI
 
 Per arrivare a mettere in campo un progetto ci sono diverse fasi preparatorie che dobbiamo completare prima dello sviluppo.
 
 Il ciclo di vita dei progetti approvati in fase di pianificazione comprende le seguenti fasi principali:
 
-- **Strategie di acquisizione**: In house, Full outsourcing, Selective outsourcing
-- **Sviluppo di prodotti e servizi**: Sviluppo ex-novo, Reingegnerizzazione e riuso, Uso di sistemi commerciali, Architetture tecniche, Piattaforme linguaggi ambienti, Documentazione tecnica e utente
-- **Definizione del contratto**: Aspetti tecnici, Aspetti giuridici, Livelli di servizio, Processi di misura, Applicazione di penali
-- **Pianificazione e controllo**: Procedure di budget, Controllo di gestione, Stato avanzamento lavori, Documentazione di gestione
-- **Erogazione**
-- **Customer satisfaction**: Qualità percepita, Qualità desiderata, Processo di misura, Applicazione di penali
-
 ![.](./asset/Ciclo_di_vita/ciclo.png)
 
----
+In questo capitolo vediamo degli aspetti che devono essere definiti giuridicamente bene.
 
 ## Strategie di acquisizione: Make or Buy?
 
@@ -36,8 +22,6 @@ La realtà è molto complessa, per commentarla è utile schematizzare, ma con sp
 - **Acquisto sul mercato di un bene o servizio**: accezione generica riferita alla scelta di acquisire da terzi (Buy) invece che realizzare internamente (Make) un bene o un servizio
 - **Esternalizzazione (outsourcing)**: presuppone una qualche forma di stabilità del rapporto di "collaborazione" tra l'impresa e il terzista con una prospettiva di medio termine
 
----
-
 ## Strategie di acquisizione: fare o affidare?
 
 L'outsourcing ha luogo quando un'organizzazione affida tramite un accordo contrattuale a un fornitore esterno la responsabilità di una o più funzioni o servizi specializzati precedentemente svolti internamente.
@@ -49,8 +33,6 @@ L'outsourcing ha luogo quando un'organizzazione affida tramite un accordo contra
 - Aumento del livello qualitativo del servizio
 - Accesso a tecnologie avanzate
 - Possibilità di incrementi di capacità a richiesta
-
----
 
 ## Outsourcing: due coordinate per classificarlo
 
@@ -64,8 +46,6 @@ L'outsourcing ha luogo quando un'organizzazione affida tramite un accordo contra
 - Full Outsourcing
 - Selective Outsourcing
 
----
-
 ## Information Technology Outsourcing
 
 Outsourcing delle attività di sviluppo, esercizio, manutenzione dei Sistemi Informativi e delle risorse informatiche.
@@ -74,8 +54,6 @@ Può essere (seconda coordinata):
 
 - Full Outsourcing
 - Selective Outsourcing (spesso "Multisourcing")
-
----
 
 ## Tipi di servizi affidati in outsourcing
 
@@ -87,8 +65,6 @@ Può essere (seconda coordinata):
 - **Facility management**: Gestione delle infrastrutture HW (presso locali del committente o del fornitore), spesso con disaster recovery e business continuity
 - **System integration**
 - **Help desk, CRM**: Infrastrutture e anche servizio (BPO)
-
----
 
 ## Business Process Outsourcing (BPO)
 
@@ -103,8 +79,6 @@ Outsourcing di processi operativi dell'organizzazione, di solito "strumentali" e
 
 Alcuni casi di servizi "core", con (nel settore pubblico) rapporti "stretti" di partnership fra amministrazione e fornitore.
 
----
-
 ## Scenario tradizionale vs BPO
 
 **Scenario tradizionale:**
@@ -118,8 +92,6 @@ Alcuni casi di servizi "core", con (nel settore pubblico) rapporti "stretti" di 
 - Responsabile del servizio → Fornitore BPO → Utente del servizio
 
 ![.](./asset/Ciclo_di_vita/scenario.png)
-
----
 
 ## Un esempio: Servizi di BPO di Accenture
 
@@ -144,8 +116,6 @@ Alcuni casi di servizi "core", con (nel settore pubblico) rapporti "stretti" di 
 
 Fonte: http://www.accenture.com/us-en/Pages/service-bpo-overview-summary.aspx
 
----
-
 ## Classificazione, due coordinate
 
 **In base alla missione affidata al Fornitore:**
@@ -160,15 +130,11 @@ Fonte: http://www.accenture.com/us-en/Pages/service-bpo-overview-summary.aspx
 
 ![.](./asset/Ciclo_di_vita/strategie.png)
 
----
-
 ## Funzione IT Interna
 
 La funzione IT è assegnata ad una struttura dell'organizzazione che fornisce ed implementa nuovi servizi ed architetture IT mediante progetti interni.
 
 La funzione IT può comunque acquistare/affidare all'esterno le applicazioni, infrastrutture, HW.
-
----
 
 ## Insourcing
 
@@ -183,8 +149,6 @@ Consip http://www.consip.it/on-line/Home/Chisiamo/Lanostramissione/Modello.html
 
 Nel caso di Business Process Outsourcing si parla di **Captive company**: società "prigioniera" azienda fondata da altra azienda allo scopo di eseguire operazioni per conto dell'azienda madre (es. FGA Capital gestisce il processo di finanziamento per la società FGA - Fiat Group Automobiles).
 
----
-
 ## Selective Outsourcing
 
 La funzione IT è delegata a più fornitori esterni che forniscono ed implementano nuovi servizi ed architetture IT sulla base di più contratti di durata limitata, 3-5 anni:
@@ -196,8 +160,6 @@ La funzione IT è delegata a più fornitori esterni che forniscono ed implementa
 
 L'organizzazione attua un approccio tattico per creare un ambiente competitivo (costi, capacità, innovazione), ma con complessità gestionale accresciuta.
 
----
-
 ## Full Outsourcing
 
 La funzione IT è delegata ad un unico fornitore esterno che fornisce ed implementa nuovi servizi ed architetture IT sulla base di un unico contratto di servizio.
@@ -208,8 +170,6 @@ L'organizzazione intende creare una partnership strategica con l'outsourcer.
 
 La realtà è spesso intermedia, quindi non si ha "full" outsourcing, sono coinvolti più servizi in un'unica collaborazione.
 
----
-
 ## Joint Venture (Società partecipata)
 
 La funzione IT è delegata ad una società di servizi separata e indipendente dall'organizzazione a cui fornisce servizi, in partecipazione con un fornitore.
@@ -217,8 +177,6 @@ La funzione IT è delegata ad una società di servizi separata e indipendente da
 La maggioranza delle quote può essere dell'uno o dell'altro, a seconda che si voglia privilegiare il controllo del committente o la responsabilità e l'impegno del fornitore.
 
 Fornisce ed implementa nuovi servizi ed architetture IT sulla base di un contratto di servizio (definizione di tariffe per i servizi).
-
----
 
 ## Consorzi e RTI
 
@@ -232,8 +190,6 @@ L'organizzazione intende creare una partnership strategica con il Consorzio.
 
 Spesso si tratta di un **RTI** (raggruppamento temporaneo di imprese) cioè di una struttura costituita per l'occasione (un progetto?) e non permanente.
 
----
-
 ## Strategie di acquisizione, comparazione
 
 - Ogni forma di acquisizione presenta "pro" e "contro"
@@ -241,8 +197,6 @@ Spesso si tratta di un **RTI** (raggruppamento temporaneo di imprese) cioè di u
 - La scelta non deve necessariamente essere effettuata una volta per tutte, può essere rivista:
   - Sulla base di una strategia di approccio progressivo
   - Per adattarsi al mutare di condizioni interne o esterne all'organizzazione
-
----
 
 ## Outsourcing: pro e contro, in generale
 
@@ -259,8 +213,6 @@ Spesso si tratta di un **RTI** (raggruppamento temporaneo di imprese) cioè di u
 - Perdita di controllo, con conseguenti rischi
 - Riduzione del potere negoziale a medio termine
 - Demotivazione personale IT interno
-
----
 
 ## Outsourcing globale
 
@@ -280,8 +232,6 @@ Spesso si tratta di un **RTI** (raggruppamento temporaneo di imprese) cioè di u
 - Rischio di insuccesso globale
 - Complessità del singolo contratto
 
----
-
 ## Outsourcing selettivo
 
 **A favore:**
@@ -300,8 +250,6 @@ Spesso si tratta di un **RTI** (raggruppamento temporaneo di imprese) cioè di u
 - Possibile "scarica barile"
 - Difficoltà di integrazione
 
----
-
 ## Impatto Organizzativo
 
 I servizi IT sono sempre più una combinazione di attività interne ed esterne.
@@ -311,8 +259,6 @@ Le interazioni Cliente-Fornitore sono di gran lunga più complesse di quanto des
 - In una organizzazione solo parte delle interazioni e dei processi sono oggetto di una definizione formale
 
 **Esternalizzare i servizi informatici non significa sopprimere la funzione IT interna**, anzi la responsabilità finale del management rimane al committente.
-
----
 
 ## La funzione IT nei casi estremi: make e outsourcing
 
@@ -349,8 +295,6 @@ Le interazioni Cliente-Fornitore sono di gran lunga più complesse di quanto des
 - Gestione Sicurezza (Security Manager)
 - Direzione Sistemi Informativi
 
----
-
 ## Evoluzione delle competenze
 
 Con l'outsourcing la funzione IT è più una unità di governo e gestione che di servizio.
@@ -368,9 +312,7 @@ Con l'outsourcing la funzione IT è più una unità di governo e gestione che di
   - Analisti
   - Sistemisti
 
-**Attenzione:** Spesso si pensa di utilizzare l'outsourcing per supplire alle carenze di personale, però l'outsourcing richiede meno personale, ma di livello elevato!
-
----
+**Attenzione:** Spesso si pensa di utilizzare l'outsourcing per supplire alle carenze di personale, però l'outsourcing richiede meno personale, ma di livello elevato.
 
 ## Compiti e Responsabilità Funzione IT
 
@@ -416,8 +358,6 @@ Con l'outsourcing la funzione IT è più una unità di governo e gestione che di
 - Sorvegliare l'applicazione delle politiche di sicurezza
 - Verificare il rispetto della normativa vigente
 
----
-
 ## Fattori Chiave di Successo
 
 - **Scelta della Strategia di Sourcing**
@@ -433,8 +373,6 @@ Con l'outsourcing la funzione IT è più una unità di governo e gestione che di
   - Pariteticità, correttezza, funzionalità, flessibilità
 
 - **Governo del Contratto**
-
----
 
 ## Strategie di realizzazione di SW applicativo
 
@@ -452,8 +390,6 @@ Le nuove esigenze di automazione possono essere risolte con modalità diverse:
 - Utilizzo di sistemi informatici proprietari con ricorso a licenza d'uso
 - Utilizzo di sistemi informatici open source
 - Combinazione dei punti precedenti
-
----
 
 ## Strategie di realizzazione: Sviluppo ad hoc
 
@@ -480,8 +416,6 @@ Le pubbliche amministrazioni sono obbligate a condividere con le altre PA le app
 
 **Impatti:** Sul modello di business delle software house produttrici del software che dovranno orientarsi al mercato delle personalizzazioni.
 
----
-
 ## Strategie di realizzazione: Open Source
 
 **Utilizzo di sistemi open source:**
@@ -499,8 +433,6 @@ Le pubbliche amministrazioni sono obbligate a condividere con le altre PA le app
 - Supporto non sempre disponibile
 - Instabilità di mercato e potenziale mancanza di una evoluzione del sistema nel tempo
 
----
-
 ## Strategie di realizzazione: Sistemi proprietari
 
 **Utilizzo di sistemi proprietari con ricorso a licenza d'uso:**
@@ -514,13 +446,9 @@ Le pubbliche amministrazioni sono obbligate a condividere con le altre PA le app
 
 - Rispetto a soluzioni open source va comunque valutato il reale TCO (Total Cost Ownership) anche considerando i rischi legati a mancanza di supporto adeguato, manutenzione correttiva ed evolutiva
 
----
-
 ## La gestione di progetto
 
 ![.](./asset/Ciclo_di_vita/definizione.png)
-
----
 
 ## Contratto
 
@@ -534,13 +462,11 @@ Contratto fra il responsabile del servizio ("committente") e il fornitore ICT (a
 - Contratto d'opera (art. 2222 C.C.)
 - Contratto di compravendita (art. 1472 C.C.)
 
----
-
-## Contratti: tipologie
-
 **Contratto d'appalto (Art. 1655 C.C.):**
 
 L'appalto è il contratto con il quale una parte assume con organizzazione dei mezzi necessari e con gestione a proprio rischio, il compimento di una opera o di un servizio verso un corrispettivo in denaro.
+
+Quello che a noi interessa maggiormente.
 
 Caratteristiche:
 
@@ -556,9 +482,9 @@ Caratteristiche:
 
 - Cessione/acquisizione di una cosa
 
----
-
 ## Contratti per vari tipi di forniture
+
+In un contratto possono esserci più di una di queste forniture:
 
 - Fornitura di apparecchiature ICT (server, postazioni di lavoro, memorie, stampanti e altre periferiche, dispositivi di rete, ...)
 - Fornitura chiavi in mano di sistema ICT completo
@@ -571,23 +497,25 @@ Caratteristiche:
 
 Vedi anche "Dizionario delle classi di fornitura" sul sito del corso.
 
----
-
 ## Visione manageriale (non burocratica)
 
-Un contratto ha l'obiettivo di soddisfare entrambe le parti (ed eventuali terzi interessati, che supponiamo comunque rappresentati).
+Un contratto ha l'obiettivo di soddisfare entrambe le parti (ed eventuali terzi interessati, che supponiamo comunque rappresentati). L'obiettivo quindi del contratto è soprattuto manageriale, se non facciamo un contratto equo, costruiamo un rapporto sbilanciato che non andrà a buon fine. Dietro al contratto c'è il progetto quindi l'attività lavorativo vede due parti di cui una ha troppo potere. Si cerca di arrivare in fondo al progetto senza litigare per arrivare alla fine senza litigare. Se non si finisce allora entrambe le parti hanno fallito.
 
 Se i risultati non vengono raggiunti, entrambi hanno fallito.
 
 **Quindi un contratto deve:**
 
 - Definire, in modo cooperativo tra le parti, le prestazioni in termini di contenuti, costi, qualità, responsabilità
-- Eliminare le ambiguità nel rapporto tra le parti e prevenire le difficoltà e le situazioni anomale
+- Eliminare le ambiguità nel rapporto tra le parti e prevenire le difficoltà e le situazioni anomale. Spesso contratti che appena fatti sembrano del tutto chiari, a distanza di tempo possono creare ambiguità. Infatti è davvero difficile arrivare ad un contratto davvero non ambiguo.
 - Ma non può pretendere di "prevedere tutto" in dettaglio
 
 Quindi deve specificare non solo obblighi e impegni ma anche procedure e regole di relazione.
 
----
+Il contratto diventa attivo al momento della firma.
+
+In tutti i contratti c'è sempre la clausola che il lavoro deve essere svolto a regola d'arte: deve essere fatto bene, ma il 'Fatto bene' sarà scelto un pò a posteriori perchè il mio fatto bene e il tuo fatto bene non sono uguali. Per i software e si va in tribunale per questa ragione si prendono dei consulenti tecnici di parte e di ufficio che avranno una loro opinione.
+
+Questo per dire che non tutto può essere definito alla stesura del contratto perchè ci sarà sempre qualcosa che non si potrà definire del tutto prima del progetto.
 
 ## Gestione dei contratti
 
@@ -600,40 +528,40 @@ Il contratto rappresenta il principale strumento a disposizione delle parti per 
 
 - Comitato guida (con rappresentanti delle parti)
 - Direzione dei lavori (rappresentante del committente per l'interazione con il fornitore)
-- Monitoraggio (controllo durante il ciclo di vita)
-- Collaudo (verifica dei prodotti)
-- Certificazioni di qualità (per garantire trasparenza e tracciabilità delle attività del fornitore)
+- Monitoraggio (controllo durante il ciclo di vita).Ci sono anche dei gruppi di monitoraggio che ispezionano in itinere il lavoro. Monitora tempi e modi di lavoro mentre il collaudo verifica la funzionalità del progetto. Quindi vanno a vedere cose diverse.
+- Collaudo (verifica dei prodotti), ad esempio attraverso le UAT.
+- Certificazioni di qualità (per garantire trasparenza e tracciabilità delle attività del fornitore) che fanno delle ispezioni anche loro.
 
----
+Se ci sono situazioni anomale si cerca di rimediare non uscendo dai termini contrattuali: andare in tribunale è lungo e dispendioso.
 
 ## Contratti: fasi
 
-- **Impostazione** (definizione oggetto e strategia di acquisizione)
-- **Negoziazione** (definizione del contratto), nel settore pubblico sostanzialmente attraverso gare, vedremo i dettagli più avanti
-- **Stipula**
-- **Attuazione** (governo del contratto)
-
----
+- **Impostazione** (definizione oggetto e strategia di acquisizione), articoli e flussi di lavoro
+- **Negoziazione** (definizione del contratto), nel settore pubblico sostanzialmente attraverso gare, vedremo i dettagli più avanti. Le due parti si rimbalzano il contratto richiedendo modifiche. In caso di innovazione e quindi non si sa la scoperta che verrà fuori di solito si possono pensare ai dettagli più avanti perchè non si sa che scoperta di innovazione verrà fuori.
+- **Stipula**, ovvero la firma di questo
+- **Attuazione** (governo del contratto), diventa attivo
 
 ## Soggetti coinvolti nelle attività contrattuali
 
-**Per il committente:**
+(Non dobbiamo sapere la seguente lista a memoria ma ci basta andare a pensare a cosa può essere utile per il committente e il forntore)
 
-- Dirigenti implicati nella definizione delle scelte strategiche
+**Per il committente (chi compra):**
+
+- Dirigenti implicati nella definizione delle scelte strategiche. In linea con l'innovazione e la strategia dell'azienda
 - Personale della funzione acquisti
-- Personale della funzione legale
-- Personale della funzione sistemi informativi
-- Personale utente dei sistemi informativi
+- Personale della funzione legale, l'avvocato deve verificarne la correttezza dal punto di vista legale
+- Personale della funzione sistemi informativi, deve capire se tecnicamente quello che vogliamo è quello che ci serve
+- Personale utente dei sistemi informativi, per capire se quello che compriamo è coerente con quello che dobbiamo farcene.
 
-**Per il fornitore:**
+Componente legale, economica, strategica e funzionale
+
+**Per il fornitore (chi vende):**
 
 - Dirigenti implicati nella definizione delle offerte
 - Personale della funzione commerciale
 - Personale della funzione legale
 - Personale della funzione che eroga i servizi ICT
 - Personale della funzione di assicurazione qualità
-
----
 
 ## Soggetti coinvolti per il committente
 
@@ -671,8 +599,6 @@ Il contratto rappresenta il principale strumento a disposizione delle parti per 
 - Partecipante a commissioni di gara
 - Partecipante a commissioni di collaudo
 
----
-
 ## Soggetti coinvolti per il fornitore
 
 **Dirigenti implicati nella definizione delle offerte:**
@@ -707,28 +633,28 @@ Il contratto rappresenta il principale strumento a disposizione delle parti per 
 - Responsabile dell'assicurazione e controllo qualità (Quality manager)
 - Responsabile dell'analisi della soddisfazione dell'utente (Customer satisfaction)
 
----
-
 ## Struttura di un contratto
+
+Tra i tanti allegati:
 
 **Parte Normativa:**
 
-- Corpo del Contratto
+- Corpo del Contratto, tutti gli articoli e i rapporti istituzionali e legali
 
 **Parte Operativa:**
 
-- Capitolato Tecnico
-- Offerta
+- Capitolato Tecnico, dettaglio espresso con dettagli tecnici di quello che deve essere rappresentato
+- Offerta, risposta di come viene data alla richiesta
 
 Spesso ci sono sovrapposizioni fra le varie parti (con anche incoerenze!)
 
 In caso di gara, corpo e capitolato fanno parte della documentazione predisposta dal committente, mentre l'offerta è la "risposta" (coerente) del fornitore.
 
+Di solito vengono offerti 3 preventivi con 3 offerte diverse.
+
 Difficile descrivere in modo tassonomico la struttura di un contratto che varia fortemente in base al suo oggetto. Procederemo per esempi con un contratto di grandi dimensioni in ambito PA:
 
 **Esempio:** Contratto per l'affidamento dei servizi per la manutenzione ed evoluzione dei sistemi informativi della Ragioneria Generale dello Stato (gara 2/12/2008 n. 4553).
-
----
 
 ## Corpo del contratto
 
@@ -739,8 +665,6 @@ Definisce e correla:
 - Relazioni fra cliente e fornitore
 - Corrispettivi (pagamenti)
 
----
-
 ## Capitolato tecnico
 
 Predisposto dal cliente (insieme al bando, in caso di gara):
@@ -750,8 +674,6 @@ Predisposto dal cliente (insieme al bando, in caso di gara):
 Fornisce al fornitore le informazioni di dettaglio utili per preparare l'offerta (di solito anche l'indice dell'offerta stessa).
 
 Allegato tecnico al corpo del contratto assieme all'offerta del fornitore.
-
----
 
 ## Offerta tecnica
 
@@ -767,11 +689,9 @@ Dimostrare al cliente la capacità del fornitore di soddisfare quanto richiesto 
 - Piano di progetto
 - Piano della qualità
 
----
-
 ## Esempio: contratto per manutenzione ed evoluzione dei sistemi informativi
 
-Contratto sviluppato da **CONSIP** - società pubblica che fornisce consulenza tecnologica, organizzativa e di progetto agli uffici del Ministero dell'Economia.
+Contratto quinquennale sviluppato da **CONSIP** - società pubblica che fornisce consulenza tecnologica, organizzativa e di progetto agli uffici del Ministero dell'Economia.
 
 Il contratto considerato prevede servizi di:
 
@@ -780,11 +700,13 @@ Il contratto considerato prevede servizi di:
 - Manutenzione Adeguativa e Correttiva (MAC)
 - Supporto Specialistico
 
-Su aree applicative dei sistemi informativi della Ragioneria Generale dello Stato.
+su aree applicative dei sistemi informativi della Ragioneria Generale dello Stato.
 
 Il materiale di dettaglio è disponibile sul sito del corso.
 
----
+**Trovi il contratto completo su sito.**
+
+Come per tutti i contratti grossi ci sono penali e cauzioni in caso di inadempiezza.
 
 ## Parte generale e parte speciale
 
@@ -793,32 +715,34 @@ Molti enti utilizzano una struttura in due parti:
 - **Generale**: comune a tutti i contratti, con gli aspetti standard
 - **Speciale**: diversa di volta in volta, con gli aspetti peculiari
 
----
+### Parte generale
 
-## Parte generale
+La parte generale è quella del contratto che viene messa in tutti i tipi del contratto senza parlare del progetto in sè che si va a vendere/acquistare.
+
+In grassetto trovi cosa è stato citato durante la lezione prendendo come esempio il contratto citato sopra.
 
 (riferimento allo schema Consip)
 
-- Aumento e diminuzione (standard 20%, "sesto quinto")
-- Modalità di esecuzione: luogo (e "convivenza"); impiego di risorse specializzate
+- **Aumento e diminuzione** (standard 20%, "sesto quinto"). Ad esempio: fino a un quinto in più o un quinto in meno del totale non stiamo a rompere troppo e mettiamo d'accordo sul come affrontarlo.
+- **Modalità di esecuzione**: luogo (e "convivenza"); impiego di risorse specializzate
 - Rispetto della normativa sui rapporti di lavoro (sicurezza, igiene, previdenza infortuni, contratti collettivi) con possibile penalizzazione
-- Obblighi di riservatezza, con possibile risoluzione
-- Brevetti e diritti d'autore, rispetto garantito dal fornitore
-- Utilizzo di hw e sw: l'impresa deve essere autorizzata
-- Danni, responsabilità civile e assicurazione
+- **Obblighi di riservatezza**, con possibile risoluzione
+- **Brevetti e diritti d'autore**, rispetto garantito dal fornitore. Se il fornitore viola un brevetto è prendo un pezzo di codice non open source, allora la responsabilità è del fornitore e chi compra non si prende l'impegno di controllare che siano o meno rispettate. In caso di multe per violazione al cliente allora chi ha fatto il software deve ripagare il cliente e chi ha il brevetto o diritto d'autore.
+- **Utilizzo di hw e sw**: l'impresa deve essere autorizzata
+- **Danni**, responsabilità civile e assicurazione. Esempio: durante l'installazione del software viene cancellato un intero database, allora il fornitore deve si impegna a sistemare (oltre alla cauzione)
 - Oneri fiscali e spese contrattuali
-- Cauzione (10% del valore contrattuale, ridotto se l'azienda è certificata per la qualità, aumentato in caso di ribasso significativo); il costo di una polizza per la cauzione è 0,5-1% del valore assicurato
-- Recesso (committente con preavviso, il fornitore no) e recesso per giusta causa
-- Divieto di cessione del contratto e di cessione del credito
-- Trasparenza dei prezzi: assenza di intermediazione, rispetto della concorrenza
-- Subappalto: previsto a priori e con vincoli e responsabilità che restano sul fornitore e si ripetono sul subappaltatore
+- **Cauzione** (10% del valore contrattuale, ridotto se l'azienda è certificata per la qualità, aumentato in caso di ribasso significativo); il costo di una polizza per la cauzione è 0,5-1% del valore assicurato.
+- **Recesso** (committente con preavviso, il fornitore no) e recesso per giusta causa. Quanto prima si deve avvisare e quale cifra bisona sborsare in caso nel caso in cui vogliio recedere senza un motivo valido. Un motivo valido potrebbero essere situazioni legali serie (es: mafia).
+- Divieto di cessione del contratto e di cessione del credito.
+- **Trasparenza dei prezzi**: assenza di intermediazione, rispetto della concorrenza. (es: "non ho preso mazzette" cit.)
+- **Subappalto**: previsto a priori e con vincoli e responsabilità che restano sul fornitore e si ripetono sul subappaltatore. Di solito anche se subapparlti il subapparlatore deve rispettare le stesse regole del fornitore e per qualsiasi danno fatto va a carico del fornitore.
 - Foro competente esclusivo
 - Trattamento dati personali
 - Condizioni particolari di risoluzione (accertamenti antimafia, verifica autocertificazioni, sanzioni interdittive)
 
----
+### Parte speciale - Contratto per manutenzione ed evoluzione
 
-## Contratto per manutenzione ed evoluzione: articoli
+La parte che parla del prodotto specifico, a volte riprende o ripete parti della parte generale.
 
 **Articoli del contratto (parte speciale):**
 
@@ -840,7 +764,8 @@ Molti enti utilizzano una struttura in due parti:
 16. Fatturazione
 17. Risoluzione
 
----
+Domanda d'esame: **Quali sono gli allegati tecnici del contratto?**
+Risposta: Capitolato tecnico, offerta, piano della qualità (non mi dice cosa ma mi dice come, documento di ingegneria del software), piano di lavoro.
 
 ## Art. 1: Oggetto, luogo della prestazione e responsabile
 
@@ -861,8 +786,6 @@ Su aree applicative dei sistemi informativi della RGS.
 - Trasferimento di know-how
 - Il tutto in misura pari almeno al 10% dell'importo contrattuale
 
----
-
 ## Art. 2: Durata e affiancamento
 
 **Durata:** 60 mesi
@@ -873,8 +796,6 @@ Di cui:
 - Nei primi due, affiancamento del fornitore uscente
 - Negli ultimi due, anche trasferimento di know-how al committente o a terzi (fornitore subentrante)
 
----
-
 ## Art. 3: Obblighi e adempimenti a carico dell'impresa
 
 - Oneri e rischi a carico dell'impresa, inclusi viaggi e missioni se necessari
@@ -884,16 +805,12 @@ Di cui:
 - Disponibilità a verifiche da parte del committente
 - Risoluzione e danni
 
----
-
 ## Art. 4: Proprietà del sw sviluppato e dei prodotti
 
 - L'Amministrazione acquisisce la proprietà (con diritto di sfruttamento) di sw e documentazione
 - Possibilità per l'amministrazione di acquistare licenze dei pacchetti utilizzati dal fornitore
 - Possibilità di riuso per altre amministrazioni (su richiesta) e alle medesime condizioni
 - Possibilità di utilizzare componenti open source (con modifiche a carico del fornitore)
-
----
 
 ## Art. 5: Dimensioni massime dei singoli servizi
 
@@ -904,8 +821,6 @@ Di cui:
 - **Supporto Specialistico**: 6.520 giorni persona
 
 Con possibilità di travaso.
-
----
 
 ## Art. 6: Piano della qualità
 
@@ -918,9 +833,13 @@ Il committente verifica e può richiedere modifiche.
 
 **Per la struttura:** Appendice 6 del Capitolato, par 2.1 (CT Appendice 6 Piano di qualità.pdf)
 
----
-
 ## Piano della qualità
+
+Specifica i cicli di vita e i contenuti dei prodotti. Definisco come deve essere fatto il lavoro. Spiego tutte le mie metodologie.
+
+Il fornitore si impegna di fornire il documento entro tot giorni dal contratto.
+
+Il piano completo è un ciclo di vita del prodotto.
 
 Descrive un servizio in termini di:
 
@@ -940,9 +859,7 @@ Spiega **"CHI"** fa **"COSA"**, **"COME"** la fa e **"QUANDO"**.
 - Il fornitore che lo usa
 - Il cliente che fruisce di servizi sviluppati nel Sistema Qualità
 
----
-
-## Piano della qualità: struttura esempio (1)
+## Piano della qualità: struttura esempio
 
 (Appendice 6 del Capitolato, par 2.1)
 
@@ -975,9 +892,11 @@ Spiega **"CHI"** fa **"COSA"**, **"COME"** la fa e **"QUANDO"**.
 
 ## Indicatori di qualità, esempio
 
+Sono veri e propri KPI:
+
 ![.](./asset/Ciclo_di_vita/indicatori.png)
 
----
+La produttività è calcolata in punti funzione che possono ad esempio essere i giorni uomo..
 
 ## Livelli di servizio
 
@@ -989,8 +908,6 @@ Elementi quantitativi volti a definire soglie minime di accettazione per i vari 
 
 - **Tecnico** (livelli di servizio)
 - **Utente** (requisiti di servizio)
-
----
 
 ## Livelli di servizio tecnici: esempi
 
@@ -1006,14 +923,10 @@ Elementi quantitativi volti a definire soglie minime di accettazione per i vari 
 - Disponibilità della rete
 - Disponibilità delle postazioni di lavoro
 
----
-
 ## Livelli di servizio utente: esempi
 
 - Disponibilità complessiva del sito Web
 - Tempo massimo di interruzione
-
----
 
 ## Aspetti tecnici e utente
 
@@ -1032,13 +945,9 @@ Elementi quantitativi volti a definire soglie minime di accettazione per i vari 
 - Le esigenze di servizio degli utenti (Requisiti di Servizio)
 - Con i criteri tecnici (Livelli di Servizio)
 
----
-
 ## Art. 7: Garanzie
 
 Il fornitore garantisce l'eliminazione di eventuali difetti riscontrati (con opportune modalità nell'ultimo anno).
-
----
 
 ## Art. 8: Subappalto
 
@@ -1046,8 +955,6 @@ Vengono indicate:
 
 - Prestazioni subappaltate
 - Subappaltatori
-
----
 
 ## Art. 9: Pianificazione delle attività
 
@@ -1066,8 +973,6 @@ Gli interventi sono pianificati in accordo tra le parti, con un "Piano di lavoro
 3. Il committente decide se accettare o meno
 4. Il fornitore predispone un piano di lavoro, rendiconta via via e consuntiva
 
----
-
 ## Art. 10: Produttività e risorse impiegate
 
 - Produttività del personale (come specificata nell'offerta)
@@ -1076,23 +981,17 @@ Gli interventi sono pianificati in accordo tra le parti, con un "Piano di lavoro
 - Curricula delle persone impegnate (valutate dal committente, con possibilità di richiesta di sostituzione)
 - Regole per la sostituzione da parte del fornitore
 
----
-
 ## Art. 11: Consegna dei prodotti
 
 - Rispetto dei tempi e dello standard (sia quelli base sia quelli migliorativi)
 - Accettazione formale del committente
 - Penali
 
----
-
 ## Controllo e verifica della prestazione
 
 **12. Collaudo:** Controllo di prodotto
 
 **13. Monitoraggio:** Controllo di processo
-
----
 
 ## Collaudo
 
@@ -1112,8 +1011,6 @@ Originariamente concepito per i prodotti, disciplinato dal contratto, è il cont
 - Con il coinvolgimento dell'utente
 - Alla presenza di incaricati del fornitore
 
----
-
 ## Collaudo: esito negativo
 
 **Esito del collaudo negativo quando:**
@@ -1128,8 +1025,6 @@ Originariamente concepito per i prodotti, disciplinato dal contratto, è il cont
 - Incameramento del deposito cauzionale prestato dal fornitore
 - Diritto al risarcimento dell'eventuale ulteriore danno
 
----
-
 ## Collaudo: contratto di outsourcing
 
 **Analisi da parte del cliente:**
@@ -1142,8 +1037,6 @@ Originariamente concepito per i prodotti, disciplinato dal contratto, è il cont
 
 - Monitoraggio (vedi dopo)
 - Sistemi di misura dei livelli di servizio
-
----
 
 ## Controllo della prestazione: controllo di processo
 
@@ -1163,8 +1056,6 @@ Originariamente concepito per i prodotti, disciplinato dal contratto, è il cont
 
 **Costi della non Qualità:** La qualità giusta è quella sufficiente: **Just Enough Quality**
 
----
-
 ## Monitoraggio
 
 Azione continua e parallela all'esecuzione del contratto a supporto della direzione lavori.
@@ -1175,8 +1066,6 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
 - Lo stato avanzamento lavori
 - La quantità e qualità, i livelli di servizio, dei beni forniti e dei servizi erogati
 - I processi messi in atto dal fornitore per l'erogazione dei servizi
-
----
 
 ## Monitoraggio: vigilanza in corso d'opera
 
@@ -1196,8 +1085,6 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
 
 **Complementare al collaudo**, mirata a garantire il raggiungimento degli obiettivi, attraverso la **prevenzione**.
 
----
-
 ## Monitoraggio: azione di prevenzione
 
 **Azione di prevenzione dell'insorgere di anomalie:**
@@ -1208,8 +1095,6 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
   - Verifica dell'accuratezza delle misure e del rispetto delle soglie
   - Valutazione della soddisfazione degli utenti finali
   - Analisi dei risultati ottenuti in relazione agli investimenti effettuati per identificare il valore aggiunto del contratto
-
----
 
 ## Monitoraggio: azione di diagnosi e consuntivo
 
@@ -1226,8 +1111,6 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
 - Andamento delle prestazioni erogate
   - Livelli di servizio, risorse utilizzate
   - Problemi incontrati nello svolgimento delle attività e modalità di risoluzione degli stessi (best practices)
-
----
 
 ## Monitoraggio: obblighi contrattuali del fornitore
 
@@ -1246,15 +1129,11 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
   - Applicazioni SW, documentazione
 - Partecipare a sedute di riesame congiunto delle attività
 
----
-
 ## Art. 12: Collaudo e accettazione
 
 - Obiettivi sottoposti a collaudo
 - Rimozione dei vizi, malfunzionamenti, ...
 - ... penali, risoluzione contratto
-
----
 
 ## Art. 13: Monitoraggio
 
@@ -1264,8 +1143,6 @@ Azione continua e parallela all'esecuzione del contratto a supporto della direzi
 - Invia informazioni sulle ispezioni dei certificatori di qualità
 - Permette accesso a documentazione
 - Accetta verifiche ispettive
-
----
 
 ## Penali
 
@@ -1279,13 +1156,11 @@ Devono essere correlate all'entità dell'inadempimento.
 
 **Esempi:**
 
-- Ritardi nella consegna e messa in funzione di sistemi
+- Ritardi nella consegna e messa in funzione di sistemi (nell'esmpio visto in classe sono 1000 euro ogni giorno di ritardo).
 - Collaudi negativi
 - Fermi dell'HW (non ripristinati nei termini previsti)
 - Malfunzionamenti SW (non ripristinati nei termini previsti)
 - Mancato raggiungimento dei livelli di servizio previsti
-
----
 
 ## Art. 14: Penali
 
@@ -1307,8 +1182,6 @@ Associate ai livelli di servizio. Nello specifico:
 14. Collegamenti esterni non autorizzati
 15. Mancato adeguamento dell'organico
 
----
-
 ## Art. 15: Corrispettivo
 
 Il pagamento corrisposto dal committente al fornitore, determinato in modo anche articolato.
@@ -1319,35 +1192,17 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 
 **A misura ("a consuntivo"):**
 
-- Definiti valori unitari (di prodotti forniti o di risorse utilizzate)
+- Definiti valori unitari (di prodotti forniti o di risorse utilizzate), quanto costa un gioro uomo e quanto vale il punto funzione.
 - Il corrispettivo è commisurato alla quantità (di solito entro minimi e massimi predefiniti)
 
 **Soluzioni intermedie:**
 
-- A corpo con correttivi
+- A corpo con correttivi, ho una cifra ma se (io fornitore) ci metto di più (tu cliente) sistemi.
 - In contratti articolati, parte a corpo e parte a misura
 - Con indici di prestazioni ("premi")
 
----
-
-## Corrispettivi: modalità
-
-**A corpo ("a prezzo fisso", "a rischio d'impresa", "a ordine chiuso"):**
-
-- Valore globale
-
-**A misura ("a consuntivo"):**
-
-- Definiti valori unitari (di prodotti forniti o di risorse utilizzate)
-- Il corrispettivo è commisurato alla quantità (di solito entro minimi e massimi predefiniti)
-
-**Soluzioni intermedie:**
-
-- A corpo con correttivi
-- In contratti articolati, parte a corpo e parte a misura
-- Con indici di prestazioni ("premi")
-
----
+Domanda da esame: **Il contratto a corpo tutela il cliente?**
+Risposta: No, il contratto a corpo non tutela il cliente perchè quando si sforano le tempistiche si tende a velocizzarsi diminuendo la qualità del lavoro.
 
 ## Modelli a corpo
 
@@ -1368,9 +1223,7 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 
 - In funzione del raggiungimento di predeterminati stati di avanzamento lavori
 
----
-
-## Modelli a corpo: esempio sviluppo SW
+### Modelli a corpo: esempio sviluppo SW
 
 **Il contratto definisce:**
 
@@ -1387,9 +1240,7 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 
 - Verifica finale, collaudo del SW prodotto
 
----
-
-## Modelli a corpo: pro e contro
+### Modelli a corpo: pro e contro
 
 **Pro:**
 
@@ -1411,8 +1262,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 - Necessario realizzare uno studio di fattibilità (costo 1-3% del valore del contratto)
 - Volatilità delle specifiche
 
----
-
 ## Modelli a misura
 
 **Due categorie di misure fondamentali:**
@@ -1432,9 +1281,10 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 - Avviene su base periodica, tipicamente dai 3 ai 6 mesi
 - Calcolando il corrispettivo a consuntivo, in base alla misurazione di parametri predeterminati e quotati in sede contrattuale
 
----
+Il cliente non sa quanto paga. Di solito lo uso quando non sono certo di quanto il progetto mi impiega, ed è sicuramente utile a entrambi perchè se non so quanto mi impiega sovrastimo molto perchè non so nemmeno quali errori possono venire fuori. Mentre per il fornitore metti caso che non ho sovrastimato bene ma lavoro di più della sovrastima. Allora le attività di monitoraggio sono molte di più.
+Per i progetti in cui sappiamo con certezza la complessità del progetto meglio lavorare con modelli a corpo.
 
-## Corrispettivi - Sviluppo SW: Prodotti realizzati (1)
+## Corrispettivi - Sviluppo SW: Prodotti realizzati
 
 **Il contratto definisce:**
 
@@ -1453,10 +1303,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 - Verifica finale, collaudo del SW prodotto
 - Misura (critica) della dimensione di SW sviluppato
 
----
-
-## Corrispettivi - Sviluppo SW: Prodotti realizzati (2)
-
 **Pro:**
 
 - Riduzione dei costi perché è più facile stimare le funzionalità
@@ -1471,10 +1317,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 - Non applicabile facilmente a manutenzione adeguativa o correttiva
   - Difficile stimare la "dimensione"
 
----
-
-## Corrispettivi - Sviluppo SW: Prodotti realizzati (3)
-
 **Criticità:**
 
 - Definizione delle tariffe unitarie per unità di prodotto SW
@@ -1487,8 +1329,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 **Garanzie:**
 
 - Correlazione tra prodotto sviluppato e costo sostenuto
-
----
 
 ## Corrispettivo a misura - Sviluppo SW: Risorse utilizzate
 
@@ -1509,10 +1349,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 - Verifica finale, collaudo del SW prodotto
 - Misura dell'impegno sostenuto (time report) e valutazione di congruità
 
----
-
-## Corrispettivi - Sviluppo SW: Risorse utilizzate (2)
-
 **Pro:**
 
 - Gestione del contratto semplice
@@ -1528,8 +1364,6 @@ Il pagamento corrisposto dal committente al fornitore, determinato in modo anche
 
 - Assenza di correlazione tra prodotto ottenuto e spesa sostenuta (a meno di verifiche accurate sulla qualità dei prodotti)
 - Definizione delle tariffe unitarie per figura professionale
-
----
 
 ## Art. 16: Fatturazione
 
