@@ -1,6 +1,6 @@
-pandoc Integrazione.md -o Integrazione.html -s --toc \
+pandoc seminari.md -o seminari.html -s --toc \
  --toc-depth=3 \
- --metadata title="Integrazione" \
+ --metadata title="Seminari" \
  --metadata author="Matilde D'Antino" \
  -c https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css \
  -H <(cat << 'EOF'
@@ -113,4 +113,4 @@ pandoc Integrazione.md -o Integrazione.html -s --toc \
 EOF
 )
 
-open Integrazione.html
+open seminari.html
