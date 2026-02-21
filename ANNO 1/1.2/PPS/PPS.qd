@@ -1,0 +1,12 @@
+.docname {Paradigmi di Programmazione e Sviluppo}
+.doctype {paged}
+.doclang {Italian}
+.theme {paperwhite} layout:{latex}
+
+.docauthors
+  - Federico Diotallevi
+
+.pagemargin {bottomcenter}
+    .currentpage
+
+# Paradigmi di Programmazione e Sviluppo
